@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<TITLE>NAME</TITLE>
+<LINK href="/styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#METHODS">METHODS
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#COPYRIGHT">COPYRIGHT
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Critic::ConfigErrors - An exception object collecting a set of problems found by <A HREF="/pod/Perl/Critic/Config.html">Perl::Critic::Config</A>.
+
+</P><HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>A set of configuration settings can have multiple problems.  This is
+an object for collecting all the problems found so that the user can
+see them in one run.  Stringification is overridden to allow this
+object to show all the messages when printed as the result of an
+<CODE>eval</CODE>.
+
+
+</P><HR>
+<H1><A NAME="METHODS">METHODS
+
+</A></H1>
+<DL><DT><A NAME="add_message(%20%24message%20)"><CODE>add_message( $message )</CODE>
+
+</A></DT>
+<DD>
+Accumulate the parameter with rest of the messages.
+
+
+</DD>
+<DT><A NAME="add_bad_option_message(%20%24option_name%2c%20%24value%2c%20%24source%2c%20%24suffix%20)"><CODE>add_bad_option_message( $option_name, $value, $source, $suffix )</CODE>
+
+</A></DT>
+<DD>
+Accumulate a standardized message for a bad option.  <CODE>$option_name</CODE>
+should have a leading minus (&quot;-&quot;) if the option was specified on a
+command line.  <CODE>$value</CODE> is the input that was found wanting.
+<CODE>$source</CODE> should be the origination point of the <CODE>$value</CODE>, most
+likely the name of a <I>.perlcriticrc</I>.  <CODE>$suffix</CODE> is the non-standard
+part of the message, describing the fault(s) of the <CODE>$value</CODE>.
+
+
+</DD>
+<DT><A NAME="messages()"><CODE>messages()</CODE>
+
+</A></DT>
+<DD>
+Returns a reference to an array of the collected messages.
+
+
+</DD>
+<DT><A NAME="to_string()"><CODE>to_string()</CODE>
+
+</A></DT>
+<DD>
+Returns a string representation of this object, suitable for printing
+as an error message.
+
+</DD>
+</DL>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<P>Elliot Shank &lt;perl@galumph.com&gt;
+
+</P><HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT
+
+</A></H1>
+
+<P>Copyright (c) 2007 Elliot Shank.  All rights reserved.
+
+</P>
+<P>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.  The full text of this license
+can be found in the LICENSE file included with this module.
+
+</P>
+</BODY>
+</HTML>

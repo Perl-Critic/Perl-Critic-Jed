@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+<head>
+
+<title>Perl::Critic</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<meta name="keywords" content="Perl perl-critic perl::critic programming code standards" />
+<meta name="description" content="Perl source code analyzer." />
+
+<link rel="stylesheet" href="/styles/style.css" type="text/css" media="all" />
+
+<!-- Prevents Google Toolbar from coloring inputs yellow -->
+<script src="/javascript/input-style.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function setFocus()
+{
+document.getElementById("upload").focus()
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10783012-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body id="home" onload="setFocus()">
+ <h1 class="logo">Perl::Critic</h1>
+ <h2 class="tag-line">Some Ways Are Better Than Others</h2>
+
+ <div>
+  <form method="post" enctype="multipart/form-data" action="/perl/critic.pl" class="center">
+  <fieldset>
+   <p>
+    <label for="upload">
+     Select file to upload:
+    </label>
+    <input type="file" id="upload" name="code_file" size="30" />
+   </p>
+
+   <label>Select severity level:</label>
+
+   <p class="radio-buttons">
+     <label>
+       <input type="radio" name="severity" value="5" checked><br>
+       gentle
+     </label> 
+     
+     <label>
+       <input type="radio" name="severity" value="4" ><br>
+       stern 
+     </label> 
+
+     <label>
+       <input type="radio" name="severity" value="3" ><br>
+       harsh
+     </label> 
+
+     <label>
+       <input type="radio" name="severity" value="2" ><br>
+       cruel 
+     </label> 
+
+     <label>
+       <input type="radio" name="severity" value="1" ><br>
+       brutal 
+     </label> 
+   <p>
+    <input type="submit" id="critique" value="Analyze My Code!" class="button" />
+   </p>
+  </fieldset>
+  </form>
+ </div>
+
+
+ <h3><a href="http://search.cpan.org/dist/Perl-Critic">This site is running Perl-Critic version 1.115</a><h3>
+
+ <div class="footer">
+  <p><a href="mailto:web-users@perlcritic.tigris.org?subject=perlcritic.com feedback">Send Us Feedback.</a></p>
+  <p class="copyright">&copy;2006-2011 Jeffrey Thalhammer, all rights reserved</p>
+ </div>
+</body>
+</html>

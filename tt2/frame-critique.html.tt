@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<style type="text/css" media="all">
+<!--
+        
+a:link
+{color: #006699;
+text-decoration: none;}
+
+a:visited
+{color: #666;
+text-decoration: none;}
+
+a:hover
+{color: #34AACD;
+text-decoration: underline;}
+
+a:active
+{color: #34AACD;
+text-decoration: underline;}
+
+-->
+</style>
+
+</head>
+
+
+<body>
+<pre>
+
+[%- FOREACH viol = violations -%]
+
+    [%-
+        line = viol.location.0;
+        col  = viol.location.1;
+        desc = viol.description;
+        expl = viol.explanation;
+        sev  = viol.severity;
+
+        pol  = viol.policy;
+        pod  = pol.replace( '::', '/' );
+
+        msg1 = "$desc at line $line, column ${col}.";
+        link1 = "<a href='${target}#${line}' target='code_frame'>${msg1}</a>"
+
+        msg2 = "${expl}.  Severity: $sev";
+        link2 = "<a href='/pod/${pod}.html' target='_new'>${msg2}</a>"
+    -%]
+
+    [%- link1 %]&nbsp;&nbsp;[% link2 %]
+
+[%- END -%] 
+
+[%- IF violations.size == 0 -%]
+    
+Congratulations! No violations were found at this severity level.
+You might want to try again using a more restrictive severity level.
+
+[%- END -%]
+
+</pre>
+</body>
+</html>
+
+
+

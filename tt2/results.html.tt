@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<title>Perl::Critic - results</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="keywords" content="Perl perl-critic perl::critic programming code standards" />
+<link rel="stylesheet" href="/styles/style.css" type="text/css" media="all" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-10783012-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+<body id="results">
+
+<div id="header">
+    <a href="/" title="Return to Perl::Critic home"><h1 class="logo">Perl::Critic</h1></a>
+</div>
+
+<div id="contents">
+    <h3>Analysis of '[% source_path %]'</h3>
+    <small>Click a warning message to navigate the code.  Click the PBP reference for Policy info.</small>
+    <iframe src="[% critique_url %]" name="critique_frame" align="center" width="100%"></iframe>
+
+    <h3>Contents of '[% source_path %]'</h3>
+    <small>Line numbers have been added.</small>
+    <iframe src="[% code_url %]" name="code_frame" align="center" width="100%"></iframe>
+</div>
+
+<div id="footer">
+    <hr/>
+    <p><a href="mailto:web-users@perlcritic.tigris.org?subject=perlcritic.com feedback">Send Us Feedback.</a></p>
+    <p class="copyright">&copy;2006-2011 Perl::Critic, all rights reserved</p>
+</div>

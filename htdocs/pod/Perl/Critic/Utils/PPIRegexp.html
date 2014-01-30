@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<TITLE>NAME</TITLE>
+<LINK href="/styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#SYNOPSIS">SYNOPSIS
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#INTERFACE%20SUPPORT">INTERFACE SUPPORT
+
+</A><LI><A HREF="#IMPORTABLE%20SUBS">IMPORTABLE SUBS
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#COPYRIGHT">COPYRIGHT
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Critic::Utils::PPIRegexp - Utility functions for dealing with PPI regexp tokens.
+
+
+</P><H1><A NAME="SYNOPSIS">SYNOPSIS
+
+</A></H1>
+
+<PRE>   use Perl::Critic::Utils::PPIRegexp qw(:all);
+   use PPI::Document;
+   my $doc = PPI::Document-&gt;new(\'m/foo/');
+   my $elem = $doc-&gt;find('PPI::Token::Regexp::Match')-&gt;[0];
+   print get_match_string($elem);  # yields 'foo'
+</PRE>
+<H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>As of PPI v1.1xx, the PPI regexp token classes
+(<A HREF="PPI/Token/Regexp/Match.html">PPI::Token::Regexp::Match</A>,
+<A HREF="PPI/Token/Regexp/Substitute.html">PPI::Token::Regexp::Substitute</A> and
+<A HREF="PPI/Token/QuoteLike/Regexp.html">PPI::Token::QuoteLike::Regexp</A>) has a
+very weak interface, so it is necessary to dig into internals to learn
+anything useful.  This package contains subroutines to encapsulate
+that excess intimacy.  If future versions of PPI gain better
+accessors, this package will start using those.
+
+
+</P><H1><A NAME="INTERFACE%20SUPPORT">INTERFACE SUPPORT
+
+</A></H1>
+
+<P>This is considered to be a public module.  Any changes to its
+interface will go through a deprecation cycle.
+
+
+</P><H1><A NAME="IMPORTABLE%20SUBS">IMPORTABLE SUBS
+
+</A></H1>
+<DL><DT><A NAME="parse_regexp(%20%24token%20)"><CODE>parse_regexp( $token )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Parse the regexp token with <A HREF="Regexp/Parser.html">Regexp::Parser</A>.  If that
+module is not available or if there is a parse error, returns undef.
+If a parse success, returns a Regexp::Parser instance that can be used
+to walk the regexp object model.
+
+</P>
+<P>CAVEAT: This method pays special attention to the <CODE>x</CODE> modifier to the
+regexp.  If present, we wrap the regexp string in <CODE>(?x:...)</CODE> to
+ensure a proper parse.  This does change the object model though.
+
+</P>
+<P>Someday if PPI gets native Regexp support, this method may become
+deprecated.
+
+
+</P></DD>
+<DT><A NAME="ppiify(%20%24regexp%20)"><CODE>ppiify( $regexp )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Given a <A HREF="Regexp/Parser.html">Regexp::Parser</A> instance (perhaps as returned
+from <CODE>parse_regexp</CODE>) convert it to a tree of <A HREF="PPI/Node.html">PPI::Node</A>
+instances.  This is useful because PPI has a more familiar and
+powerful programming model than the Regexp::Parser object tree.
+
+</P>
+<P>Someday if PPI gets native Regexp support, this method may become a
+no-op.
+
+
+</P></DD>
+<DT><A NAME="get_match_string(%20%24token%20)"><CODE>get_match_string( $token )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Returns the match portion of the regexp or undef if the specified
+token is not a regexp.  Examples:
+
+</P>
+<PRE>    m/foo/;         # yields 'foo'
+    s/foo/bar/;     # yields 'foo'
+    / \A a \z /xms; # yields ' \\A a \\z '
+    qr{baz};        # yields 'baz'
+</PRE>
+</DD>
+<DT><A NAME="get_substitute_string(%20%24token%20)"><CODE>get_substitute_string( $token )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Returns the substitution portion of a search-and-replace regexp or
+undef if the specified token is not a valid regexp.  Examples:
+
+</P>
+<PRE>    m/foo/;         # yields undef
+    s/foo/bar/;     # yields 'bar'
+</PRE>
+</DD>
+<DT><A NAME="get_modifiers(%20%24token%20)"><CODE>get_modifiers( $token )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Returns a hash containing booleans for the modifiers of the regexp, or
+undef if the token is not a regexp.
+
+</P>
+<PRE>    /foo/xms;  # yields (m =&gt; 1, s =&gt; 1, x =&gt; 1)
+    s/foo//;   # yields ()
+    qr/foo/i;  # yields (i =&gt; 1)
+</PRE>
+</DD>
+<DT><A NAME="get_delimiters(%20%24token%20)"><CODE>get_delimiters( $token )</CODE>
+
+</A></DT>
+<DD>
+
+<P>Returns one (or two for a substitution regexp) two-character strings
+indicating the delimiters of the regexp, or an empty list if the token
+is not a regular expression token.  For example:
+
+</P>
+<PRE>    m/foo/;      # yields ('//')
+    m#foo#;      # yields ('##')
+    m&lt;foo&gt;;      # yields ('&lt;&gt;')
+    s/foo/bar/;  # yields ('//', '//')
+    s{foo}{bar}; # yields ('{}', '{}')
+    s{foo}/bar/; # yields ('{}', '//')   valid, but yuck!
+    qr/foo/;     # yields ('//')
+</PRE>
+</DD>
+</DL>
+<H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<P>Chris Dolan &lt;cdolan@cpan.org&gt;
+
+
+</P><H1><A NAME="COPYRIGHT">COPYRIGHT
+
+</A></H1>
+
+<P>Copyright (c) 2007-2009 Chris Dolan.  Many rights reserved.
+
+</P>
+<P>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.  The full text of this license
+can be found in the LICENSE file included with this module.
+
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,98 @@
+/* GLOBAL ------------------------------------ */
+
+.copyright
+{font-size: 10px;}
+
+
+/* HOME PAGE --------------------------------- */
+
+#home
+{text-align: center;
+margin-top: 60px;}
+
+#home h1.logo
+{font-family: "Courier New";
+font-size: 60px;
+text-indent: -1000em;
+background: transparent url(/images/perl-critic-logo.gif) no-repeat bottom center;
+width: 387px;
+height: 161px;
+margin: auto;
+margin-bottom: 10px;}
+
+#home h2.tag-line
+{font-family: Georgia, "TImes New Roman", Times, serif;
+font-weight: normal;
+font-style: italic;
+font-size: 24px;
+margin-bottom: 30px;}
+
+#home form
+{border: 1px solid #000;
+width: 350px;
+padding: 18px;
+text-align: left;
+margin-bottom: 10px;}
+
+#home input
+{font-family: "Courier New", Courier;
+font-size: 14px;
+font-weight: bold;
+width: 100%;}
+
+#home label
+{font-family: "Courier New", Courier;
+font-size: 14px;
+font-weight: bold;
+text-transform: uppercase;}
+
+#home .radio-buttons
+{clear: both;
+overflow: hidden;
+border: 1px solid #000;
+text-align: center;
+width: 100%;}
+
+
+#home .radio-buttons label
+{margin-right: 1em;
+float: left;
+text-transform: lowercase;
+text-align: center;}
+
+#home .button
+{border-style: solid;
+border-width: 3px;
+border-color: #76ADC8 #004161 #002A40 #3D8BB1;
+background: #006699;
+}
+
+/* BEGIN - Added by Subredu Manuel (aka diablo) */
+.center {
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+fieldset {
+  border: none;
+}
+
+/* END - Added by Subredu Manuel (aka diablo) */
+
+/* RESULTS PAGE --------------------------------- */
+
+#results {
+background: #FFF;}
+
+#header
+{padding: 20px;
+background: #006699;
+color: #FFF;}
+
+/* logo */
+#header h1.logo
+{width: 435px;
+height: 50px;
+background: transparent url(/images/perl-critic-logo2.gif) no-repeat;
+text-indent: -1000em;
+margin: 0;}

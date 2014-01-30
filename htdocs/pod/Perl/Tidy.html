@@ -1,0 +1,414 @@
+<HTML>
+<HEAD>
+<TITLE>Perl::Tidy</TITLE>
+<LINK href="/styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#SYNOPSIS">SYNOPSIS
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#EXAMPLE">EXAMPLE
+
+</A><LI><A HREF="#Using%20the%20formatter%20Callback%20Object">Using the <B>formatter</B> Callback Object
+
+</A><LI><A HREF="#EXPORT">EXPORT
+
+</A><LI><A HREF="#CREDITS">CREDITS
+
+</A><LI><A HREF="#VERSION">VERSION
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#SEE%20ALSO">SEE ALSO
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Tidy - Parses and beautifies perl source
+
+</P><H1><A NAME="SYNOPSIS">SYNOPSIS
+
+</A></H1>
+
+<PRE>    use Perl::Tidy;
+
+    Perl::Tidy::perltidy(
+        source            =&gt; $source,
+        destination       =&gt; $destination,
+        stderr            =&gt; $stderr,
+        argv              =&gt; $argv,
+        perltidyrc        =&gt; $perltidyrc,
+        logfile           =&gt; $logfile,
+        errorfile         =&gt; $errorfile,
+        formatter         =&gt; $formatter,           # callback object (see below)
+        dump_options      =&gt; $dump_options,
+        dump_options_type =&gt; $dump_options_type,
+    );</PRE>
+<H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>This module makes the functionality of the perltidy utility available to perl
+scripts.  Any or all of the input parameters may be omitted, in which case the
+@ARGV array will be used to provide input parameters as described
+in the perltidy(1) man page.
+
+</P>
+<P>For example, the perltidy script is basically just this:
+
+</P>
+<PRE>    use Perl::Tidy;
+    Perl::Tidy::perltidy();</PRE>
+
+<P>The module accepts input and output streams by a variety of methods.
+The following list of parameters may be any of a the following: a
+filename, an ARRAY reference, a SCALAR reference, or an object with
+either a <B>getline</B> or <B>print</B> method, as appropriate.
+
+</P>
+<PRE>        source            - the source of the script to be formatted
+        destination       - the destination of the formatted output
+        stderr            - standard error output
+        perltidyrc        - the .perltidyrc file
+        logfile           - the .LOG file stream, if any 
+        errorfile         - the .ERR file stream, if any
+        dump_options      - ref to a hash to receive parameters (see below), 
+        dump_options_type - controls contents of dump_options
+        dump_getopt_flags - ref to a hash to receive Getopt flags
+        dump_options_category - ref to a hash giving category of options
+        dump_abbreviations    - ref to a hash giving all abbreviations</PRE>
+
+<P>The following chart illustrates the logic used to decide how to
+treat a parameter.
+
+</P>
+<PRE>   ref($param)  $param is assumed to be:
+   -----------  ---------------------
+   undef        a filename
+   SCALAR       ref to string
+   ARRAY        ref to array
+   (other)      object with getline (if source) or print method</PRE>
+
+<P>If the parameter is an object, and the object has a <B>close</B> method, that
+close method will be called at the end of the stream.
+
+</P><DL><DT><A NAME="source">source
+
+</A></DT>
+<DD>
+If the <B>source</B> parameter is given, it defines the source of the
+input stream.
+
+</DD>
+<DT><A NAME="destination">destination
+
+</A></DT>
+<DD>
+If the <B>destination</B> parameter is given, it will be used to define the
+file or memory location to receive output of perltidy.  
+
+</DD>
+<DT><A NAME="stderr">stderr
+
+</A></DT>
+<DD>
+The <B>stderr</B> parameter allows the calling program to capture the output
+to what would otherwise go to the standard error output device.
+
+</DD>
+<DT><A NAME="perltidyrc">perltidyrc
+
+</A></DT>
+<DD>
+If the <B>perltidyrc</B> file is given, it will be used instead of any
+<I>.perltidyrc</I> configuration file that would otherwise be used. 
+
+</DD>
+<DT><A NAME="argv">argv
+
+</A></DT>
+<DD>
+If the <B>argv</B> parameter is given, it will be used instead of the
+<B>@ARGV</B> array.  The <B>argv</B> parameter may be a string, a reference to a
+string, or a reference to an array.  If it is a string or reference to a
+string, it will be parsed into an array of items just as if it were a
+command line string.
+
+</DD>
+<DT><A NAME="dump_options">dump_options
+
+</A></DT>
+<DD>
+
+<P>If the <B>dump_options</B> parameter is given, it must be the reference to a hash.
+In this case, the parameters contained in any perltidyrc configuration file
+will be placed in this hash and perltidy will return immediately.  This is
+equivalent to running perltidy with --dump-options, except that the perameters
+are returned in a hash rather than dumped to standard output.  Also, by default
+only the parameters in the perltidyrc file are returned, but this can be
+changed (see the next parameter).  This parameter provides a convenient method
+for external programs to read a perltidyrc file.  An example program using
+this feature, <I>perltidyrc_dump.pl</I>, is included in the distribution.
+
+</P>
+<P>Any combination of the <B>dump_</B> parameters may be used together.
+
+</P></DD>
+<DT><A NAME="dump_options_type">dump_options_type
+
+</A></DT>
+<DD>
+This parameter is a string which can be used to control the parameters placed
+in the hash reference supplied by <B>dump_options</B>.  The possible values are
+'perltidyrc' (default) and 'full'.  The 'full' parameter causes both the
+default options plus any options found in a perltidyrc file to be returned.
+
+</DD>
+<DT><A NAME="dump_getopt_flags">dump_getopt_flags
+
+</A></DT>
+<DD>
+If the <B>dump_getopt_flags</B> parameter is given, it must be the reference to a
+hash.  This hash will receive all of the parameters that perltidy understands
+and flags that are passed to Getopt::Long.  This parameter may be
+used alone or with the <B>dump_options</B> flag.  Perltidy will
+exit immediately after filling this hash.  See the demo program
+<I>perltidyrc_dump.pl</I> for example usage.
+
+</DD>
+<DT><A NAME="dump_options_category">dump_options_category
+
+</A></DT>
+<DD>
+If the <B>dump_options_category</B> parameter is given, it must be the reference to a
+hash.  This hash will receive a hash with keys equal to all long parameter names
+and values equal to the title of the corresponding section of the perltidy manual.
+See the demo program <I>perltidyrc_dump.pl</I> for example usage.
+
+</DD>
+<DT><A NAME="dump_abbreviations">dump_abbreviations
+
+</A></DT>
+<DD>
+If the <B>dump_abbreviations</B> parameter is given, it must be the reference to a
+hash.  This hash will receive all abbreviations used by Perl::Tidy.  See the
+demo program <I>perltidyrc_dump.pl</I> for example usage.
+
+</DD>
+</DL>
+<H1><A NAME="EXAMPLE">EXAMPLE
+
+</A></H1>
+
+<P>The following example passes perltidy a snippet as a reference
+to a string and receives the result back in a reference to
+an array.  
+
+</P>
+<PRE> use Perl::Tidy;
+ 
+ # some messy source code to format
+ my $source = &lt;&lt;'EOM';
+ use strict;
+ my @editors=('Emacs', 'Vi   '); my $rand = rand();
+ print &quot;A poll of 10 random programmers gave these results:\n&quot;;
+ foreach(0..10) {
+ my $i=int ($rand+rand());
+ print &quot; $editors[$i] users are from Venus&quot; . &quot;, &quot; . 
+ &quot;$editors[1-$i] users are from Mars&quot; . 
+ &quot;\n&quot;;
+ }
+ EOM
+ 
+ # We'll pass it as ref to SCALAR and receive it in a ref to ARRAY
+ my @dest;
+ perltidy( source =&gt; \$source, destination =&gt; \@dest );
+ foreach (@dest) {print}</PRE>
+<H1><A NAME="Using%20the%20formatter%20Callback%20Object">Using the <B>formatter</B> Callback Object
+
+</A></H1>
+
+<P>The <B>formatter</B> parameter is an optional callback object which allows
+the calling program to receive tokenized lines directly from perltidy for
+further specialized processing.  When this parameter is used, the two
+formatting options which are built into perltidy (beautification or
+html) are ignored.  The following diagram illustrates the logical flow:
+
+</P>
+<PRE>                    |-- (normal route)   -&gt; code beautification
+  caller-&gt;perltidy-&gt;|-- (-html flag )    -&gt; create html 
+                    |-- (formatter given)-&gt; callback to write_line</PRE>
+
+<P>This can be useful for processing perl scripts in some way.  The 
+parameter <CODE>$formatter</CODE> in the perltidy call,
+
+</P>
+<PRE>        formatter   =&gt; $formatter,  </PRE>
+
+<P>is an object created by the caller with a <CODE>write_line</CODE> method which
+will accept and process tokenized lines, one line per call.  Here is
+a simple example of a <CODE>write_line</CODE> which merely prints the line number,
+the line type (as determined by perltidy), and the text of the line:
+
+</P>
+<PRE> sub write_line {
+ 
+     # This is called from perltidy line-by-line
+     my $self              = shift;
+     my $line_of_tokens    = shift;
+     my $line_type         = $line_of_tokens-&gt;{_line_type};
+     my $input_line_number = $line_of_tokens-&gt;{_line_number};
+     my $input_line        = $line_of_tokens-&gt;{_line_text};
+     print &quot;$input_line_number:$line_type:$input_line&quot;;
+ }</PRE>
+
+<P>The complete program, <B>perllinetype</B>, is contained in the examples section of
+the source distribution.  As this example shows, the callback method
+receives a parameter <B>$line_of_tokens</B>, which is a reference to a hash
+of other useful information.  This example uses these hash entries:
+
+</P>
+<PRE> $line_of_tokens-&gt;{_line_number} - the line number (1,2,...)
+ $line_of_tokens-&gt;{_line_text}   - the text of the line
+ $line_of_tokens-&gt;{_line_type}   - the type of the line, one of:
+
+    SYSTEM         - system-specific code before hash-bang line
+    CODE           - line of perl code (including comments)
+    POD_START      - line starting pod, such as '=head'
+    POD            - pod documentation text
+    POD_END        - last line of pod section, '=cut'
+    HERE           - text of here-document
+    HERE_END       - last line of here-doc (target word)
+    FORMAT         - format section
+    FORMAT_END     - last line of format section, '.'
+    DATA_START     - __DATA__ line
+    DATA           - unidentified text following __DATA__
+    END_START      - __END__ line
+    END            - unidentified text following __END__
+    ERROR          - we are in big trouble, probably not a perl script</PRE>
+
+<P>Most applications will be only interested in lines of type <B>CODE</B>.  For
+another example, let's write a program which checks for one of the
+so-called <I>naughty matching variables</I> <CODE>&amp;`</CODE>, <CODE>$&amp;</CODE>, and <CODE>$'</CODE>, which
+can slow down processing.  Here is a <B>write_line</B>, from the example
+program <B>find_naughty.pl</B>, which does that:
+
+</P>
+<PRE> sub write_line {
+ 
+     # This is called back from perltidy line-by-line
+     # We're looking for $`, $&amp;, and $'
+     my ( $self, $line_of_tokens ) = @_;
+ 
+     # pull out some stuff we might need
+     my $line_type         = $line_of_tokens-&gt;{_line_type};
+     my $input_line_number = $line_of_tokens-&gt;{_line_number};
+     my $input_line        = $line_of_tokens-&gt;{_line_text};
+     my $rtoken_type       = $line_of_tokens-&gt;{_rtoken_type};
+     my $rtokens           = $line_of_tokens-&gt;{_rtokens};
+     chomp $input_line;
+ 
+     # skip comments, pod, etc
+     return if ( $line_type ne 'CODE' );
+ 
+     # loop over tokens looking for $`, $&amp;, and $'
+     for ( my $j = 0 ; $j &lt; @$rtoken_type ; $j++ ) {
+ 
+         # we only want to examine token types 'i' (identifier)
+         next unless $$rtoken_type[$j] eq 'i';
+ 
+         # pull out the actual token text
+         my $token = $$rtokens[$j];
+ 
+         # and check it
+         if ( $token =~ /^\$[\`\&amp;\']$/ ) {
+             print STDERR
+               &quot;$input_line_number: $token\n&quot;;
+         }
+     }
+ }</PRE>
+
+<P>This example pulls out these tokenization variables from the $line_of_tokens
+hash reference:
+
+</P>
+<PRE>     $rtoken_type = $line_of_tokens-&gt;{_rtoken_type};
+     $rtokens     = $line_of_tokens-&gt;{_rtokens};</PRE>
+
+<P>The variable <CODE>$rtoken_type</CODE> is a reference to an array of token type codes,
+and <CODE>$rtokens</CODE> is a reference to a corresponding array of token text.
+These are obviously only defined for lines of type <B>CODE</B>.
+Perltidy classifies tokens into types, and has a brief code for each type.
+You can get a complete list at any time by running perltidy from the
+command line with
+
+</P>
+<PRE>     perltidy --dump-token-types</PRE>
+
+<P>In the present example, we are only looking for tokens of type <B>i</B>
+(identifiers), so the for loop skips past all other types.  When an
+identifier is found, its actual text is checked to see if it is one
+being sought.  If so, the above write_line prints the token and its
+line number.
+
+</P>
+<P>The <B>formatter</B> feature is relatively new in perltidy, and further
+documentation needs to be written to complete its description.  However,
+several example programs have been written and can be found in the
+<B>examples</B> section of the source distribution.  Probably the best way
+to get started is to find one of the examples which most closely matches
+your application and start modifying it.
+
+</P>
+<P>For help with perltidy's pecular way of breaking lines into tokens, you
+might run, from the command line, 
+
+</P>
+<PRE> perltidy -D filename</PRE>
+
+<P>where <I>filename</I> is a short script of interest.  This will produce
+<I>filename.DEBUG</I> with interleaved lines of text and their token types.
+The -D flag has been in perltidy from the beginning for this purpose.
+If you want to see the code which creates this file, it is
+<CODE>write_debug_entry</CODE> in Tidy.pm.
+
+</P><H1><A NAME="EXPORT">EXPORT
+
+</A></H1>
+
+<PRE>  &amp;perltidy</PRE>
+<H1><A NAME="CREDITS">CREDITS
+
+</A></H1>
+
+<P>Thanks to Hugh Myers who developed the initial modular interface 
+to perltidy.
+
+</P><H1><A NAME="VERSION">VERSION
+
+</A></H1>
+
+<P>This man page documents Perl::Tidy version 20060719.
+
+</P><H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<PRE> Steve Hancock
+ perltidy at users.sourceforge.net</PRE>
+<H1><A NAME="SEE%20ALSO">SEE ALSO
+
+</A></H1>
+
+<P>The perltidy(1) man page describes all of the features of perltidy.  It
+can be found at http://perltidy.sourceforge.net.
+
+</P>
+</BODY>
+</HTML>

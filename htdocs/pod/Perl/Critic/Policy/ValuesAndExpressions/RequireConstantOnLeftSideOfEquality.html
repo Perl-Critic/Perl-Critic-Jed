@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<TITLE>Perl::Critic::Policy::ValuesAndExpressions::RequireConstantOnLeftSideOfEquality</TITLE>
+<LINK href="/styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#AFFILIATION">AFFILIATION
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#CONFIGURATION">CONFIGURATION
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#COPYRIGHT">COPYRIGHT
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Critic::Policy::ValuesAndExpressions::RequireConstantOnLeftSideOfEquality - Putting the constant value on the left side of an equality exposes typos.
+
+</P><HR>
+<H1><A NAME="AFFILIATION">AFFILIATION
+
+</A></H1>
+
+<P>This Policy is part of the core <A HREF="../../../../Perl/Critic.html">Perl::Critic</A>
+distribution.
+
+
+</P><HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>This policy warns you if you put a constant value (i.e. a literal number or
+some string) on the right side of a <CODE>==</CODE> operator when there is a variable or
+some other lvalue on the left side.  In a nutshell:
+
+</P>
+<PRE>  if($foo == 42){}    # not ok
+  if(42 == $foo){}    # ok
+
+  if($foo eq 'bar'){} # not ok
+  if('bar' eq $foo){} # ok</PRE>
+
+<P>The rationale is that sometimes you might mistype <CODE>=</CODE> instead of <CODE>==</CODE>, and
+if you're in the habit of putting the constant value on the left side of the
+equality, then Perl will give you a compile-time warning.  Perhaps this is
+best explained with an example:
+
+</P>
+<PRE>  if ($foo == 42){}  # This is what I want it to do.
+  if ($foo = 42){}   # But suppose this is what I actually type.
+  if (42 = $foo){}   # If I had (mis)typed it like this, then Perl gives a warning.
+  if (42 == $foo){}  # So this is what I should have attempted to type.</PRE>
+
+<P>So this Policy doesn't actually tell you if you've mistyped <CODE>=</CODE> instead of
+<CODE>==</CODE>.  Rather, it encourages you to write your expressions in a certain way
+so that Perl can warn you when you mistyped it.
+
+</P>
+<P>The <CODE>eq</CODE> operator is not prone to the same type of typo as the <CODE>==</CODE>
+operator, but this Policy still treats it the same way.  Therefore, the rule
+is consistently applied to all equality operators, which helps you to get into
+the habit of writing compliant expressions faster.
+
+
+</P><HR>
+<H1><A NAME="CONFIGURATION">CONFIGURATION
+
+</A></H1>
+
+<P>This Policy is not configurable except for the standard options.
+
+
+</P><HR>
+<H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<P>Jeffrey Ryan Thalhammer &lt;thaljef@cpan.org&gt;
+
+
+</P><HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT
+
+</A></H1>
+
+<P>Copyright (c) 2005-2008 Jeffrey Ryan Thalhammer.  All rights reserved.
+
+</P>
+<P>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.  The full text of this license
+can be found in the LICENSE file included with this module.
+
+</P>
+</BODY>
+</HTML>

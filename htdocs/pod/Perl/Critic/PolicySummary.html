@@ -1,0 +1,1205 @@
+<HTML>
+<HEAD>
+<TITLE>Perl::Critic::PolicySummary</TITLE>
+<LINK href="/styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#POLICIES">POLICIES
+
+</A><UL>
+<LI><A HREF="#BuiltinFunctions%3a%3aProhibitBooleanGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitBooleanGrep.html">BuiltinFunctions::ProhibitBooleanGrep</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitComplexMappings"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitComplexMappings.html">BuiltinFunctions::ProhibitComplexMappings</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitLvalueSubstr"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitLvalueSubstr.html">BuiltinFunctions::ProhibitLvalueSubstr</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitReverseSortBlock"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitReverseSortBlock.html">BuiltinFunctions::ProhibitReverseSortBlock</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitSleepViaSelect"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitSleepViaSelect.html">BuiltinFunctions::ProhibitSleepViaSelect</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitStringyEval"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitStringyEval.html">BuiltinFunctions::ProhibitStringyEval</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitStringySplit"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitStringySplit.html">BuiltinFunctions::ProhibitStringySplit</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitUniversalCan"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitUniversalCan.html">BuiltinFunctions::ProhibitUniversalCan</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitUniversalIsa"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitUniversalIsa.html">BuiltinFunctions::ProhibitUniversalIsa</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitVoidGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitVoidGrep.html">BuiltinFunctions::ProhibitVoidGrep</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aProhibitVoidMap"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitVoidMap.html">BuiltinFunctions::ProhibitVoidMap</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aRequireBlockGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireBlockGrep.html">BuiltinFunctions::RequireBlockGrep</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aRequireBlockMap"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireBlockMap.html">BuiltinFunctions::RequireBlockMap</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aRequireGlobFunction"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireGlobFunction.html">BuiltinFunctions::RequireGlobFunction</A>
+
+</A><LI><A HREF="#BuiltinFunctions%3a%3aRequireSimpleSortBlock"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireSimpleSortBlock.html">BuiltinFunctions::RequireSimpleSortBlock</A>
+
+</A><LI><A HREF="#ClassHierarchies%3a%3aProhibitAutoloading"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitAutoloading.html">ClassHierarchies::ProhibitAutoloading</A>
+
+</A><LI><A HREF="#ClassHierarchies%3a%3aProhibitExplicitISA"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitExplicitISA.html">ClassHierarchies::ProhibitExplicitISA</A>
+
+</A><LI><A HREF="#ClassHierarchies%3a%3aProhibitOneArgBless"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitOneArgBless.html">ClassHierarchies::ProhibitOneArgBless</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aProhibitHardTabs"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitHardTabs.html">CodeLayout::ProhibitHardTabs</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aProhibitParensWithBuiltins"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitParensWithBuiltins.html">CodeLayout::ProhibitParensWithBuiltins</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aProhibitQuotedWordLists"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitQuotedWordLists.html">CodeLayout::ProhibitQuotedWordLists</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aProhibitTrailingWhitespace"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitTrailingWhitespace.html">CodeLayout::ProhibitTrailingWhitespace</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aRequireConsistentNewlines"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireConsistentNewlines.html">CodeLayout::RequireConsistentNewlines</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aRequireTidyCode"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireTidyCode.html">CodeLayout::RequireTidyCode</A>
+
+</A><LI><A HREF="#CodeLayout%3a%3aRequireTrailingCommas"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireTrailingCommas.html">CodeLayout::RequireTrailingCommas</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitCStyleForLoops"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitCStyleForLoops.html">ControlStructures::ProhibitCStyleForLoops</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitCascadingIfElse"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitCascadingIfElse.html">ControlStructures::ProhibitCascadingIfElse</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitDeepNests"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitDeepNests.html">ControlStructures::ProhibitDeepNests</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitLabelsWithSpecialBlockNames"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitLabelsWithSpecialBlockNames.html">ControlStructures::ProhibitLabelsWithSpecialBlockNames</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitMutatingListFunctions"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitMutatingListFunctions.html">ControlStructures::ProhibitMutatingListFunctions</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitNegativeExpressionsInUnlessAndUntilConditions"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitNegativeExpressionsInUnlessAndUntilConditions.html">ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitPostfixControls"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitPostfixControls.html">ControlStructures::ProhibitPostfixControls</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitUnlessBlocks"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUnlessBlocks.html">ControlStructures::ProhibitUnlessBlocks</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitUnreachableCode"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUnreachableCode.html">ControlStructures::ProhibitUnreachableCode</A>
+
+</A><LI><A HREF="#ControlStructures%3a%3aProhibitUntilBlocks"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUntilBlocks.html">ControlStructures::ProhibitUntilBlocks</A>
+
+</A><LI><A HREF="#Documentation%3a%3aPodSpelling"><A HREF="../../Perl/Critic/Policy/Documentation/PodSpelling.html">Documentation::PodSpelling</A>
+
+</A><LI><A HREF="#Documentation%3a%3aRequirePackageMatchesPodName"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePackageMatchesPodName.html">Documentation::RequirePackageMatchesPodName</A>
+
+</A><LI><A HREF="#Documentation%3a%3aRequirePodAtEnd"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodAtEnd.html">Documentation::RequirePodAtEnd</A>
+
+</A><LI><A HREF="#Documentation%3a%3aRequirePodLinksIncludeText"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodLinksIncludeText.html">Documentation::RequirePodLinksIncludeText</A>
+
+</A><LI><A HREF="#Documentation%3a%3aRequirePodSections"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodSections.html">Documentation::RequirePodSections</A>
+
+</A><LI><A HREF="#ErrorHandling%3a%3aRequireCarping"><A HREF="../../Perl/Critic/Policy/ErrorHandling/RequireCarping.html">ErrorHandling::RequireCarping</A>
+
+</A><LI><A HREF="#ErrorHandling%3a%3aRequireCheckingReturnValueOfEval"><A HREF="../../Perl/Critic/Policy/ErrorHandling/RequireCheckingReturnValueOfEval.html">ErrorHandling::RequireCheckingReturnValueOfEval</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitBacktickOperators"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitBacktickOperators.html">InputOutput::ProhibitBacktickOperators</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitBarewordFileHandles"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitBarewordFileHandles.html">InputOutput::ProhibitBarewordFileHandles</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitExplicitStdin"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitExplicitStdin.html">InputOutput::ProhibitExplicitStdin</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitInteractiveTest"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitInteractiveTest.html">InputOutput::ProhibitInteractiveTest</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitJoinedReadline"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitJoinedReadline.html">InputOutput::ProhibitJoinedReadline</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitOneArgSelect"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitOneArgSelect.html">InputOutput::ProhibitOneArgSelect</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitReadlineInForLoop"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitReadlineInForLoop.html">InputOutput::ProhibitReadlineInForLoop</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aProhibitTwoArgOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitTwoArgOpen.html">InputOutput::ProhibitTwoArgOpen</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireBracedFileHandleWithPrint"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireBracedFileHandleWithPrint.html">InputOutput::RequireBracedFileHandleWithPrint</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireBriefOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireBriefOpen.html">InputOutput::RequireBriefOpen</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireCheckedClose"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedClose.html">InputOutput::RequireCheckedClose</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireCheckedOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedOpen.html">InputOutput::RequireCheckedOpen</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireCheckedSyscalls"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedSyscalls.html">InputOutput::RequireCheckedSyscalls</A>
+
+</A><LI><A HREF="#InputOutput%3a%3aRequireEncodingWithUTF8Layer"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireEncodingWithUTF8Layer.html">InputOutput::RequireEncodingWithUTF8Layer</A>
+
+</A><LI><A HREF="#Miscellanea%3a%3aProhibitFormats"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitFormats.html">Miscellanea::ProhibitFormats</A>
+
+</A><LI><A HREF="#Miscellanea%3a%3aProhibitTies"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitTies.html">Miscellanea::ProhibitTies</A>
+
+</A><LI><A HREF="#Miscellanea%3a%3aProhibitUnrestrictedNoCritic"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitUnrestrictedNoCritic.html">Miscellanea::ProhibitUnrestrictedNoCritic</A>
+
+</A><LI><A HREF="#Miscellanea%3a%3aProhibitUselessNoCritic"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitUselessNoCritic.html">Miscellanea::ProhibitUselessNoCritic</A>
+
+</A><LI><A HREF="#Miscellanea%3a%3aRequireRcsKeywords"><A HREF="../../Perl/Critic/Policy/Miscellanea/RequireRcsKeywords.html">Miscellanea::RequireRcsKeywords</A>
+
+</A><LI><A HREF="#Modules%3a%3aProhibitAutomaticExportation"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitAutomaticExportation.html">Modules::ProhibitAutomaticExportation</A>
+
+</A><LI><A HREF="#Modules%3a%3aProhibitConditionalUseStatements"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitConditionalUseStatements.html">Modules::ProhibitConditionalUseStatements</A>
+
+</A><LI><A HREF="#Modules%3a%3aProhibitEvilModules"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitEvilModules.html">Modules::ProhibitEvilModules</A>
+
+</A><LI><A HREF="#Modules%3a%3aProhibitExcessMainComplexity"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitExcessMainComplexity.html">Modules::ProhibitExcessMainComplexity</A>
+
+</A><LI><A HREF="#Modules%3a%3aProhibitMultiplePackages"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitMultiplePackages.html">Modules::ProhibitMultiplePackages</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireBarewordIncludes"><A HREF="../../Perl/Critic/Policy/Modules/RequireBarewordIncludes.html">Modules::RequireBarewordIncludes</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireEndWithOne"><A HREF="../../Perl/Critic/Policy/Modules/RequireEndWithOne.html">Modules::RequireEndWithOne</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireExplicitPackage"><A HREF="../../Perl/Critic/Policy/Modules/RequireExplicitPackage.html">Modules::RequireExplicitPackage</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireFilenameMatchesPackage"><A HREF="../../Perl/Critic/Policy/Modules/RequireFilenameMatchesPackage.html">Modules::RequireFilenameMatchesPackage</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireNoMatchVarsWithUseEnglish"><A HREF="../../Perl/Critic/Policy/Modules/RequireNoMatchVarsWithUseEnglish.html">Modules::RequireNoMatchVarsWithUseEnglish</A>
+
+</A><LI><A HREF="#Modules%3a%3aRequireVersionVar"><A HREF="../../Perl/Critic/Policy/Modules/RequireVersionVar.html">Modules::RequireVersionVar</A>
+
+</A><LI><A HREF="#NamingConventions%3a%3aCapitalization"><A HREF="../../Perl/Critic/Policy/NamingConventions/Capitalization.html">NamingConventions::Capitalization</A>
+
+</A><LI><A HREF="#NamingConventions%3a%3aProhibitAmbiguousNames"><A HREF="../../Perl/Critic/Policy/NamingConventions/ProhibitAmbiguousNames.html">NamingConventions::ProhibitAmbiguousNames</A>
+
+</A><LI><A HREF="#Objects%3a%3aProhibitIndirectSyntax"><A HREF="../../Perl/Critic/Policy/Objects/ProhibitIndirectSyntax.html">Objects::ProhibitIndirectSyntax</A>
+
+</A><LI><A HREF="#References%3a%3aProhibitDoubleSigils"><A HREF="../../Perl/Critic/Policy/References/ProhibitDoubleSigils.html">References::ProhibitDoubleSigils</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitCaptureWithoutTest"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitCaptureWithoutTest.html">RegularExpressions::ProhibitCaptureWithoutTest</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitComplexRegexes"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitComplexRegexes.html">RegularExpressions::ProhibitComplexRegexes</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitEnumeratedClasses"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitEnumeratedClasses.html">RegularExpressions::ProhibitEnumeratedClasses</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitEscapedMetacharacters"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitEscapedMetacharacters.html">RegularExpressions::ProhibitEscapedMetacharacters</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitFixedStringMatches"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitFixedStringMatches.html">RegularExpressions::ProhibitFixedStringMatches</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitSingleCharAlternation"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitSingleCharAlternation.html">RegularExpressions::ProhibitSingleCharAlternation</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitUnusedCapture"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitUnusedCapture.html">RegularExpressions::ProhibitUnusedCapture</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aProhibitUnusualDelimiters"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitUnusualDelimiters.html">RegularExpressions::ProhibitUnusualDelimiters</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aRequireBracesForMultiline"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireBracesForMultiline.html">RegularExpressions::RequireBracesForMultiline</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aRequireDotMatchAnything"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireDotMatchAnything.html">RegularExpressions::RequireDotMatchAnything</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aRequireExtendedFormatting"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireExtendedFormatting.html">RegularExpressions::RequireExtendedFormatting</A>
+
+</A><LI><A HREF="#RegularExpressions%3a%3aRequireLineBoundaryMatching"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireLineBoundaryMatching.html">RegularExpressions::RequireLineBoundaryMatching</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitAmpersandSigils"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitAmpersandSigils.html">Subroutines::ProhibitAmpersandSigils</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitBuiltinHomonyms"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitBuiltinHomonyms.html">Subroutines::ProhibitBuiltinHomonyms</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitExcessComplexity"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitExcessComplexity.html">Subroutines::ProhibitExcessComplexity</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitExplicitReturnUndef"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitExplicitReturnUndef.html">Subroutines::ProhibitExplicitReturnUndef</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitManyArgs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitManyArgs.html">Subroutines::ProhibitManyArgs</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitNestedSubs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitNestedSubs.html">Subroutines::ProhibitNestedSubs</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitReturnSort"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitReturnSort.html">Subroutines::ProhibitReturnSort</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitSubroutinePrototypes"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitSubroutinePrototypes.html">Subroutines::ProhibitSubroutinePrototypes</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProhibitUnusedPrivateSubroutines"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitUnusedPrivateSubroutines.html">Subroutines::ProhibitUnusedPrivateSubroutines</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aProtectPrivateSubs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProtectPrivateSubs.html">Subroutines::ProtectPrivateSubs</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aRequireArgUnpacking"><A HREF="../../Perl/Critic/Policy/Subroutines/RequireArgUnpacking.html">Subroutines::RequireArgUnpacking</A>
+
+</A><LI><A HREF="#Subroutines%3a%3aRequireFinalReturn"><A HREF="../../Perl/Critic/Policy/Subroutines/RequireFinalReturn.html">Subroutines::RequireFinalReturn</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aProhibitNoStrict"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitNoStrict.html">TestingAndDebugging::ProhibitNoStrict</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aProhibitNoWarnings"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitNoWarnings.html">TestingAndDebugging::ProhibitNoWarnings</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aProhibitProlongedStrictureOverride"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitProlongedStrictureOverride.html">TestingAndDebugging::ProhibitProlongedStrictureOverride</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aRequireTestLabels"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireTestLabels.html">TestingAndDebugging::RequireTestLabels</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aRequireUseStrict"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireUseStrict.html">TestingAndDebugging::RequireUseStrict</A>
+
+</A><LI><A HREF="#TestingAndDebugging%3a%3aRequireUseWarnings"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireUseWarnings.html">TestingAndDebugging::RequireUseWarnings</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitCommaSeparatedStatements"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitCommaSeparatedStatements.html">ValuesAndExpressions::ProhibitCommaSeparatedStatements</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitComplexVersion"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitComplexVersion.html">ValuesAndExpressions::ProhibitComplexVersion</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitConstantPragma"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitConstantPragma.html">ValuesAndExpressions::ProhibitConstantPragma</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitEmptyQuotes"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitEmptyQuotes.html">ValuesAndExpressions::ProhibitEmptyQuotes</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitEscapedCharacters"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitEscapedCharacters.html">ValuesAndExpressions::ProhibitEscapedCharacters</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitImplicitNewlines"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitImplicitNewlines.html">ValuesAndExpressions::ProhibitImplicitNewlines</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitInterpolationOfLiterals"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitInterpolationOfLiterals.html">ValuesAndExpressions::ProhibitInterpolationOfLiterals</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitLeadingZeros"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitLeadingZeros.html">ValuesAndExpressions::ProhibitLeadingZeros</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitLongChainsOfMethodCalls"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitLongChainsOfMethodCalls.html">ValuesAndExpressions::ProhibitLongChainsOfMethodCalls</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitMagicNumbers"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMagicNumbers.html">ValuesAndExpressions::ProhibitMagicNumbers</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitMismatchedOperators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMismatchedOperators.html">ValuesAndExpressions::ProhibitMismatchedOperators</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitMixedBooleanOperators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMixedBooleanOperators.html">ValuesAndExpressions::ProhibitMixedBooleanOperators</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitNoisyQuotes"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitNoisyQuotes.html">ValuesAndExpressions::ProhibitNoisyQuotes</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitQuotesAsQuotelikeOperatorDelimiters"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitQuotesAsQuotelikeOperatorDelimiters.html">ValuesAndExpressions::ProhibitQuotesAsQuotelikeOperatorDelimiters</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitSpecialLiteralHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitSpecialLiteralHeredocTerminator.html">ValuesAndExpressions::ProhibitSpecialLiteralHeredocTerminator</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aProhibitVersionStrings"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitVersionStrings.html">ValuesAndExpressions::ProhibitVersionStrings</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aRequireConstantVersion"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireConstantVersion.html">ValuesAndExpressions::RequireConstantVersion</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aRequireInterpolationOfMetachars"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireInterpolationOfMetachars.html">ValuesAndExpressions::RequireInterpolationOfMetachars</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aRequireNumberSeparators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireNumberSeparators.html">ValuesAndExpressions::RequireNumberSeparators</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aRequireQuotedHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireQuotedHeredocTerminator.html">ValuesAndExpressions::RequireQuotedHeredocTerminator</A>
+
+</A><LI><A HREF="#ValuesAndExpressions%3a%3aRequireUpperCaseHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireUpperCaseHeredocTerminator.html">ValuesAndExpressions::RequireUpperCaseHeredocTerminator</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitConditionalDeclarations"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitConditionalDeclarations.html">Variables::ProhibitConditionalDeclarations</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitEvilVariables"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitEvilVariables.html">Variables::ProhibitEvilVariables</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitLocalVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitLocalVars.html">Variables::ProhibitLocalVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitMatchVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitMatchVars.html">Variables::ProhibitMatchVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitPackageVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPackageVars.html">Variables::ProhibitPackageVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitPerl4PackageNames"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPerl4PackageNames.html">Variables::ProhibitPerl4PackageNames</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitPunctuationVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPunctuationVars.html">Variables::ProhibitPunctuationVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitReusedNames"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitReusedNames.html">Variables::ProhibitReusedNames</A>
+
+</A><LI><A HREF="#Variables%3a%3aProhibitUnusedVariables"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitUnusedVariables.html">Variables::ProhibitUnusedVariables</A>
+
+</A><LI><A HREF="#Variables%3a%3aProtectPrivateVars"><A HREF="../../Perl/Critic/Policy/Variables/ProtectPrivateVars.html">Variables::ProtectPrivateVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aRequireInitializationForLocalVars"><A HREF="../../Perl/Critic/Policy/Variables/RequireInitializationForLocalVars.html">Variables::RequireInitializationForLocalVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aRequireLexicalLoopIterators"><A HREF="../../Perl/Critic/Policy/Variables/RequireLexicalLoopIterators.html">Variables::RequireLexicalLoopIterators</A>
+
+</A><LI><A HREF="#Variables%3a%3aRequireLocalizedPunctuationVars"><A HREF="../../Perl/Critic/Policy/Variables/RequireLocalizedPunctuationVars.html">Variables::RequireLocalizedPunctuationVars</A>
+
+</A><LI><A HREF="#Variables%3a%3aRequireNegativeIndices"><A HREF="../../Perl/Critic/Policy/Variables/RequireNegativeIndices.html">Variables::RequireNegativeIndices</A>
+
+</A></UL>
+<LI><A HREF="#VERSION">VERSION
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#COPYRIGHT">COPYRIGHT
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Critic::PolicySummary - Descriptions of the Policy modules included with <A HREF="../../Perl/Critic.html">Perl::Critic</A> itself.
+
+
+</P><H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>The following Policy modules are distributed with Perl::Critic. (There are
+additional Policies that can be found in add-on distributions.)  The Policy
+modules have been categorized according to the table of contents in Damian
+Conway's book <B>Perl Best Practices</B>. Since most coding standards take the
+form &quot;do this...&quot; or &quot;don't do that...&quot;, I have adopted the convention of
+naming each module <CODE>RequireSomething</CODE> or <CODE>ProhibitSomething</CODE>.  Each Policy
+is listed here with its default severity.  If you don't agree with the default
+severity, you can change it in your <I>.perlcriticrc</I> file (try <CODE>perlcritic
+--profile-proto</CODE> for a starting version).  See the documentation of each
+module for its specific details.
+
+
+</P><H1><A NAME="POLICIES">POLICIES
+
+</A></H1>
+<H2><A NAME="BuiltinFunctions%3a%3aProhibitBooleanGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitBooleanGrep.html">BuiltinFunctions::ProhibitBooleanGrep</A>
+
+</A></H2>
+
+<P>Use <CODE>List::MoreUtils::any</CODE> instead of <CODE>grep</CODE> in boolean context. [Default severity 2]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitComplexMappings"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitComplexMappings.html">BuiltinFunctions::ProhibitComplexMappings</A>
+
+</A></H2>
+
+<P>Map blocks should have a single statement. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitLvalueSubstr"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitLvalueSubstr.html">BuiltinFunctions::ProhibitLvalueSubstr</A>
+
+</A></H2>
+
+<P>Use 4-argument <CODE>substr</CODE> instead of writing <CODE>substr($foo, 2, 6) = $bar</CODE>. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitReverseSortBlock"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitReverseSortBlock.html">BuiltinFunctions::ProhibitReverseSortBlock</A>
+
+</A></H2>
+
+<P>Forbid $b before $a in sort blocks. [Default severity 1]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitSleepViaSelect"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitSleepViaSelect.html">BuiltinFunctions::ProhibitSleepViaSelect</A>
+
+</A></H2>
+
+<P>Use <A HREF="../../Time/HiRes.html">Time::HiRes</A> instead of something like <CODE>select(undef, undef, undef, .05)</CODE>. [Default severity 5]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitStringyEval"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitStringyEval.html">BuiltinFunctions::ProhibitStringyEval</A>
+
+</A></H2>
+
+<P>Write <CODE>eval { my $foo; bar($foo) }</CODE> instead of <CODE>eval &quot;my $foo; bar($foo);&quot;</CODE>. [Default severity 5]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitStringySplit"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitStringySplit.html">BuiltinFunctions::ProhibitStringySplit</A>
+
+</A></H2>
+
+<P>Write <CODE>split /-/, $string</CODE> instead of <CODE>split '-', $string</CODE>. [Default severity 2]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitUniversalCan"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitUniversalCan.html">BuiltinFunctions::ProhibitUniversalCan</A>
+
+</A></H2>
+
+<P>Write <CODE>eval { $foo-&gt;can($name) }</CODE> instead of <CODE>UNIVERSAL::can($foo, $name)</CODE>. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitUniversalIsa"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitUniversalIsa.html">BuiltinFunctions::ProhibitUniversalIsa</A>
+
+</A></H2>
+
+<P>Write <CODE>eval { $foo-&gt;isa($pkg) }</CODE> instead of <CODE>UNIVERSAL::isa($foo, $pkg)</CODE>. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitVoidGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitVoidGrep.html">BuiltinFunctions::ProhibitVoidGrep</A>
+
+</A></H2>
+
+<P>Don't use <CODE>grep</CODE> in void contexts. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aProhibitVoidMap"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/ProhibitVoidMap.html">BuiltinFunctions::ProhibitVoidMap</A>
+
+</A></H2>
+
+<P>Don't use <CODE>map</CODE> in void contexts. [Default severity 3]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aRequireBlockGrep"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireBlockGrep.html">BuiltinFunctions::RequireBlockGrep</A>
+
+</A></H2>
+
+<P>Write <CODE>grep { $_ =~ /$pattern/ } @list</CODE> instead of <CODE>grep /$pattern/, @list</CODE>. [Default severity 4]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aRequireBlockMap"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireBlockMap.html">BuiltinFunctions::RequireBlockMap</A>
+
+</A></H2>
+
+<P>Write <CODE>map { $_ =~ /$pattern/ } @list</CODE> instead of <CODE>map /$pattern/, @list</CODE>. [Default severity 4]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aRequireGlobFunction"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireGlobFunction.html">BuiltinFunctions::RequireGlobFunction</A>
+
+</A></H2>
+
+<P>Use <CODE>glob q{*}</CODE> instead of &lt;*&gt;. [Default severity 5]
+
+</P><H2><A NAME="BuiltinFunctions%3a%3aRequireSimpleSortBlock"><A HREF="../../Perl/Critic/Policy/BuiltinFunctions/RequireSimpleSortBlock.html">BuiltinFunctions::RequireSimpleSortBlock</A>
+
+</A></H2>
+
+<P>Sort blocks should have a single statement. [Default severity 3]
+
+</P><H2><A NAME="ClassHierarchies%3a%3aProhibitAutoloading"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitAutoloading.html">ClassHierarchies::ProhibitAutoloading</A>
+
+</A></H2>
+
+<P>AUTOLOAD methods should be avoided. [Default severity 3]
+
+</P><H2><A NAME="ClassHierarchies%3a%3aProhibitExplicitISA"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitExplicitISA.html">ClassHierarchies::ProhibitExplicitISA</A>
+
+</A></H2>
+
+<P>Employ <CODE>use base</CODE> instead of <CODE>@ISA</CODE>. [Default severity 3]
+
+</P><H2><A NAME="ClassHierarchies%3a%3aProhibitOneArgBless"><A HREF="../../Perl/Critic/Policy/ClassHierarchies/ProhibitOneArgBless.html">ClassHierarchies::ProhibitOneArgBless</A>
+
+</A></H2>
+
+<P>Write <CODE>bless {}, $class;</CODE> instead of just <CODE>bless {};</CODE>. [Default severity 5]
+
+</P><H2><A NAME="CodeLayout%3a%3aProhibitHardTabs"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitHardTabs.html">CodeLayout::ProhibitHardTabs</A>
+
+</A></H2>
+
+<P>Use spaces instead of tabs. [Default severity 3]
+
+</P><H2><A NAME="CodeLayout%3a%3aProhibitParensWithBuiltins"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitParensWithBuiltins.html">CodeLayout::ProhibitParensWithBuiltins</A>
+
+</A></H2>
+
+<P>Write <CODE>open $handle, $path</CODE> instead of <CODE>open($handle, $path)</CODE>. [Default severity 1]
+
+</P><H2><A NAME="CodeLayout%3a%3aProhibitQuotedWordLists"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitQuotedWordLists.html">CodeLayout::ProhibitQuotedWordLists</A>
+
+</A></H2>
+
+<P>Write <CODE>qw(foo bar baz)</CODE> instead of <CODE>('foo', 'bar', 'baz')</CODE>. [Default severity 2]
+
+</P><H2><A NAME="CodeLayout%3a%3aProhibitTrailingWhitespace"><A HREF="../../Perl/Critic/Policy/CodeLayout/ProhibitTrailingWhitespace.html">CodeLayout::ProhibitTrailingWhitespace</A>
+
+</A></H2>
+
+<P>Don't use whitespace at the end of lines. [Default severity 1]
+
+</P><H2><A NAME="CodeLayout%3a%3aRequireConsistentNewlines"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireConsistentNewlines.html">CodeLayout::RequireConsistentNewlines</A>
+
+</A></H2>
+
+<P>Use the same newline through the source. [Default severity 4]
+
+</P><H2><A NAME="CodeLayout%3a%3aRequireTidyCode"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireTidyCode.html">CodeLayout::RequireTidyCode</A>
+
+</A></H2>
+
+<P>Must run code through <A HREF="../../perltidy.html">perltidy</A>. [Default severity 1]
+
+</P><H2><A NAME="CodeLayout%3a%3aRequireTrailingCommas"><A HREF="../../Perl/Critic/Policy/CodeLayout/RequireTrailingCommas.html">CodeLayout::RequireTrailingCommas</A>
+
+</A></H2>
+
+<P>Put a comma at the end of every multi-line list declaration, including the last one. [Default severity 1]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitCStyleForLoops"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitCStyleForLoops.html">ControlStructures::ProhibitCStyleForLoops</A>
+
+</A></H2>
+
+<P>Write <CODE>for(0..20)</CODE> instead of <CODE>for($i=0; $i&lt;=20; $i++)</CODE>. [Default severity 2]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitCascadingIfElse"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitCascadingIfElse.html">ControlStructures::ProhibitCascadingIfElse</A>
+
+</A></H2>
+
+<P>Don't write long &quot;if-elsif-elsif-elsif-elsif...else&quot; chains. [Default severity 3]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitDeepNests"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitDeepNests.html">ControlStructures::ProhibitDeepNests</A>
+
+</A></H2>
+
+<P>Don't write deeply nested loops and conditionals. [Default severity 3]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitLabelsWithSpecialBlockNames"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitLabelsWithSpecialBlockNames.html">ControlStructures::ProhibitLabelsWithSpecialBlockNames</A>
+
+</A></H2>
+
+<P>Don't use labels that are the same as the special block names. [Default severity 4]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitMutatingListFunctions"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitMutatingListFunctions.html">ControlStructures::ProhibitMutatingListFunctions</A>
+
+</A></H2>
+
+<P>Don't modify <CODE>$_</CODE> in list functions. [Default severity 5]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitNegativeExpressionsInUnlessAndUntilConditions"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitNegativeExpressionsInUnlessAndUntilConditions.html">ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions</A>
+
+</A></H2>
+
+<P>Don't use operators like <CODE>not</CODE>, <CODE>!~</CODE>, and <CODE>le</CODE> within <CODE>until</CODE> and <CODE>unless</CODE>. [Default severity 3]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitPostfixControls"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitPostfixControls.html">ControlStructures::ProhibitPostfixControls</A>
+
+</A></H2>
+
+<P>Write <CODE>if($condition){ do_something() }</CODE> instead of <CODE>do_something() if $condition</CODE>. [Default severity 2]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitUnlessBlocks"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUnlessBlocks.html">ControlStructures::ProhibitUnlessBlocks</A>
+
+</A></H2>
+
+<P>Write <CODE>if(! $condition)</CODE> instead of <CODE>unless($condition)</CODE>. [Default severity 2]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitUnreachableCode"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUnreachableCode.html">ControlStructures::ProhibitUnreachableCode</A>
+
+</A></H2>
+
+<P>Don't write code after an unconditional <CODE>die, exit, or next</CODE>. [Default severity 4]
+
+</P><H2><A NAME="ControlStructures%3a%3aProhibitUntilBlocks"><A HREF="../../Perl/Critic/Policy/ControlStructures/ProhibitUntilBlocks.html">ControlStructures::ProhibitUntilBlocks</A>
+
+</A></H2>
+
+<P>Write <CODE>while(! $condition)</CODE> instead of <CODE>until($condition)</CODE>. [Default severity 2]
+
+</P><H2><A NAME="Documentation%3a%3aPodSpelling"><A HREF="../../Perl/Critic/Policy/Documentation/PodSpelling.html">Documentation::PodSpelling</A>
+
+</A></H2>
+
+<P>Check your spelling. [Default severity 1]
+
+</P><H2><A NAME="Documentation%3a%3aRequirePackageMatchesPodName"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePackageMatchesPodName.html">Documentation::RequirePackageMatchesPodName</A>
+
+</A></H2>
+
+<P>The <CODE>=head1 NAME</CODE> section should match the package. [Default severity 1]
+
+</P><H2><A NAME="Documentation%3a%3aRequirePodAtEnd"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodAtEnd.html">Documentation::RequirePodAtEnd</A>
+
+</A></H2>
+
+<P>All POD should be after <CODE>__END__</CODE>. [Default severity 1]
+
+</P><H2><A NAME="Documentation%3a%3aRequirePodLinksIncludeText"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodLinksIncludeText.html">Documentation::RequirePodLinksIncludeText</A>
+
+</A></H2>
+
+<P>Provide text to display with your pod links. [Default severity 2]
+
+</P><H2><A NAME="Documentation%3a%3aRequirePodSections"><A HREF="../../Perl/Critic/Policy/Documentation/RequirePodSections.html">Documentation::RequirePodSections</A>
+
+</A></H2>
+
+<P>Organize your POD into the customary sections. [Default severity 2]
+
+</P><H2><A NAME="ErrorHandling%3a%3aRequireCarping"><A HREF="../../Perl/Critic/Policy/ErrorHandling/RequireCarping.html">ErrorHandling::RequireCarping</A>
+
+</A></H2>
+
+<P>Use functions from <A HREF="../../Carp.html">Carp</A> instead of <CODE>warn</CODE> or <CODE>die</CODE>. [Default severity 3]
+
+</P><H2><A NAME="ErrorHandling%3a%3aRequireCheckingReturnValueOfEval"><A HREF="../../Perl/Critic/Policy/ErrorHandling/RequireCheckingReturnValueOfEval.html">ErrorHandling::RequireCheckingReturnValueOfEval</A>
+
+</A></H2>
+
+<P>You can't depend upon the value of <CODE>$@</CODE>/<CODE>$EVAL_ERROR</CODE> to tell whether an <CODE>eval</CODE> failed. [Default severity 3]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitBacktickOperators"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitBacktickOperators.html">InputOutput::ProhibitBacktickOperators</A>
+
+</A></H2>
+
+<P>Discourage stuff like <CODE>@files = `ls $directory`</CODE>. [Default severity 3]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitBarewordFileHandles"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitBarewordFileHandles.html">InputOutput::ProhibitBarewordFileHandles</A>
+
+</A></H2>
+
+<P>Write <CODE>open my $fh, q{&lt;}, $filename;</CODE> instead of <CODE>open FH, q{&lt;}, $filename;</CODE>. [Default severity 5]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitExplicitStdin"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitExplicitStdin.html">InputOutput::ProhibitExplicitStdin</A>
+
+</A></H2>
+
+<P>Use &quot;&lt;&gt;&quot; or &quot;&lt;ARGV&gt;&quot; or a prompting module instead of &quot;&lt;STDIN&gt;&quot;. [Default severity 4]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitInteractiveTest"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitInteractiveTest.html">InputOutput::ProhibitInteractiveTest</A>
+
+</A></H2>
+
+<P>Use prompt() instead of -t. [Default severity 5]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitJoinedReadline"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitJoinedReadline.html">InputOutput::ProhibitJoinedReadline</A>
+
+</A></H2>
+
+<P>Use <CODE>local $/ = undef</CODE> or <A HREF="../../File/Slurp.html">File::Slurp</A> instead of joined readline. [Default severity 3]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitOneArgSelect"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitOneArgSelect.html">InputOutput::ProhibitOneArgSelect</A>
+
+</A></H2>
+
+<P>Never write <CODE>select($fh)</CODE>. [Default severity 4]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitReadlineInForLoop"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitReadlineInForLoop.html">InputOutput::ProhibitReadlineInForLoop</A>
+
+</A></H2>
+
+<P>Write <CODE>while( $line = &lt;&gt; ){...}</CODE> instead of <CODE>for(&lt;&gt;){...}</CODE>. [Default severity 4]
+
+</P><H2><A NAME="InputOutput%3a%3aProhibitTwoArgOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/ProhibitTwoArgOpen.html">InputOutput::ProhibitTwoArgOpen</A>
+
+</A></H2>
+
+<P>Write <CODE>open $fh, q{&lt;}, $filename;</CODE> instead of <CODE>open $fh, &quot;&lt;$filename&quot;;</CODE>. [Default severity 5]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireBracedFileHandleWithPrint"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireBracedFileHandleWithPrint.html">InputOutput::RequireBracedFileHandleWithPrint</A>
+
+</A></H2>
+
+<P>Write <CODE>print {$FH} $foo, $bar;</CODE> instead of <CODE>print $FH $foo, $bar;</CODE>. [Default severity 1]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireBriefOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireBriefOpen.html">InputOutput::RequireBriefOpen</A>
+
+</A></H2>
+
+<P>Close filehandles as soon as possible after opening them. [Default severity 4]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireCheckedClose"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedClose.html">InputOutput::RequireCheckedClose</A>
+
+</A></H2>
+
+<P>Write <CODE>my $error = close $fh;</CODE> instead of <CODE>close $fh;</CODE>. [Default severity 2]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireCheckedOpen"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedOpen.html">InputOutput::RequireCheckedOpen</A>
+
+</A></H2>
+
+<P>Write <CODE>my $error = open $fh, $mode, $filename;</CODE> instead of <CODE>open $fh, $mode, $filename;</CODE>. [Default severity 3]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireCheckedSyscalls"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireCheckedSyscalls.html">InputOutput::RequireCheckedSyscalls</A>
+
+</A></H2>
+
+<P>Return value of flagged function ignored. [Default severity 1]
+
+</P><H2><A NAME="InputOutput%3a%3aRequireEncodingWithUTF8Layer"><A HREF="../../Perl/Critic/Policy/InputOutput/RequireEncodingWithUTF8Layer.html">InputOutput::RequireEncodingWithUTF8Layer</A>
+
+</A></H2>
+
+<P>Write <CODE>open $fh, q{&lt;:encoding(UTF-8)}, $filename;</CODE> instead of <CODE>open $fh, q{{&lt;:utf8}, $filename;</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Miscellanea%3a%3aProhibitFormats"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitFormats.html">Miscellanea::ProhibitFormats</A>
+
+</A></H2>
+
+<P>Do not use <CODE>format</CODE>. [Default severity 3]
+
+</P><H2><A NAME="Miscellanea%3a%3aProhibitTies"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitTies.html">Miscellanea::ProhibitTies</A>
+
+</A></H2>
+
+<P>Do not use <CODE>tie</CODE>. [Default severity 2]
+
+</P><H2><A NAME="Miscellanea%3a%3aProhibitUnrestrictedNoCritic"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitUnrestrictedNoCritic.html">Miscellanea::ProhibitUnrestrictedNoCritic</A>
+
+</A></H2>
+
+<P>Forbid a bare <CODE>## no critic</CODE> [Default severity 3]
+
+</P><H2><A NAME="Miscellanea%3a%3aProhibitUselessNoCritic"><A HREF="../../Perl/Critic/Policy/Miscellanea/ProhibitUselessNoCritic.html">Miscellanea::ProhibitUselessNoCritic</A>
+
+</A></H2>
+
+<P>Remove ineffective &quot;## no critic&quot; annotations. [Default severity 2]
+
+</P><H2><A NAME="Miscellanea%3a%3aRequireRcsKeywords"><A HREF="../../Perl/Critic/Policy/Miscellanea/RequireRcsKeywords.html">Miscellanea::RequireRcsKeywords</A>
+
+</A></H2>
+
+<P>Put source-control keywords in every file. [Default severity 2]
+
+</P><H2><A NAME="Modules%3a%3aProhibitAutomaticExportation"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitAutomaticExportation.html">Modules::ProhibitAutomaticExportation</A>
+
+</A></H2>
+
+<P>Export symbols via <CODE>@EXPORT_OK</CODE> or <CODE>%EXPORT_TAGS</CODE> instead of <CODE>@EXPORT</CODE>. [Default severity 4]
+
+</P><H2><A NAME="Modules%3a%3aProhibitConditionalUseStatements"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitConditionalUseStatements.html">Modules::ProhibitConditionalUseStatements</A>
+
+</A></H2>
+
+<P>Avoid putting conditional logic around compile-time includes. [Default severity 3]
+
+</P><H2><A NAME="Modules%3a%3aProhibitEvilModules"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitEvilModules.html">Modules::ProhibitEvilModules</A>
+
+</A></H2>
+
+<P>Ban modules that aren't blessed by your shop. [Default severity 5]
+
+</P><H2><A NAME="Modules%3a%3aProhibitExcessMainComplexity"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitExcessMainComplexity.html">Modules::ProhibitExcessMainComplexity</A>
+
+</A></H2>
+
+<P>Minimize complexity in code that is <B>outside</B> of subroutines. [Default severity 3]
+
+</P><H2><A NAME="Modules%3a%3aProhibitMultiplePackages"><A HREF="../../Perl/Critic/Policy/Modules/ProhibitMultiplePackages.html">Modules::ProhibitMultiplePackages</A>
+
+</A></H2>
+
+<P>Put packages (especially subclasses) in separate files. [Default severity 4]
+
+</P><H2><A NAME="Modules%3a%3aRequireBarewordIncludes"><A HREF="../../Perl/Critic/Policy/Modules/RequireBarewordIncludes.html">Modules::RequireBarewordIncludes</A>
+
+</A></H2>
+
+<P>Write <CODE>require Module</CODE> instead of <CODE>require 'Module.pm'</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Modules%3a%3aRequireEndWithOne"><A HREF="../../Perl/Critic/Policy/Modules/RequireEndWithOne.html">Modules::RequireEndWithOne</A>
+
+</A></H2>
+
+<P>End each module with an explicitly <CODE>1;</CODE> instead of some funky expression. [Default severity 4]
+
+</P><H2><A NAME="Modules%3a%3aRequireExplicitPackage"><A HREF="../../Perl/Critic/Policy/Modules/RequireExplicitPackage.html">Modules::RequireExplicitPackage</A>
+
+</A></H2>
+
+<P>Always make the <CODE>package</CODE> explicit. [Default severity 4]
+
+</P><H2><A NAME="Modules%3a%3aRequireFilenameMatchesPackage"><A HREF="../../Perl/Critic/Policy/Modules/RequireFilenameMatchesPackage.html">Modules::RequireFilenameMatchesPackage</A>
+
+</A></H2>
+
+<P>Package declaration must match filename. [Default severity 5]
+
+</P><H2><A NAME="Modules%3a%3aRequireNoMatchVarsWithUseEnglish"><A HREF="../../Perl/Critic/Policy/Modules/RequireNoMatchVarsWithUseEnglish.html">Modules::RequireNoMatchVarsWithUseEnglish</A>
+
+</A></H2>
+
+<P><CODE>use English</CODE> must be passed a <CODE>-no_match_vars</CODE> argument. [Default severity 2]
+
+</P><H2><A NAME="Modules%3a%3aRequireVersionVar"><A HREF="../../Perl/Critic/Policy/Modules/RequireVersionVar.html">Modules::RequireVersionVar</A>
+
+</A></H2>
+
+<P>Give every module a <CODE>$VERSION</CODE> number. [Default severity 2]
+
+</P><H2><A NAME="NamingConventions%3a%3aCapitalization"><A HREF="../../Perl/Critic/Policy/NamingConventions/Capitalization.html">NamingConventions::Capitalization</A>
+
+</A></H2>
+
+<P>Distinguish different program components by case. [Default severity 1]
+
+</P><H2><A NAME="NamingConventions%3a%3aProhibitAmbiguousNames"><A HREF="../../Perl/Critic/Policy/NamingConventions/ProhibitAmbiguousNames.html">NamingConventions::ProhibitAmbiguousNames</A>
+
+</A></H2>
+
+<P>Don't use vague variable or subroutine names like 'last' or 'record'. [Default severity 3]
+
+</P><H2><A NAME="Objects%3a%3aProhibitIndirectSyntax"><A HREF="../../Perl/Critic/Policy/Objects/ProhibitIndirectSyntax.html">Objects::ProhibitIndirectSyntax</A>
+
+</A></H2>
+
+<P>Prohibit indirect object call syntax. [Default severity 4]
+
+</P><H2><A NAME="References%3a%3aProhibitDoubleSigils"><A HREF="../../Perl/Critic/Policy/References/ProhibitDoubleSigils.html">References::ProhibitDoubleSigils</A>
+
+</A></H2>
+
+<P>Write <CODE>@{ $array_ref }</CODE> instead of <CODE>@$array_ref</CODE>. [Default severity 2]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitCaptureWithoutTest"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitCaptureWithoutTest.html">RegularExpressions::ProhibitCaptureWithoutTest</A>
+
+</A></H2>
+
+<P>Capture variable used outside conditional. [Default severity 3]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitComplexRegexes"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitComplexRegexes.html">RegularExpressions::ProhibitComplexRegexes</A>
+
+</A></H2>
+
+<P>Split long regexps into smaller <CODE>qr//</CODE> chunks. [Default severity 3]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitEnumeratedClasses"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitEnumeratedClasses.html">RegularExpressions::ProhibitEnumeratedClasses</A>
+
+</A></H2>
+
+<P>Use named character classes instead of explicit character lists. [Default severity 1]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitEscapedMetacharacters"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitEscapedMetacharacters.html">RegularExpressions::ProhibitEscapedMetacharacters</A>
+
+</A></H2>
+
+<P>Use character classes for literal meta-characters instead of escapes. [Default severity 1]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitFixedStringMatches"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitFixedStringMatches.html">RegularExpressions::ProhibitFixedStringMatches</A>
+
+</A></H2>
+
+<P>Use <CODE>eq</CODE> or hash instead of fixed-pattern regexps. [Default severity 2]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitSingleCharAlternation"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitSingleCharAlternation.html">RegularExpressions::ProhibitSingleCharAlternation</A>
+
+</A></H2>
+
+<P>Use <CODE>[abc]</CODE> instead of <CODE>a|b|c</CODE>. [Default severity 1]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitUnusedCapture"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitUnusedCapture.html">RegularExpressions::ProhibitUnusedCapture</A>
+
+</A></H2>
+
+<P>Only use a capturing group if you plan to use the captured value. [Default severity 3]
+
+</P><H2><A NAME="RegularExpressions%3a%3aProhibitUnusualDelimiters"><A HREF="../../Perl/Critic/Policy/RegularExpressions/ProhibitUnusualDelimiters.html">RegularExpressions::ProhibitUnusualDelimiters</A>
+
+</A></H2>
+
+<P>Use only <CODE>//</CODE> or <CODE>{}</CODE> to delimit regexps. [Default severity 1]
+
+</P><H2><A NAME="RegularExpressions%3a%3aRequireBracesForMultiline"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireBracesForMultiline.html">RegularExpressions::RequireBracesForMultiline</A>
+
+</A></H2>
+
+<P>Use <CODE>{</CODE> and <CODE>}</CODE> to delimit multi-line regexps. [Default severity 1]
+
+</P><H2><A NAME="RegularExpressions%3a%3aRequireDotMatchAnything"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireDotMatchAnything.html">RegularExpressions::RequireDotMatchAnything</A>
+
+</A></H2>
+
+<P>Always use the <CODE>/s</CODE> modifier with regular expressions. [Default severity 2]
+
+</P><H2><A NAME="RegularExpressions%3a%3aRequireExtendedFormatting"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireExtendedFormatting.html">RegularExpressions::RequireExtendedFormatting</A>
+
+</A></H2>
+
+<P>Always use the <CODE>/x</CODE> modifier with regular expressions. [Default severity 3]
+
+</P><H2><A NAME="RegularExpressions%3a%3aRequireLineBoundaryMatching"><A HREF="../../Perl/Critic/Policy/RegularExpressions/RequireLineBoundaryMatching.html">RegularExpressions::RequireLineBoundaryMatching</A>
+
+</A></H2>
+
+<P>Always use the <CODE>/m</CODE> modifier with regular expressions. [Default severity 2]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitAmpersandSigils"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitAmpersandSigils.html">Subroutines::ProhibitAmpersandSigils</A>
+
+</A></H2>
+
+<P>Don't call functions with a leading ampersand sigil. [Default severity 2]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitBuiltinHomonyms"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitBuiltinHomonyms.html">Subroutines::ProhibitBuiltinHomonyms</A>
+
+</A></H2>
+
+<P>Don't declare your own <CODE>open</CODE> function. [Default severity 4]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitExcessComplexity"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitExcessComplexity.html">Subroutines::ProhibitExcessComplexity</A>
+
+</A></H2>
+
+<P>Minimize complexity by factoring code into smaller subroutines. [Default severity 3]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitExplicitReturnUndef"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitExplicitReturnUndef.html">Subroutines::ProhibitExplicitReturnUndef</A>
+
+</A></H2>
+
+<P>Return failure with bare <CODE>return</CODE> instead of <CODE>return undef</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitManyArgs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitManyArgs.html">Subroutines::ProhibitManyArgs</A>
+
+</A></H2>
+
+<P>Too many arguments. [Default severity 3]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitNestedSubs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitNestedSubs.html">Subroutines::ProhibitNestedSubs</A>
+
+</A></H2>
+
+<P><CODE>sub never { sub correct {} }</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitReturnSort"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitReturnSort.html">Subroutines::ProhibitReturnSort</A>
+
+</A></H2>
+
+<P>Behavior of <CODE>sort</CODE> is not defined if called in scalar context. [Default severity 5]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitSubroutinePrototypes"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitSubroutinePrototypes.html">Subroutines::ProhibitSubroutinePrototypes</A>
+
+</A></H2>
+
+<P>Don't write <CODE>sub my_function (@@) {}</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Subroutines%3a%3aProhibitUnusedPrivateSubroutines"><A HREF="../../Perl/Critic/Policy/Subroutines/ProhibitUnusedPrivateSubroutines.html">Subroutines::ProhibitUnusedPrivateSubroutines</A>
+
+</A></H2>
+
+<P>Prevent unused private subroutines. [Default severity 3]
+
+</P><H2><A NAME="Subroutines%3a%3aProtectPrivateSubs"><A HREF="../../Perl/Critic/Policy/Subroutines/ProtectPrivateSubs.html">Subroutines::ProtectPrivateSubs</A>
+
+</A></H2>
+
+<P>Prevent access to private subs in other packages. [Default severity 3]
+
+</P><H2><A NAME="Subroutines%3a%3aRequireArgUnpacking"><A HREF="../../Perl/Critic/Policy/Subroutines/RequireArgUnpacking.html">Subroutines::RequireArgUnpacking</A>
+
+</A></H2>
+
+<P>Always unpack <CODE>@_</CODE> first. [Default severity 4]
+
+</P><H2><A NAME="Subroutines%3a%3aRequireFinalReturn"><A HREF="../../Perl/Critic/Policy/Subroutines/RequireFinalReturn.html">Subroutines::RequireFinalReturn</A>
+
+</A></H2>
+
+<P>End every path through a subroutine with an explicit <CODE>return</CODE> statement. [Default severity 4]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aProhibitNoStrict"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitNoStrict.html">TestingAndDebugging::ProhibitNoStrict</A>
+
+</A></H2>
+
+<P>Prohibit various flavors of <CODE>no strict</CODE>. [Default severity 5]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aProhibitNoWarnings"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitNoWarnings.html">TestingAndDebugging::ProhibitNoWarnings</A>
+
+</A></H2>
+
+<P>Prohibit various flavors of <CODE>no warnings</CODE>. [Default severity 4]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aProhibitProlongedStrictureOverride"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/ProhibitProlongedStrictureOverride.html">TestingAndDebugging::ProhibitProlongedStrictureOverride</A>
+
+</A></H2>
+
+<P>Don't turn off strict for large blocks of code. [Default severity 4]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aRequireTestLabels"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireTestLabels.html">TestingAndDebugging::RequireTestLabels</A>
+
+</A></H2>
+
+<P>Tests should all have labels. [Default severity 3]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aRequireUseStrict"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireUseStrict.html">TestingAndDebugging::RequireUseStrict</A>
+
+</A></H2>
+
+<P>Always <CODE>use strict</CODE>. [Default severity 5]
+
+</P><H2><A NAME="TestingAndDebugging%3a%3aRequireUseWarnings"><A HREF="../../Perl/Critic/Policy/TestingAndDebugging/RequireUseWarnings.html">TestingAndDebugging::RequireUseWarnings</A>
+
+</A></H2>
+
+<P>Always <CODE>use warnings</CODE>. [Default severity 4]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitCommaSeparatedStatements"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitCommaSeparatedStatements.html">ValuesAndExpressions::ProhibitCommaSeparatedStatements</A>
+
+</A></H2>
+
+<P>Don't use the comma operator as a statement separator. [Default severity 4]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitComplexVersion"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitComplexVersion.html">ValuesAndExpressions::ProhibitComplexVersion</A>
+
+</A></H2>
+
+<P>Prohibit version values from outside the module. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitConstantPragma"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitConstantPragma.html">ValuesAndExpressions::ProhibitConstantPragma</A>
+
+</A></H2>
+
+<P>Don't <CODE>use constant FOO =&gt; 15</CODE>. [Default severity 4]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitEmptyQuotes"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitEmptyQuotes.html">ValuesAndExpressions::ProhibitEmptyQuotes</A>
+
+</A></H2>
+
+<P>Write <CODE>q{}</CODE> instead of <CODE>''</CODE>. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitEscapedCharacters"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitEscapedCharacters.html">ValuesAndExpressions::ProhibitEscapedCharacters</A>
+
+</A></H2>
+
+<P>Write <CODE>&quot;\N{DELETE}&quot;</CODE> instead of <CODE>&quot;\x7F&quot;</CODE>, etc. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitImplicitNewlines"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitImplicitNewlines.html">ValuesAndExpressions::ProhibitImplicitNewlines</A>
+
+</A></H2>
+
+<P>Use concatenation or HEREDOCs instead of literal line breaks in strings. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitInterpolationOfLiterals"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitInterpolationOfLiterals.html">ValuesAndExpressions::ProhibitInterpolationOfLiterals</A>
+
+</A></H2>
+
+<P>Always use single quotes for literal strings. [Default severity 1]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitLeadingZeros"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitLeadingZeros.html">ValuesAndExpressions::ProhibitLeadingZeros</A>
+
+</A></H2>
+
+<P>Write <CODE>oct(755)</CODE> instead of <CODE>0755</CODE>. [Default severity 5]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitLongChainsOfMethodCalls"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitLongChainsOfMethodCalls.html">ValuesAndExpressions::ProhibitLongChainsOfMethodCalls</A>
+
+</A></H2>
+
+<P>Long chains of method calls indicate tightly coupled code. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitMagicNumbers"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMagicNumbers.html">ValuesAndExpressions::ProhibitMagicNumbers</A>
+
+</A></H2>
+
+<P>Don't use values that don't explain themselves. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitMismatchedOperators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMismatchedOperators.html">ValuesAndExpressions::ProhibitMismatchedOperators</A>
+
+</A></H2>
+
+<P>Don't mix numeric operators with string operands, or vice-versa. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitMixedBooleanOperators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitMixedBooleanOperators.html">ValuesAndExpressions::ProhibitMixedBooleanOperators</A>
+
+</A></H2>
+
+<P>Write <CODE> !$foo &amp;&amp; $bar || $baz </CODE> instead of <CODE> not $foo &amp;&amp; $bar or $baz</CODE>. [Default severity 4]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitNoisyQuotes"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitNoisyQuotes.html">ValuesAndExpressions::ProhibitNoisyQuotes</A>
+
+</A></H2>
+
+<P>Use <CODE>q{}</CODE> or <CODE>qq{}</CODE> instead of quotes for awkward-looking strings. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitQuotesAsQuotelikeOperatorDelimiters"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitQuotesAsQuotelikeOperatorDelimiters.html">ValuesAndExpressions::ProhibitQuotesAsQuotelikeOperatorDelimiters</A>
+
+</A></H2>
+
+<P>Don't use quotes (<CODE>'</CODE>, <CODE>&quot;</CODE>, <CODE>`</CODE>) as delimiters for the quote-like operators. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitSpecialLiteralHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitSpecialLiteralHeredocTerminator.html">ValuesAndExpressions::ProhibitSpecialLiteralHeredocTerminator</A>
+
+</A></H2>
+
+<P>Don't write <CODE> print &lt;&lt;'__END__' </CODE>. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aProhibitVersionStrings"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/ProhibitVersionStrings.html">ValuesAndExpressions::ProhibitVersionStrings</A>
+
+</A></H2>
+
+<P>Don't use strings like <CODE>v1.4</CODE> or <CODE>1.4.5</CODE> when including other modules. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aRequireConstantVersion"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireConstantVersion.html">ValuesAndExpressions::RequireConstantVersion</A>
+
+</A></H2>
+
+<P>Require $VERSION to be a constant rather than a computed value. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aRequireInterpolationOfMetachars"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireInterpolationOfMetachars.html">ValuesAndExpressions::RequireInterpolationOfMetachars</A>
+
+</A></H2>
+
+<P>Warns that you might have used single quotes when you really wanted double-quotes. [Default severity 1]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aRequireNumberSeparators"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireNumberSeparators.html">ValuesAndExpressions::RequireNumberSeparators</A>
+
+</A></H2>
+
+<P>Write <CODE> 141_234_397.0145 </CODE> instead of <CODE> 141234397.0145 </CODE>. [Default severity 2]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aRequireQuotedHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireQuotedHeredocTerminator.html">ValuesAndExpressions::RequireQuotedHeredocTerminator</A>
+
+</A></H2>
+
+<P>Write <CODE> print &lt;&lt;'THE_END' </CODE> or <CODE> print &lt;&lt;&quot;THE_END&quot; </CODE>. [Default severity 3]
+
+</P><H2><A NAME="ValuesAndExpressions%3a%3aRequireUpperCaseHeredocTerminator"><A HREF="../../Perl/Critic/Policy/ValuesAndExpressions/RequireUpperCaseHeredocTerminator.html">ValuesAndExpressions::RequireUpperCaseHeredocTerminator</A>
+
+</A></H2>
+
+<P>Write <CODE> &lt;&lt;'THE_END'; </CODE> instead of <CODE> &lt;&lt;'theEnd'; </CODE>. [Default severity 2]
+
+</P><H2><A NAME="Variables%3a%3aProhibitConditionalDeclarations"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitConditionalDeclarations.html">Variables::ProhibitConditionalDeclarations</A>
+
+</A></H2>
+
+<P>Do not write <CODE> my $foo = $bar if $baz; </CODE>. [Default severity 5]
+
+</P><H2><A NAME="Variables%3a%3aProhibitEvilVariables"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitEvilVariables.html">Variables::ProhibitEvilVariables</A>
+
+</A></H2>
+
+<P>Ban variables that aren't blessed by your shop. [Default severity 5]
+
+</P><H2><A NAME="Variables%3a%3aProhibitLocalVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitLocalVars.html">Variables::ProhibitLocalVars</A>
+
+</A></H2>
+
+<P>Use <CODE>my</CODE> instead of <CODE>local</CODE>, except when you have to. [Default severity 2]
+
+</P><H2><A NAME="Variables%3a%3aProhibitMatchVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitMatchVars.html">Variables::ProhibitMatchVars</A>
+
+</A></H2>
+
+<P>Avoid <CODE>$`</CODE>, <CODE>$&amp;</CODE>, <CODE>$'</CODE> and their English equivalents. [Default severity 4]
+
+</P><H2><A NAME="Variables%3a%3aProhibitPackageVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPackageVars.html">Variables::ProhibitPackageVars</A>
+
+</A></H2>
+
+<P>Eliminate globals declared with <CODE>our</CODE> or <CODE>use vars</CODE>. [Default severity 3]
+
+</P><H2><A NAME="Variables%3a%3aProhibitPerl4PackageNames"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPerl4PackageNames.html">Variables::ProhibitPerl4PackageNames</A>
+
+</A></H2>
+
+<P>Use double colon (::) to separate package name components instead of single quotes ('). [Default severity 2]
+
+</P><H2><A NAME="Variables%3a%3aProhibitPunctuationVars"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitPunctuationVars.html">Variables::ProhibitPunctuationVars</A>
+
+</A></H2>
+
+<P>Write <CODE>$EVAL_ERROR</CODE> instead of <CODE>$@</CODE>. [Default severity 2]
+
+</P><H2><A NAME="Variables%3a%3aProhibitReusedNames"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitReusedNames.html">Variables::ProhibitReusedNames</A>
+
+</A></H2>
+
+<P>Do not reuse a variable name in a lexical scope [Default severity 3]
+
+</P><H2><A NAME="Variables%3a%3aProhibitUnusedVariables"><A HREF="../../Perl/Critic/Policy/Variables/ProhibitUnusedVariables.html">Variables::ProhibitUnusedVariables</A>
+
+</A></H2>
+
+<P>Don't ask for storage you don't need. [Default severity 3]
+
+</P><H2><A NAME="Variables%3a%3aProtectPrivateVars"><A HREF="../../Perl/Critic/Policy/Variables/ProtectPrivateVars.html">Variables::ProtectPrivateVars</A>
+
+</A></H2>
+
+<P>Prevent access to private vars in other packages. [Default severity 3]
+
+</P><H2><A NAME="Variables%3a%3aRequireInitializationForLocalVars"><A HREF="../../Perl/Critic/Policy/Variables/RequireInitializationForLocalVars.html">Variables::RequireInitializationForLocalVars</A>
+
+</A></H2>
+
+<P>Write <CODE>local $foo = $bar;</CODE> instead of just <CODE>local $foo;</CODE>. [Default severity 3]
+
+</P><H2><A NAME="Variables%3a%3aRequireLexicalLoopIterators"><A HREF="../../Perl/Critic/Policy/Variables/RequireLexicalLoopIterators.html">Variables::RequireLexicalLoopIterators</A>
+
+</A></H2>
+
+<P>Write <CODE>for my $element (@list) {...}</CODE> instead of <CODE>for $element (@list) {...}</CODE>. [Default severity 5]
+
+</P><H2><A NAME="Variables%3a%3aRequireLocalizedPunctuationVars"><A HREF="../../Perl/Critic/Policy/Variables/RequireLocalizedPunctuationVars.html">Variables::RequireLocalizedPunctuationVars</A>
+
+</A></H2>
+
+<P>Magic variables should be assigned as &quot;local&quot;. [Default severity 4]
+
+</P><H2><A NAME="Variables%3a%3aRequireNegativeIndices"><A HREF="../../Perl/Critic/Policy/Variables/RequireNegativeIndices.html">Variables::RequireNegativeIndices</A>
+
+</A></H2>
+
+<P>Negative array index should be used. [Default severity 4]
+
+
+</P><H1><A NAME="VERSION">VERSION
+
+</A></H1>
+
+<P>This is part of <A HREF="../../Perl/Critic.html">Perl::Critic</A> version 1.110.
+
+
+</P><H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<P>Jeffrey Ryan Thalhammer &lt;jeff@imaginative-software.com&gt;
+
+
+</P><H1><A NAME="COPYRIGHT">COPYRIGHT
+
+</A></H1>
+
+<P>Copyright (c) 2005-2010 Imaginative Software Systems.  All rights reserved.
+
+</P>
+<P>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.  The full text of this license
+can be found in the LICENSE file included with this module.
+
+</P>
+</BODY>
+</HTML>

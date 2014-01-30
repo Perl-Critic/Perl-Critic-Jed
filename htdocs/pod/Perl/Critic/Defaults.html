@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+<TITLE>Perl::Critic::Defaults</TITLE>
+<LINK href="styles/pod.css" type="text/css" rel="stylesheet"></HEAD>
+<BODY BGCOLOR="#ffffff" TEXT="#000000">
+<UL>
+<LI><A HREF="#NAME">NAME
+
+</A><LI><A HREF="#DESCRIPTION">DESCRIPTION
+
+</A><LI><A HREF="#CONSTRUCTOR">CONSTRUCTOR
+
+</A><LI><A HREF="#METHODS">METHODS
+
+</A><LI><A HREF="#SEE%20ALSO">SEE ALSO
+
+</A><LI><A HREF="#AUTHOR">AUTHOR
+
+</A><LI><A HREF="#COPYRIGHT">COPYRIGHT
+
+</A></UL>
+<HR>
+<H1><A NAME="NAME">NAME
+
+</A></H1>
+
+<P>Perl::Critic::Defaults - The global configuration default values, combined with command-line values.
+
+</P><HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION
+
+</A></H1>
+
+<P>This is a helper class that encapsulates the default parameters for
+constructing a <A HREF="../../Perl/Critic/Config.html">Perl::Critic::Config</A> object.  There are no
+user-serviceable parts here.
+
+</P><HR>
+<H1><A NAME="CONSTRUCTOR">CONSTRUCTOR
+
+</A></H1>
+<DL><DT><A NAME="new(%20%25DEFAULT_PARAMS%20)"><CODE> new( %DEFAULT_PARAMS ) </CODE>
+
+</A></DT>
+<DD>
+
+<P>Returns a reference to a new <CODE>Perl::Critic::Defaults</CODE> object.  You
+can override the coded defaults by passing in name-value pairs that
+correspond to the methods listed below.
+
+</P>
+<P>This is usually only invoked by <A HREF="../../Perl/Critic/UserProfile.html">Perl::Critic::UserProfile</A>, which
+passes in the global values from a <I>.perlcriticrc</I> file.  This object
+contains no information for individual Policies.
+
+</P></DD>
+</DL>
+<HR>
+<H1><A NAME="METHODS">METHODS
+
+</A></H1>
+<DL><DT><A NAME="exclude()"><CODE> exclude() </CODE>
+
+</A></DT>
+<DD>
+Returns a reference to a list of the default exclusion patterns.  If
+there are no default exclusion patterns, then the list will be empty.
+
+</DD>
+<DT><A NAME="force()"><CODE> force() </CODE>
+
+</A></DT>
+<DD>
+Returns the default value of the <CODE>force</CODE> flag (Either 1 or 0).
+
+</DD>
+<DT><A NAME="include()"><CODE> include() </CODE>
+
+</A></DT>
+<DD>
+Returns a reference to a list of the default inclusion patterns.  If
+there are no default exclusion patterns, then the list will be empty.
+
+</DD>
+<DT><A NAME="only()"><CODE> only() </CODE>
+
+</A></DT>
+<DD>
+Returns the default value of the <CODE>only</CODE> flag (Either 1 or 0).
+
+</DD>
+<DT><A NAME="profile_strictness()"><CODE> profile_strictness() </CODE>
+
+</A></DT>
+<DD>
+Returns the default value of <CODE>profile_strictness</CODE> as an unvalidated
+string.
+
+</DD>
+<DT><A NAME="single_policy()"><CODE> single_policy() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>single-policy</CODE> pattern.  (As a string.)
+
+</DD>
+<DT><A NAME="severity()"><CODE> severity() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>severity</CODE> setting. (1..5).
+
+</DD>
+<DT><A NAME="theme()"><CODE> theme() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>theme</CODE> setting. (As a string).
+
+</DD>
+<DT><A NAME="top()"><CODE> top() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>top</CODE> setting. (Either 0 or a positive integer).
+
+</DD>
+<DT><A NAME="verbose()"><CODE> verbose() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>verbose</CODE> setting. (Either a number or format
+string).
+
+</DD>
+<DT><A NAME="color()"><CODE> color() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>color</CODE> setting. (Either 1 or 0).
+
+</DD>
+<DT><A NAME="criticism_fatal()"><CODE> criticism_fatal() </CODE>
+
+</A></DT>
+<DD>
+Returns the default <CODE>criticism-fatal</CODE> setting (Either 1 or 0).
+
+</DD>
+</DL>
+<HR>
+<H1><A NAME="SEE%20ALSO">SEE ALSO
+
+</A></H1>
+
+<P><A HREF="../../Perl/Critic/Config.html">Perl::Critic::Config</A>, <A HREF="../../Perl/Critic/UserProfile.html">Perl::Critic::UserProfile</A>
+
+</P><HR>
+<H1><A NAME="AUTHOR">AUTHOR
+
+</A></H1>
+
+<P>Jeffrey Ryan Thalhammer &lt;thaljef@cpan.org&gt;
+
+</P><HR>
+<H1><A NAME="COPYRIGHT">COPYRIGHT
+
+</A></H1>
+
+<P>Copyright (c) 2005-2008 Jeffrey Ryan Thalhammer.  All rights reserved.
+
+</P>
+<P>This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.  The full text of this license
+can be found in the LICENSE file included with this module.
+
+</P>
+</BODY>
+</HTML>
