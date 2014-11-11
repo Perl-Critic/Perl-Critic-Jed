@@ -21,36 +21,40 @@ our $HL = create_highlighter();
 #-----------------------------------------------------------------------------
 
 sub startup {
-	my $self = shift;
-	$self->routes->get('critique' => \&critique);
+    my $self = shift;
+    $self->routes->get('/' => 'index.html.ep')
+    $self->routes->post('critique' => \&critique);
+    return $self;
 }
 
-sub critique {
-if ( http('HTTP_USER_AGENT') =~ m{ (?: mozilla|msie ) }imx ) {
-    eval {
-	my $source_fh           = upload('code_file');
-	my $source_path         = param('code_file');
-        my $severity            = param('severity');
-	my ($raw, $cooked)      = load_source_code( $HL, $source_fh );
-	my $code_frame_url      = generate_code_frame( $TT, $cooked );
-	my @violations          = critique_source_code( $severity, $raw, $source_path );
-	my $critique_frame_url  = generate_critique_frame( $TT, $code_frame_url, @violations );
-	my $status              = render_page( $TT, $source_path, $code_frame_url, $critique_frame_url );
-    };
+#-----------------------------------------------------------------------------
 
-    if ($EVAL_ERROR) {
-	show_error_screen($TT);
+sub critique {
+    if ( http('HTTP_USER_AGENT') =~ m{ (?: mozilla|msie ) }imx ) {
+        eval {
+        my $source_fh           = upload('code_file');
+        my $source_path         = param('code_file');
+        my $severity            = param('severity');
+        my ($raw, $cooked)      = load_source_code( $HL, $source_fh );
+        my $code_frame_url      = generate_code_frame( $TT, $cooked );
+        my @violations          = critique_source_code( $severity, $raw, $source_path );
+        my $critique_frame_url  = generate_critique_frame( $TT, $code_frame_url, @violations );
+        my $status              = render_page( $TT, $source_path, $code_frame_url, $critique_frame_url );
+        };
+
+        if ($EVAL_ERROR) {
+        show_error_screen($TT);
+        }
+    }
+
+    else {
+      my $raw                   = \do{  local $/ = undef; <STDIN> };
+      my @violations            = critique_source_code( 1, $raw );
+      print header @violations;
     }
 }
 
-else {
-  my $raw                   = \do{  local $/ = undef; <STDIN> };
-  my @violations            = critique_source_code( 1, $raw );
-  print header @violations;
-}
-}
 #=============================================================================
-
 
 sub render_page {
     my ($TT, @args) = @_;
@@ -81,9 +85,9 @@ sub load_source_code {
 
     while( my $line_of_source_code = <$source_fh> ) {
         $raw_source_code .= $line_of_source_code;
-	my $formatted_line = $HL->format_string( $line_of_source_code );
+        my $formatted_line = $HL->format_string( $line_of_source_code );
         $formatted_source_code .= prepend_line_number($formatted_line, $line_number);
-	$line_number++;
+        $line_number++;
     }
 
     return (\$raw_source_code, \$formatted_source_code);
@@ -97,7 +101,7 @@ sub prepend_line_number {
 
 #-----------------------------------------------------------------------------
 
-sub generate_code_frame{
+sub generate_code_frame {
     my ($TT, $string_ref) = @_;
     my ($temp_fh, $temp_file) = make_tempfile();
     my $template = 'frame-code.html.tt';
@@ -125,7 +129,7 @@ sub create_highlighter {
 
     # Install the formats
     while ( my ( $type, $style ) = each %color_table ) {
-	$hl->set_format($type, [ qq{<span style="$style">}, q{</span>} ] );
+    $hl->set_format($type, [ qq{<span style="$style">}, q{</span>} ] );
     }
 
     return $hl;
