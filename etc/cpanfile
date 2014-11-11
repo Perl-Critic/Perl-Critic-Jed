@@ -5,8 +5,3 @@ requires 'Syntax::Highlight::Perl::Improved';
 
 test_requires 'Test::More';
 test_requires 'Carp::Always';
-
-author_requires 'App::Ack';
-author_requires 'Reply';
-author_requires 'Term::ReadLine';
-author_requires 'Term::ReadLine::EditLine';
