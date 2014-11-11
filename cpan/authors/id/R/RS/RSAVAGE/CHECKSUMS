@@ -1,0 +1,9 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:36 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Config-Tiny-2.20.tgz' => {
+    'md5' => 'd239ea56157fcd61ac796fc13d585dc3',
+    'mtime' => '2013-11-23',
+    'sha256' => '8262168e0bf5eddab342a330d3f78120f6a0e88d3224d881a097c3b0d5592f3f',
+    'size' => 24350
+  }
+};

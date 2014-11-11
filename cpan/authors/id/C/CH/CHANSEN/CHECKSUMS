@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:15:31 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Mac-SystemDirectory-0.06.tar.gz' => {
+    'md5' => 'e24ce731bef85021a5a0334b2773c5cf',
+    'md5-ungz' => 'b775ebef09a4de9d242988603df0e7cd',
+    'mtime' => '2011-02-12',
+    'sha256' => 'd008e8c893f971bdb9e935e87e9f62e693d8532b01ed5b2dc89e915d9199b21f',
+    'sha256-ungz' => '20eb934a2020380e498048ba7cdbaa126f970fb2be58c9833ff54030ffe1444b',
+    'size' => 23428
+  }
+};

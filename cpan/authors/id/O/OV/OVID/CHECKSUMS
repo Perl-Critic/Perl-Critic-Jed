@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:26:13 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Text-Diff-1.41.tar.gz' => {
+    'md5' => '30d56e6dd5551ca16b8e16cc7299dc21',
+    'md5-ungz' => '20b1b8b0d4d582108b70fb6df0ab33ef',
+    'mtime' => '2011-04-17',
+    'sha256' => 'a67f50a48e313c1680cc662109ce5f913ea71454db355d0cf4db87ac89d2d2fa',
+    'sha256-ungz' => '9a4eb9f63f9b65f2716c7c75750ddbdfbb6032132407ccf580868954a1e8d410',
+    'size' => 27813
+  }
+};

@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:57 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Role-Tiny-1.003004.tar.gz' => {
+    'md5' => '3c405a0f76eab9893c8927baea0cdb0c',
+    'md5-ungz' => '86ef72bb3b36c4355c357fd88b9eaa04',
+    'mtime' => '2014-10-22',
+    'sha256' => 'adba1919b5e9a47cc13df4496e72c14fdde228887a00c2a3ae3d023b1504662a',
+    'sha256-ungz' => 'e9cbf5011bc35c83c6889550a1c3fccf3e9fecf9f6045835450f61329e4fdf03',
+    'size' => 21516
+  }
+};

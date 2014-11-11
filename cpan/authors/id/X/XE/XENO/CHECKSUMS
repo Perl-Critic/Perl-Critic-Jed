@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:43 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Pod-Spell-1.15.tar.gz' => {
+    'md5' => 'fce6fe5ae7ae8ebf140ddbbec36e4f8c',
+    'md5-ungz' => 'c6eef3bd1dd1e180651b8341307e692c',
+    'mtime' => '2014-02-28',
+    'sha256' => 'fbfdf39f85bcf758d5ae176bc90c675d14c2d0f555b0ef57bf778f4758fccee2',
+    'sha256-ungz' => '6a050a518f7adfe08c0f25ea133c2af64a9a2a3e92569e22416a8cf05fa0dbb1',
+    'size' => 29897
+  }
+};

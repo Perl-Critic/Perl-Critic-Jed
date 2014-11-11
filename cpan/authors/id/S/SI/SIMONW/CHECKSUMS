@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:39 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Module-Pluggable-5.1.tar.gz' => {
+    'md5' => '1b71ed7a67ad8c048d1499540bc892ba',
+    'md5-ungz' => 'd8e1b4e90ca28d365a6a0dafb6567a7e',
+    'mtime' => '2014-01-06',
+    'sha256' => 'e2dc354043bb16f1f3df8c4bb26070b26e594819f218cf8b8ac19e79c720916f',
+    'sha256-ungz' => 'eff10fc2f69ed8f74433b24bfb7c2121e364a8a14b536d4ec4b863fab387aee0',
+    'size' => 29418
+  }
+};

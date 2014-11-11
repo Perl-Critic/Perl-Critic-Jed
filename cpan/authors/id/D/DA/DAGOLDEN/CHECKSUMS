@@ -1,0 +1,51 @@
+# CHECKSUMS file written on Tue Nov 11 21:25:10 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'CPAN-Meta-2.142690.tar.gz' => {
+    'md5' => '753bcb213e794e1e39e5a1c6ed8ddf02',
+    'md5-ungz' => '45d738b941b82a9ecb6679afce874dd6',
+    'mtime' => '2014-09-26',
+    'sha256' => '495770e22e91e3d2bd04dc364f05061cabacfdce35baa3868bc0c05733d145db',
+    'sha256-ungz' => '18df505b8a58978f7c0b813e9747a65ec35932d20cfef8abe0bf377da67423ed',
+    'size' => 98282
+  },
+  'CPAN-Meta-YAML-0.012.tar.gz' => {
+    'md5' => 'bdee91cb71ddc7ed1a30abea611be9bb',
+    'md5-ungz' => 'ca40cc4325776b60c02bfdd3c3101b11',
+    'mtime' => '2014-02-24',
+    'sha256' => '7c728c573ba74294d3df2f0cbae2cd1b3830ed47040649b49a33a086b8300d28',
+    'sha256-ungz' => 'b30f4dc1801aebbdcdb03d8c75c8eb5490faa8db3c8a499c85f245460ef5a287',
+    'size' => 47693
+  },
+  'Class-Tiny-1.000.tar.gz' => {
+    'md5' => 'a8acb0d05e384573d3624406813bf6b4',
+    'md5-ungz' => 'd482878ebb351b25315f214d1dfcba1e',
+    'mtime' => '2014-07-16',
+    'sha256' => '625d874db1608bd317b52b482d5b94a35812499948b8cba109d402e91748944a',
+    'sha256-ungz' => 'c78ef33420d5237338474df35f3463c088bcbc686eb7e8e3aa4ba84c6c2606b0',
+    'size' => 25674
+  },
+  'PPI-XS-0.902.tar.gz' => {
+    'md5' => '9f1fc9b4df050395b5ee314f1f77bc05',
+    'md5-ungz' => '8ba97cf7b3eec24c7b2bd274d70c90ec',
+    'mtime' => '2013-02-26',
+    'sha256' => '8a5c98e91ea1e55d149a0d1596ba0cdbc44e4767a9b47502b14881ce22a70e38',
+    'sha256-ungz' => '8c23abe359485dffd8fffbff9f62a43323fcced3aaa8f44302743ef162c9799c',
+    'size' => 65485
+  },
+  'Parse-CPAN-Meta-1.4414.tar.gz' => {
+    'md5' => 'f83ad609767ab52e9a452243f50c71ca',
+    'md5-ungz' => 'cdc0d4484601c91d5866a5980570757f',
+    'mtime' => '2014-03-04',
+    'sha256' => 'cd7608154dfb72c9e110f012befe6b75d78448cb3e761716b60aa7545e16ca1b',
+    'sha256-ungz' => 'cfeaf9a7eba24d991aada44ac5ae9d33c3b1e1df4cc5b861fba64dea015c2098',
+    'size' => 23457
+  },
+  'Path-Tiny-0.060.tar.gz' => {
+    'md5' => '244b11f5ce352850d7304f77f60e9eaf',
+    'md5-ungz' => '293d89321abf2ae708210d75f85c467c',
+    'mtime' => '2014-11-04',
+    'sha256' => 'a36c458787a15a431985b2f8ebb19451d0fa37d650a1d585db117011236e5924',
+    'sha256-ungz' => '59a994bb872bdb203c05067d32a417bb671695bfa9223709e7926333ba885cc0',
+    'size' => 71847
+  }
+};

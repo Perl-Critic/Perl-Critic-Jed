@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:33 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Perl-Critic-1.122.tar.gz' => {
+    'md5' => 'b4f56e2839bfd868a9d15f0e52874896',
+    'md5-ungz' => 'bf979ddcccafd2463c40993990911d5b',
+    'mtime' => '2014-08-25',
+    'sha256' => '4502e89917074bfcb45dfeca8bd7db79aa96d69e51175c679919bd7219cd086d',
+    'sha256-ungz' => '59e3889536f14fba37ddad8237e9d4060ee7569e3bb87a7c01e82e0e9c15ffcc',
+    'size' => 633322
+  }
+};

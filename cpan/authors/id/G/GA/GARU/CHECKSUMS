@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:48 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Clone-0.37.tar.gz' => {
+    'md5' => 'b0c9d1bcf9e85ab2fbc0b436cfc801f5',
+    'md5-ungz' => 'fdf8be590d4627c1d061c9c1765b4a1e',
+    'mtime' => '2014-05-15',
+    'sha256' => 'd9f251e6f01deaac3d29df1b8422b83dca972af999cd3f6ae456e0fc6f87cd9d',
+    'sha256-ungz' => 'e72071e6de556ae861f0649211aa95ad0c6856c84d3bd41512fc38a946bd22c8',
+    'size' => 13369
+  }
+};

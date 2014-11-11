@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:51 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Probe-Perl-0.03.tar.gz' => {
+    'md5' => '8876e1b99c531800a86b383702e0ab73',
+    'md5-ungz' => '47e7002c8b2cf7895882bfea59891cf9',
+    'mtime' => '2013-08-08',
+    'sha256' => 'd9e4d21e2e77638559045fa09046b1b6fff6c403b949929db213e30abe8a3c31',
+    'sha256-ungz' => '154f7c916e5eacbd1a0a3163143f96fc90a3c9a19b737968db47c4fa14f2405f',
+    'size' => 13096
+  }
+};

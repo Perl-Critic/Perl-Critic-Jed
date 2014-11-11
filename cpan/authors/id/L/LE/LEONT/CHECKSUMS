@@ -1,0 +1,51 @@
+# CHECKSUMS file written on Tue Nov 11 21:07:01 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'ExtUtils-Config-0.008.tar.gz' => {
+    'md5' => '565a7b09c7cac5907a25bbe2c959a717',
+    'md5-ungz' => 'a80a0cdb6a82a86e77d448372d63b748',
+    'mtime' => '2014-06-25',
+    'sha256' => 'ae5104f634650dce8a79b7ed13fb59d67a39c213a6776cfdaa3ee749e62f1a8c',
+    'sha256-ungz' => '41a6cffe26e4f8e8161998709426f64af9aa54d089957372a9deac754181c49b',
+    'size' => 11165
+  },
+  'ExtUtils-Helpers-0.022.tar.gz' => {
+    'md5' => 'cf4fd6f8caa6daac33b1111c9e93162b',
+    'md5-ungz' => '1ebffc500a1f2e81629da263ebd17b8f',
+    'mtime' => '2014-03-07',
+    'sha256' => 'd3f8cf700fb3414ca1260089755cbf64041455e4b744110677b1ba5bb9a3aa95',
+    'sha256-ungz' => '841967a07a01cf0a423e283e7a2dcc59fee6085026a20db3e0687923c6b0125b',
+    'size' => 17078
+  },
+  'ExtUtils-InstallPaths-0.010.tar.gz' => {
+    'md5' => 'f0b00cc6c04653588a6298fa1f16c07f',
+    'md5-ungz' => '80fa915d5aeb51e1fa903c6822ed1f3e',
+    'mtime' => '2013-10-29',
+    'sha256' => 'd14cbff118e467900c2c488b55b83ef697d6eb1b8f592c0521f1d82848bf2156',
+    'sha256-ungz' => '53d7e0ee2977180692896184aabaf5824a6d5fb908b30325f3dccf1be382b466',
+    'size' => 18395
+  },
+  'Module-Build-0.4210.tar.gz' => {
+    'md5' => 'c346e825c077ee6e9946f47fdb1786e8',
+    'md5-ungz' => '5da819d768b09b72bc9fbdcc4c7666b0',
+    'mtime' => '2014-09-01',
+    'sha256' => '592471e27800180044016011ae580f4be308c15635162795269b472cfe991fb5',
+    'sha256-ungz' => '775185dad3c1a588adfd0cb5547603cf2b09f2f6b78b89a9aa8cc97576265bad',
+    'size' => 308569
+  },
+  'Module-Build-Tiny-0.039.tar.gz' => {
+    'md5' => '2332c90c17454107fea3f2614e11a3a9',
+    'md5-ungz' => '9e08448b8165b04585f165a8b98cd2ca',
+    'mtime' => '2014-10-12',
+    'sha256' => '7d580ff6ace0cbe555bf36b86dc8ea232581530cbeaaea09bccb57b55797f11c',
+    'sha256-ungz' => '02c15117d93d2956c5a024ad7140f41fac5e83f0745d5b84ed9d0f0918836188',
+    'size' => 20663
+  },
+  'Test-Harness-3.34.tar.gz' => {
+    'md5' => 'aa0175e8fef92c19f06128810f1a2921',
+    'md5-ungz' => 'b6e943d5ace9ebb4dbfddb86341d463e',
+    'mtime' => '2014-11-05',
+    'sha256' => '0ef634a6e1ec466f4daeb4c51149039128b3dcd807db940b0397e7608757db6f',
+    'sha256-ungz' => '95a8412a236531ee16a79cc8daacdc1e7552cc9ab0c752d4e71c27f3669be52f',
+    'size' => 241911
+  }
+};

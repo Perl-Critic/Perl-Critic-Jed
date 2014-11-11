@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:51 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Lingua-EN-Inflect-1.895.tar.gz' => {
+    'md5' => '96ce4517a21800a6e90df1f4cdd515a5',
+    'md5-ungz' => '835de3623053477878ea2493147cbfda',
+    'mtime' => '2012-09-11',
+    'sha256' => '9e71885dfd23e2db5bb58d1339e01227a106bf044f1a0b807b5dce26547a3f37',
+    'sha256-ungz' => 'f9dc224c894b91ba2307508821d38beb1a0b87196bdeafa70973815019e14b56',
+    'size' => 48608
+  }
+};

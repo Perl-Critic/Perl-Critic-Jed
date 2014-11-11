@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:07:04 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'IO-Socket-IP-0.32.tar.gz' => {
+    'md5' => '422887e801c1d3f3a114045453403867',
+    'md5-ungz' => '56cfda29c897e8ff11426f82ef9f7e85',
+    'mtime' => '2014-09-12',
+    'sha256' => '967a2be383f83e74e9274d8117177c4ed88fe6cb80a25364b594ed990004ab9a',
+    'sha256-ungz' => 'b9a147bc4dc707053f0ab30b87417abc0995488b6370983dbbf72fdc2aec2736',
+    'size' => 43333
+  }
+};

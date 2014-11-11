@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:38 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'IO-String-1.08.tar.gz' => {
+    'md5' => '250e5424f290299fc3d6b5d1e9da3835',
+    'md5-ungz' => 'd578c049d117f1205aec552e788a89f5',
+    'mtime' => '2005-12-06',
+    'sha256' => '2a3f4ad8442d9070780e58ef43722d19d1ee21a803bf7c8206877a10482de5a0',
+    'sha256-ungz' => '598a56b771051253b5637e34bb6ff40caa530564d8a29b44e3fc61f3d43c252e',
+    'size' => 7480
+  }
+};

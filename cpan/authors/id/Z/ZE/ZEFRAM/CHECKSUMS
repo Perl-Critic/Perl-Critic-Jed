@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:56 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Module-Runtime-0.014.tar.gz' => {
+    'md5' => 'a6597bc25536a30476f0d75b64d35734',
+    'md5-ungz' => '8ecef5d8236f44845140f05a9dd82370',
+    'mtime' => '2014-02-06',
+    'sha256' => '4c44fe0ea255a9fd00741ee545063f6692d2a28e7ef2fbaad1b24a92803362a4',
+    'sha256-ungz' => '8d9cce11b9483f90334b95e2bdc61c74f9cc38e1c5e72f31df3788a282963105',
+    'size' => 17396
+  }
+};

@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:41 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'PPIx-Regexp-0.036.tar.gz' => {
+    'md5' => 'a5f778ee5c334f2d41cb944262ef1040',
+    'md5-ungz' => '8a1787245b249c4f7c7f1c96fb49e8dc',
+    'mtime' => '2014-01-04',
+    'sha256' => 'd3d116030061a61c2e3813ba65e2162e4f89e2143a38045f638afbda82ebcada',
+    'sha256-ungz' => 'c39d178d1e40e304f99676cfdec1847221620e52b2230fdf5d6786e5c1b8e805',
+    'size' => 157083
+  }
+};

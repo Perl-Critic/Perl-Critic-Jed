@@ -1,0 +1,19 @@
+# CHECKSUMS file written on Tue Nov 11 21:26:12 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Spiffy-0.46.tar.gz' => {
+    'md5' => '2ec7007c111a6bc2775bb7c57673a24b',
+    'md5-ungz' => 'ea2ca4d7197505bbefc66d2d5dcd34e1',
+    'mtime' => '2014-08-16',
+    'sha256' => '8f58620a8420255c49b6c43c5ff5802bd25e4f09240c51e5bf2b022833d41da3',
+    'sha256-ungz' => '2704b762385b5fe90628b0613517b9cfa039ee532dde32bb6ab23ce7f6e381df',
+    'size' => 33447
+  },
+  'Test-Base-0.88.tar.gz' => {
+    'md5' => 'ced0cd86b099f9fd2cd73df1f46ab5e9',
+    'md5-ungz' => '377e30951ec4046faa7002a933efc551',
+    'mtime' => '2014-08-24',
+    'sha256' => '52368cc5a9cbbc4eaba33ed820672f92001b73d8bcba0bb95d5fdb1d370b9039',
+    'sha256-ungz' => '04aa607f46cf79b5c54707e3986a70d3d1d0879a160ac5e65623a7339152a29b',
+    'size' => 52032
+  }
+};

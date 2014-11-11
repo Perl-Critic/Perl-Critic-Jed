@@ -1,0 +1,91 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:49 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Class-Inspector-1.28.tar.gz' => {
+    'md5' => '7ab3ca22d3147236dddfb58f2366ad22',
+    'md5-ungz' => 'a5fc09ba95367fb23325f5dee8dde757',
+    'mtime' => '2012-10-19',
+    'sha256' => '3ca4b7a3ed1f4cc846c9a3c08f9a6e9ec07a9cbfd92510dea9513db61a923112',
+    'sha256-ungz' => '86b957ef6038d6947a4684aa207d8cbfe8b59bc2e112dd9cb83379951de5c7dc',
+    'size' => 39816
+  },
+  'File-HomeDir-1.00.tar.gz' => {
+    'md5' => 'aa290cab9db52e2f76280fd1febf794e',
+    'md5-ungz' => '361641ca9f0cc87c5ef60b08d2e6410f',
+    'mtime' => '2012-10-19',
+    'sha256' => '85b94f3513093ec0a25b91f9f2571918519ae6f2b7a1e8546f8f78d09a877143',
+    'sha256-ungz' => '5c9044ca389242c1f6391aee00afd79d44c836cfdc148f836041684fe325e3a6',
+    'size' => 51349
+  },
+  'File-Remove-1.52.tar.gz' => {
+    'md5' => 'e9d6c33a2aac9789036afb4cc23ed8eb',
+    'md5-ungz' => '97d769edf8c16205b89d7c8e8d6fd2bd',
+    'mtime' => '2012-03-19',
+    'sha256' => '4154dc574b8a9a3a555d323f152ac742363c6a69c1f61de15b72728813550bdd',
+    'sha256-ungz' => '3e2f5353100910693eda2435f9fe35f30dd9773489fafc0717dc17ab1974be93',
+    'size' => 38230
+  },
+  'File-Which-1.09.tar.gz' => {
+    'md5' => 'b9429edaad7f45caafa4d458afcfd8af',
+    'md5-ungz' => '6de7f4776a9039a0e1484fdf4eb89f64',
+    'mtime' => '2009-09-26',
+    'sha256' => 'b72fec6590160737cba97293c094962adf4f7d44d9e68dde7062ecec13f4b2c3',
+    'sha256-ungz' => '33271ef13feb46ffffca8e23e0f8f66a9e47ddbc95a4870b1693b48c3a464f98',
+    'size' => 15637
+  },
+  'List-MoreUtils-0.33.tar.gz' => {
+    'md5' => '8a33c84028cc2ff3e92c92434b326c0f',
+    'md5-ungz' => '49dd3b62088e1239746498b10b62384c',
+    'mtime' => '2011-08-04',
+    'sha256' => '315c0b444c22b7bf207ac3c7e651d102c84a2308bfafb7a7efe095a9219494ad',
+    'sha256-ungz' => '8289ecf4628c17e92a21df064f079fba665c3efeac7a69219618b4f47b2e3457',
+    'size' => 38997
+  },
+  'Params-Util-1.07.tar.gz' => {
+    'md5' => '02db120c0eef87aae1830cc62bdec37b',
+    'md5-ungz' => 'd9545eeb589499140298f674e05238f4',
+    'mtime' => '2012-03-11',
+    'sha256' => '30f1ec3f2cf9ff66ae96f973333f23c5f558915bb6266881eac7423f52d7c76c',
+    'sha256-ungz' => 'c2f29322f834e1a8caeee8bde8eb4b8670fc5cf9bc322ee8c09ac312189e6722',
+    'size' => 40726
+  },
+  'Task-Weaken-1.04.tar.gz' => {
+    'md5' => 'affd0c395515bb95d29968404d7fe6de',
+    'md5-ungz' => 'bd6954a543b20f1eb9723360f472e139',
+    'mtime' => '2011-03-08',
+    'sha256' => '67e271c55900fe7889584f911daa946e177bb60c8af44c32f4584b87766af3c4',
+    'sha256-ungz' => '09c5278b0bb4b4fd143132fa061167542f257a7f1c9b184910177a360e200007',
+    'size' => 29976
+  },
+  'Test-NoWarnings-1.04.tar.gz' => {
+    'md5' => '682ed043f7d3e38f3dfd8745fd21c49a',
+    'md5-ungz' => '294875362f56f963e9a74fac900c4349',
+    'mtime' => '2011-12-01',
+    'sha256' => '638a57658cb119af1fe5b15e73d47c2544dcfef84af0c6b1b2e97f08202b686c',
+    'sha256-ungz' => 'd6b428f8bf9ef577bc02f1c34054441ca8bf9f0f81d52703ab98d3690ddc3226',
+    'size' => 18204
+  },
+  'Test-Object-0.07.tar.gz' => {
+    'md5' => 'ab71791756faaabc3b4fad5bcc1df50f',
+    'md5-ungz' => '70ce2c527819bd18f1beb00bfb619bf9',
+    'mtime' => '2006-09-07',
+    'sha256' => 'd142a91b039928dc5d616c7bd9bb62ffb06e58991f00c54e26ef7e62ed61032a',
+    'sha256-ungz' => 'abdfb69c1129a241d126bd7c0d7fbae7cf5498023383b292d34d2179a4f2d40d',
+    'size' => 21685
+  },
+  'Test-Script-1.07.tar.gz' => {
+    'md5' => 'f6b5baa6403cd24dac7f023e0ea22384',
+    'md5-ungz' => '978a9a7da67fe79993ea5083c960d9f6',
+    'mtime' => '2009-11-24',
+    'sha256' => 'e21e5ee43a27b4c51b54ded5c92e60b817309778117a1d98ae6354abff27eb96',
+    'sha256-ungz' => 'c6d2829411503641eb1614ceea8c43774760d6cc43b6cdc3d3f4e8f84a8f00cd',
+    'size' => 26424
+  },
+  'Test-SubCalls-1.09.tar.gz' => {
+    'md5' => '975a9fe8d93ef0298fc1bca8f03166e1',
+    'md5-ungz' => 'b4c0afeff37df8c3fccbd42991caa0fb',
+    'mtime' => '2009-04-19',
+    'sha256' => 'a334b0457da338d79be2dbb62d403701fc90f7607df840115ff45ee1e2bd6e70',
+    'sha256-ungz' => '0c3ff4b7ecef90979e49e8bfbb3394a38bfae805aa8dcd979e7fc96c51d87936',
+    'size' => 25727
+  }
+};

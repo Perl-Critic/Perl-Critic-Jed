@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:43 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Perl-Tidy-20140711.tar.gz' => {
+    'md5' => 'b11587646b2252fccec5750ab584036b',
+    'md5-ungz' => '69413a7668e136eb14d2f4851da03e3a',
+    'mtime' => '2014-07-11',
+    'sha256' => '1576ceb3fd9f592d0285affbe7192685963dc1d0411968cc0587d6ac0d7b3ad8',
+    'sha256-ungz' => 'f790f8a3114711af07324ecd274ddddb6d2ac882f5406086c142995c1f5934d3',
+    'size' => 422397
+  }
+};

@@ -1,0 +1,27 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:54 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'File-ShareDir-ProjectDistDir-1.000004.tar.gz' => {
+    'md5' => '2f7e8c2920a7dd5f73e47803280e8303',
+    'md5-ungz' => '0c9252880a5ee87f5bbcae2fc8fa918a',
+    'mtime' => '2014-08-18',
+    'sha256' => 'f3e7cea1d72df40c86ef2c9d811ff259c5c21dee25c25ada3b6bb13fca43af27',
+    'sha256-ungz' => '48097055e047338239588c98a514ac94de9474aecfda29ad5eed7d832331bd9b',
+    'size' => 42137
+  },
+  'Path-FindDev-0.5.2.tar.gz' => {
+    'md5' => 'b494d775273230d3542851073c2a9da2',
+    'md5-ungz' => '361a82c98731bc7de755a2ce35a51d14',
+    'mtime' => '2014-08-16',
+    'sha256' => '26e85cb063ecf5900dba30acaef260717b6c03b4926809d785917ef5b2a6fa63',
+    'sha256-ungz' => 'afe4136610b5fd0982938dca03e08bcada0fc908a704920a6a8a47070e236420',
+    'size' => 41803
+  },
+  'Path-IsDev-1.001002.tar.gz' => {
+    'md5' => '8907c626bb16558151f7dc11f1c47719',
+    'md5-ungz' => '12293b6f4980ab2ec2b97fe26e29cf14',
+    'mtime' => '2014-08-16',
+    'sha256' => '95f98dd68cbda926eb0c2ed3061ac746a5f584af1bfe7206397f2e546960598d',
+    'sha256-ungz' => 'c4cce8d835739e71beeca1ad00074443f8a149cca92f8d14381cdfb53d04b7c7',
+    'size' => 190868
+  }
+};

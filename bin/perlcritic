@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use FindBin qw($Bin);
+use lib "$Bin/../lib";
+
+# Start commands for application
+require Mojolicious::Commands;
+Mojolicious::Commands->start_app('Perl::Critic::Web');

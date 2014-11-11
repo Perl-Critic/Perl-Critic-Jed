@@ -1,32 +1,31 @@
-#!/usr/bin/perl
-
-#######################################################################
-#      $URL: http://perlcritic.tigris.org/svn/perlcritic/trunk/perlcritic.com/perl/critic.pl $
-#     $Date: 2010-10-06 11:43:16 -0700 (Wed, 06 Oct 2010) $
-#   $Author: thaljef $
-# $Revision: 3959 $
-########################################################################
+package Perl::Critic::Web;
 
 use strict;
 use warnings;
-use CGI qw(:standard);
+
+use Mojo::Base qw(Mojolicious);
 use English qw(-no_match_vars);
 use File::Temp qw(tempfile);
 use File::Basename qw(basename);
 use Syntax::Highlight::Perl::Improved;
 use Perl::Critic;
-use Template;
 use Carp;
 
 #-----------------------------------------------------------------------------
 # Persistent variables
 
-our $TT_INCLUDE = '/var/www/vhosts/perlcritic.com/tt2';
-our $TT = Template->new( {INCLUDE_PATH => $TT_INCLUDE} );
+#our $TT_INCLUDE = '/var/www/vhosts/perlcritic.com/tt2';
+our $TT = undef; #Template->new( {INCLUDE_PATH => $TT_INCLUDE} );
 our $HL = create_highlighter();
 
 #-----------------------------------------------------------------------------
 
+sub startup {
+	my $self = shift;
+	$self->routes->get('critique' => \&critique);
+}
+
+sub critique {
 if ( http('HTTP_USER_AGENT') =~ m{ (?: mozilla|msie ) }imx ) {
     eval {
 	my $source_fh           = upload('code_file');
@@ -47,9 +46,9 @@ if ( http('HTTP_USER_AGENT') =~ m{ (?: mozilla|msie ) }imx ) {
 else {
   my $raw                   = \do{  local $/ = undef; <STDIN> };
   my @violations            = critique_source_code( 1, $raw );
-  print header, @violations;
+  print header @violations;
 }
-
+}
 #=============================================================================
 
 
@@ -183,6 +182,6 @@ sub get_temp_dir {
 }
 
 #-----------------------------------------------------------------------------
+1;
 
-#print {$temp_fh} qq{<html><body><pre style="font-size:10pt;color:#336;">\n};
-#print {$temp_fh} qq{</pre></body></html>\n};
+__END__

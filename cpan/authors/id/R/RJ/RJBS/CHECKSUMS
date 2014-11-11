@@ -1,0 +1,59 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:58 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Data-OptList-0.109.tar.gz' => {
+    'md5' => 'de3f747d6b802ded363cf434a96dab8f',
+    'md5-ungz' => '593a8ea4fd35e6d92a7beb15833994e0',
+    'mtime' => '2013-12-13',
+    'sha256' => '1cd7c781c4c102810e4e0c878da3746fe8df46b49d01c4d6c034dfab45cd84c8',
+    'sha256-ungz' => 'b89c72dc8e5bbfb966badb012d48235591fb9294e623e0ff3e21b5fdb369d0f8',
+    'size' => 16110
+  },
+  'Email-Address-1.905.tar.gz' => {
+    'md5' => '3ed17b42a797bbc0103eabbb2d130766',
+    'md5-ungz' => '114c13c5b377f4c9e90e754289d57d5b',
+    'mtime' => '2014-06-18',
+    'sha256' => '737f15e4e3ac09186d7053a1b89619d0b714a284f232e207677b186d9fcc92b2',
+    'sha256-ungz' => 'a900d257042683348828286d220110035e9b8c27b7b1a72edfbfd2f982a33546',
+    'size' => 39663
+  },
+  'IPC-Run3-0.048.tar.gz' => {
+    'md5' => '5a8cec571c51a118b265cf6e24e55761',
+    'md5-ungz' => '66f51d76e476da0efb4e63baa511d662',
+    'mtime' => '2014-03-29',
+    'sha256' => '3d81c3cc1b5cff69cca9361e2c6e38df0352251ae7b41e2ff3febc850e463565',
+    'sha256-ungz' => 'd8b3e7e0861953ce00ec132cad2b0396c9f6118689814a4308ca407469d5eecb',
+    'size' => 20312
+  },
+  'Sub-Exporter-0.987.tar.gz' => {
+    'md5' => '5332d269a7ba387773fcd140b72a0ed2',
+    'md5-ungz' => '62d770cfe0fac74e070ce846e5d03516',
+    'mtime' => '2013-10-18',
+    'sha256' => '543cb2e803ab913d44272c7da6a70bb62c19e467f3b12aaac4c9523259b083d6',
+    'sha256-ungz' => 'bf1c47a7520ef24d77c6676a29739069e0be286813ae8813d5341daabc4b1de9',
+    'size' => 45980
+  },
+  'Sub-Install-0.928.tar.gz' => {
+    'md5' => 'e1ce4f9cb6b2f6b8778b036c31afa5ab',
+    'md5-ungz' => 'b8fe2ea816aba899765a45f349872f5e',
+    'mtime' => '2014-06-26',
+    'sha256' => '61e567a7679588887b7b86d427bc476ea6d77fffe7e0d17d640f89007d98ef0f',
+    'sha256-ungz' => '865937a6c8f6357560f376d2b82e3bc3d2ca92f9736886f8a2b96915c74f9055',
+    'size' => 18669
+  },
+  'Test-Deep-0.113.tar.gz' => {
+    'md5' => '1b68990b46afee0ad89f2d6b86ea4114',
+    'md5-ungz' => '2512e99de045634ec4d6a7dbd28af283',
+    'mtime' => '2014-08-23',
+    'sha256' => '1f28f96e3be35208965ff5b926968cfebd26bec0cce17aa48fdb1602c4973668',
+    'sha256-ungz' => '64de05a08cbc9753721b626642d2f14e4a5337a0e32d0501729b004a9c5d3d13',
+    'size' => 36713
+  },
+  'Test-Fatal-0.013.tar.gz' => {
+    'md5' => 'e3d13b3c7e42f4574c843aca5d9f4570',
+    'md5-ungz' => 'e2fddff7204e141a02860d96d43ce490',
+    'mtime' => '2013-09-23',
+    'sha256' => '02fb13eea43a9eb0df84919c2a1415243c0bdd68dae9f63f6d6b3827e76f36e7',
+    'sha256-ungz' => 'd8a6679dc3d737a0debf61e66257c5341c0c2c1391da468dd199e3e3be907ab1',
+    'size' => 16381
+  }
+};

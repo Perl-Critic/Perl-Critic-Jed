@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:07:05 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Syntax-Highlight-Perl-Improved-1.01.tar.gz' => {
+    'md5' => 'e5235f8e1f3f57c28105ea4a2fec7209',
+    'md5-ungz' => '6972727e149c438c4e29342d0eb2d623',
+    'mtime' => '2004-05-04',
+    'sha256' => '01467878edc6bdf006e9557d13db131ab4f77e9dd1fd6492d209f0698c3b5c9e',
+    'sha256-ungz' => '0b43e28f5bc7ffca6fbcf4d1079e633a72b113c4f32ee4c7f927a54dae840ce8',
+    'size' => 30051
+  }
+};

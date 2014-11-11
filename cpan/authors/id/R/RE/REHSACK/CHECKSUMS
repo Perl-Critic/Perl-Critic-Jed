@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:52 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'File-ShareDir-1.102.tar.gz' => {
+    'md5' => '553157f0e81cd2dabfe140ceb06cd03f',
+    'md5-ungz' => '7fd4d06bca4087e10afe61de74c7456a',
+    'mtime' => '2014-05-12',
+    'sha256' => '7c7334b974882587fbd9bc135f6bc04ad197abe99e6f4761953fe9ca88c57411',
+    'sha256-ungz' => '8ce5b015d962c2d0eebeb7d6c1d52c1b746f06f2712609f28f75fedf8b3d64a6',
+    'size' => 11973
+  }
+};

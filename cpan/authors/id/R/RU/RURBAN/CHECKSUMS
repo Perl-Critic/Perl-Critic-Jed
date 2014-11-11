@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Tue Nov 11 21:06:35 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'B-Keywords-1.13.tar.gz' => {
+    'md5' => 'fe57415a76a423645c31281fe508bf46',
+    'md5-ungz' => '69c364533edc21f04be7621c2c36e19f',
+    'mtime' => '2013-04-05',
+    'sha256' => '073eb916f69bd337261de6cb6cab8ccdb06f67415d8c7291453ebdfdfe0be405',
+    'sha256-ungz' => 'a75dfbf0c849cc67a5940444b61bfc56270fcb86f101803191eca14b4827488d',
+    'size' => 9739
+  }
+};
