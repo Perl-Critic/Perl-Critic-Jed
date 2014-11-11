@@ -14,7 +14,7 @@ margin-top: 60px;}
 {font-family: "Courier New";
 font-size: 60px;
 text-indent: -1000em;
-background: transparent url(/images/perl-critic-logo.gif) no-repeat bottom center;
+background: transparent url(/img/perl-critic-logo.gif) no-repeat bottom center;
 width: 387px;
 height: 161px;
 margin: auto;
@@ -93,6 +93,6 @@ color: #FFF;}
 #header h1.logo
 {width: 435px;
 height: 50px;
-background: transparent url(/images/perl-critic-logo2.gif) no-repeat;
+background: transparent url(/img/perl-critic-logo2.gif) no-repeat;
 text-indent: -1000em;
 margin: 0;}

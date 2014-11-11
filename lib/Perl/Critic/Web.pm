@@ -9,6 +9,7 @@ use File::Temp qw(tempfile);
 use File::Basename qw(basename);
 use Syntax::Highlight::Perl::Improved;
 use Perl::Critic;
+use IO::String;
 use Carp;
 
 #-----------------------------------------------------------------------------
@@ -22,7 +23,7 @@ our $HL = create_highlighter();
 
 sub startup {
     my $self = shift;
-    $self->routes->get('/' => 'index.html.ep')
+    $self->routes->get('/' => 'index');
     $self->routes->post('critique' => \&critique);
     return $self;
 }
@@ -30,38 +31,41 @@ sub startup {
 #-----------------------------------------------------------------------------
 
 sub critique {
-    if ( http('HTTP_USER_AGENT') =~ m{ (?: mozilla|msie ) }imx ) {
+    my $self = shift;
+    my $upload = $self->param('code_file');
+    my $source_path = $upload->filename;
+    my $source_fh = IO::String->new($upload->slurp);
+    my $severity = $self->param('severity');
+    my $agent = $self->req->headers->user_agent;
+
+    if ( $agent =~ m{ (?: mozilla|msie ) }imx ) {
         eval {
-        my $source_fh           = upload('code_file');
-        my $source_path         = param('code_file');
-        my $severity            = param('severity');
-        my ($raw, $cooked)      = load_source_code( $HL, $source_fh );
-        my $code_frame_url      = generate_code_frame( $TT, $cooked );
-        my @violations          = critique_source_code( $severity, $raw, $source_path );
-        my $critique_frame_url  = generate_critique_frame( $TT, $code_frame_url, @violations );
-        my $status              = render_page( $TT, $source_path, $code_frame_url, $critique_frame_url );
+            my ($raw, $cooked)      = load_source_code( $HL, $source_fh );
+            my $code_frame_url      = generate_code_frame( $self, $cooked );
+            my @violations          = critique_source_code( $severity, $raw, $source_path );
+            my $critique_frame_url  = generate_critique_frame( $self, $code_frame_url, @violations );
+            my $status              = render_page( $self, $source_path, $code_frame_url, $critique_frame_url );
         };
 
         if ($EVAL_ERROR) {
-        show_error_screen($TT);
+            show_error_screen($TT);
         }
     }
 
     else {
       my $raw                   = \do{  local $/ = undef; <STDIN> };
       my @violations            = critique_source_code( 1, $raw );
-      print header @violations;
+      print @violations;
     }
 }
 
 #=============================================================================
 
 sub render_page {
-    my ($TT, @args) = @_;
+    my ($self, @args) = @_;
     my %TT_vars = ();
-    print header;
     @TT_vars{ qw( source_path code_url critique_url ) } = @args;
-    $TT->process( 'results.html.tt', \%TT_vars ) or confess $TT->error();
+    $self->render('results' => %TT_vars);
     return 1;
 }
 
@@ -102,21 +106,27 @@ sub prepend_line_number {
 #-----------------------------------------------------------------------------
 
 sub generate_code_frame {
-    my ($TT, $string_ref) = @_;
+    my ($self, $string_ref) = @_;
     my ($temp_fh, $temp_file) = make_tempfile();
-    my $template = 'frame-code.html.tt';
-    $TT->process($template, {code => ${$string_ref}}, $temp_fh)
-      or confess $TT->error();
+    my $template = 'frame-code';
+
+    my $out = $self->render_to_string($template => (code => ${$string_ref}));
+    print $temp_fh $out;
+    close $temp_fh;
+
     return '/tmp/' . basename($temp_file);
 }
 
 sub generate_critique_frame {
-    my ($TT, $code_frame_url, @violations) = @_;
+    my ($self, $code_frame_url, @violations) = @_;
     my ($temp_fh, $temp_file) = make_tempfile();
-    my $template = 'frame-critique.html.tt';
-    my $TT_VARS = { violations => \@violations, target => $code_frame_url };
-    $TT->process($template, $TT_VARS, $temp_fh)
-      or confess $TT->error();
+    my $template = 'frame-critique';
+
+    my %TT_vars = ( violations => \@violations, target => $code_frame_url );
+    my $out = $self->render_to_string(template => %TT_vars);
+    print $temp_fh $out;
+    close $temp_fh;
+
     return '/tmp/' . basename($temp_file);
 }
 
@@ -138,11 +148,7 @@ sub create_highlighter {
 #-----------------------------------------------------------------------------
 
 sub show_error_screen {
-    my ($TT) = @_;
-    print header();
-    my $template = 'error.html.tt';
-    $TT->process($template) or confess $TT->error();
-    return 1;
+    die @_;
 }
 
 #-----------------------------------------------------------------------------
@@ -178,11 +184,11 @@ sub get_color_table {
 
 sub make_tempfile {
     my $temp_dir = shift || get_temp_dir();
-    return tempfile( DIR => $temp_dir );
+    return tempfile( DIR => $temp_dir, SUFFIX => '.html.ep' );
 }
 
 sub get_temp_dir {
-    return $ENV{TMP} || $ENV{TEMP} || '/var/tmp';
+    return 'public/tmp';
 }
 
 #-----------------------------------------------------------------------------

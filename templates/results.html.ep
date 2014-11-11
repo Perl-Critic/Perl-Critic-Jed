@@ -29,13 +29,13 @@
 </div>
 
 <div id="contents">
-    <h3>Analysis of '[% source_path %]'</h3>
+    <h3>Analysis of '<%= $source_path %>'</h3>
     <small>Click a warning message to navigate the code.  Click the PBP reference for Policy info.</small>
-    <iframe src="[% critique_url %]" name="critique_frame" align="center" width="100%"></iframe>
+    <iframe src="<%= $critique_url %>" name="critique_frame" align="center" width="100%"></iframe>
 
-    <h3>Contents of '[% source_path %]'</h3>
+    <h3>Contents of '<%= $source_path %>'</h3>
     <small>Line numbers have been added.</small>
-    <iframe src="[% code_url %]" name="code_frame" align="center" width="100%"></iframe>
+    <iframe src="<%= $code_url %>" name="code_frame" align="center" width="100%"></iframe>
 </div>
 
 <div id="footer">
