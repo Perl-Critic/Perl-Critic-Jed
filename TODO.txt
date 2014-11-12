@@ -1,0 +1,12 @@
+TODO:
+
+Organize into proper controller
+Render stuff in <div> rather than frame
+Do cool scrolling
+Use bootstrap/fontawesome
+Try Mojolicious::Plugin::PPI
+Use template helpers
+Use a layout
+Handle errors
+Rename stuff
+Add stratopan bug
