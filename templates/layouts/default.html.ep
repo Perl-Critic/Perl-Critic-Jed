@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title><%= title %></title>
+
+        % my $meta_description = "Instantly find bugs in your Perl code";
+
+        <meta name="keywords"            content="perl::critic, perl-critic, static analyzer, lint, perl">
+        <meta name="description"         content="<%= $meta_description %>">
+        <meta property="og:description"  content="<%= $meta_description %>">
+        <meta property="og:url"          content="http://perlcritic.com/">
+        <meta property="og:title"        content="<%= title %>">
+        <meta property="og:site_name"    content="PerlCritic">
+        <meta property="og:type"         content="website">
+
+        %= stylesheet '/css/bootstrap.min.css'
+        %= stylesheet '/css/font-awesome.min.css'
+        %= stylesheet '/css/perlcritic.css'
+
+        %= include 'includes/ga_script' if app->is_in_production_mode;
+
+    </head>
+
+
+
+    <body>
+
+        <div class="wrapper">
+
+            %# include 'includes/page_header'
+            %# include 'includes/page_alert'
+            %= content
+
+            <div class="push"></div>
+
+        </div>
+
+        %= javascript '/js/bootstrap.min.js'
+        %= javascript '/js/perlcritic.js'
+
+    </body>
+
+</html>

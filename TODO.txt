@@ -6,7 +6,6 @@ Do cool scrolling
 Use bootstrap/fontawesome
 Try Mojolicious::Plugin::PPI
 Use template helpers
-Use a layout
 Handle errors
 Rename stuff
 Add stratopan bug

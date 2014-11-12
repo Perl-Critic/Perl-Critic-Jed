@@ -1,0 +1,29 @@
+h1.logo {
+    font-family: "Courier New";
+    font-weight: 700;
+    font-size: 52px;
+}
+
+h2.tag-line {
+    font-family: Georgia, "TImes New Roman", Times, serif;
+    font-style: italic;
+    font-size: 22px;
+}
+
+/* RESULTS PAGE --------------------------------- */
+
+#results {
+background: #FFF;}
+
+#header
+{padding: 20px;
+background: #006699;
+color: #FFF;}
+
+/* logo */
+#header h1.logo
+{width: 435px;
+height: 50px;
+background: transparent url(/img/perl-critic-logo2.gif) no-repeat;
+text-indent: -1000em;
+margin: 0;}
