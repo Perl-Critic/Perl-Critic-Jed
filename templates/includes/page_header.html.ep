@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+
+  <div class="navbar-header">
+    <a class="navbar-brand" href="http://stratopan.com">
+      Sponsored by Stratopan
+    </a>
+  </div>
+
+  <ul class="navbar-text list-inline pull-right">
+    <li>
+      <a class="navbar-link" href="http://twitter.com/perlcritic">
+        <i class="icon-twitter icon-2x"></i>
+      </a>
+    </li>
+
+    <li>
+      <a class="navbar-link" href="http://github/com/Perl-Critic">
+        <i class="icon-github icon-2x"></i>
+      </a>
+    </li>
+
+    <li>
+      <a class="navbar-link" href="mailto:feedback@perlcritic.com">
+        <i class="icon-envelope icon-2x"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

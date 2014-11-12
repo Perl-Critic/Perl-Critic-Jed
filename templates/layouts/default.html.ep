@@ -16,6 +16,7 @@
         <meta property="og:type"         content="website">
 
         %= stylesheet '/css/bootstrap.min.css'
+        %= stylesheet '/css/jasny-bootstrap.min.css'
         %= stylesheet '/css/font-awesome.min.css'
         %= stylesheet '/css/perlcritic.css'
 
@@ -29,15 +30,16 @@
 
         <div class="wrapper">
 
-            %# include 'includes/page_header'
-            %# include 'includes/page_alert'
+            %= include 'includes/page_header'
             %= content
 
             <div class="push"></div>
 
         </div>
 
+        %= javascript '/js/jquery.min.js'
         %= javascript '/js/bootstrap.min.js'
+        %= javascript '/js/jasny-bootstrap.min.js'
         %= javascript '/js/perlcritic.js'
 
     </body>
