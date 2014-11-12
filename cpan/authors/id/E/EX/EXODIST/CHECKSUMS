@@ -1,5 +1,13 @@
-# CHECKSUMS file written on Tue Nov 11 21:06:59 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 21:43:45 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Test-SharedFork-0.29.tar.gz' => {
+    'md5' => 'acbc5baf82d78edf3771dfecaacd2345',
+    'md5-ungz' => '77c61be44e5cd1caa47a634da185327c',
+    'mtime' => '2014-09-20',
+    'sha256' => '63af7788cc35b9b7e6fa37c61220ca66abd6364d8bb90c20038e3d8241988a6e',
+    'sha256-ungz' => 'cf1e734d2e0f6913eaba5dbb684348146ea2c2ec9a517ec28d5f2a72ea4dce66',
+    'size' => 15449
+  },
   'Test-Simple-1.001009.tar.gz' => {
     'md5' => '45b8942055352fc20543d24b6f5b9a59',
     'md5-ungz' => 'ec5c0c59d927c0750521a54b93d9a2a5',

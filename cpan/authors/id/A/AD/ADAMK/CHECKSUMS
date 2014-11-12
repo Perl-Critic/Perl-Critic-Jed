@@ -1,5 +1,13 @@
-# CHECKSUMS file written on Tue Nov 11 21:06:49 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 22:17:29 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'CSS-Tiny-1.19.tar.gz' => {
+    'md5' => 'f3f2f3d67d35d0e2b4c3b53c8b3f9483',
+    'md5-ungz' => '58f8c77a4bf66dd808deaa4a6e32d345',
+    'mtime' => '2010-09-03',
+    'sha256' => '33cce04d0f77af07971de0c829999c24533d86d3f05296d4893a380d52c6fbe0',
+    'sha256-ungz' => '920cd582e6a76d161ed268cb617c9bd1d93575a179ee246380123c3c7c9bcc24',
+    'size' => 17826
+  },
   'Class-Inspector-1.28.tar.gz' => {
     'md5' => '7ab3ca22d3147236dddfb58f2366ad22',
     'md5-ungz' => 'a5fc09ba95367fb23325f5dee8dde757',
@@ -39,6 +47,14 @@ $cksum = {
     'sha256' => '315c0b444c22b7bf207ac3c7e651d102c84a2308bfafb7a7efe095a9219494ad',
     'sha256-ungz' => '8289ecf4628c17e92a21df064f079fba665c3efeac7a69219618b4f47b2e3457',
     'size' => 38997
+  },
+  'PPI-HTML-1.08.tar.gz' => {
+    'md5' => '7485ae90643992f410fba6ba6573872f',
+    'md5-ungz' => '2b881745415cde99a5763dc3fb0b0bca',
+    'mtime' => '2009-11-16',
+    'sha256' => '8426964033a87fad7ab89a88b34aeefab59afcac377a4b476b6e32b3b2d3c511',
+    'sha256-ungz' => '5f230ec6a37983e68722d4582a8cc8b5f21cf629e9513f36ccf5192ca2863dba',
+    'size' => 28720
   },
   'Params-Util-1.07.tar.gz' => {
     'md5' => '02db120c0eef87aae1830cc62bdec37b',

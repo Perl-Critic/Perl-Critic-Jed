@@ -1,29 +1,53 @@
 h1.logo {
     font-family: "Courier New";
-    font-weight: 700;
+    font-weight: 900;
     font-size: 50px;
 }
 
 h2.tag-line {
     font-family: Georgia, "TImes New Roman", Times, serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 20px;
 }
 
-/* RESULTS PAGE --------------------------------- */
+.src, .analysis {
+    height: 600px;
+}
 
-#results {
-background: #FFF;}
+/*---------------------------------------------------------------------------*/
 
-#header
-{padding: 20px;
-background: #006699;
-color: #FFF;}
+.ppi-code br {
+    display: none;
+}
 
-/* logo */
-#header h1.logo
-{width: 435px;
-height: 50px;
-background: transparent url(/img/perl-critic-logo2.gif) no-repeat;
-text-indent: -1000em;
-margin: 0;}
+.ppi-code {
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.ppi-code .cast { color: #339999; }
+.ppi-code .comment { color: #008080; }
+.ppi-code .core { color: #FF0000; }
+.ppi-code .double { color: #999999; }
+.ppi-code .heredoc_content { color: #FF0000; }
+.ppi-code .interpolate { color: #999999; }
+.ppi-code .keyword { color: #BD2E2A; }
+.ppi-code .line_number { color: #666666; }
+.ppi-code .line_number_off { display: none; }
+.ppi-code .line_number_on { display: inline; }
+.ppi-code .literal { color: #999999; }
+.ppi-code .magic { color: #0099FF; }
+.ppi-code .match { color: #9900FF; }
+.ppi-code .number { color: #990000; }
+.ppi-code .operator { color: #DD7700; }
+.ppi-code .pod { color: #008080; }
+.ppi-code .pragma { color: #A33AF7; }
+.ppi-code .regex { color: #9900FF; }
+.ppi-code .single { color: #FF33FF; }
+.ppi-code .substitute { color: #9900FF; }
+.ppi-code .symbol { color: #389A7D; }
+.ppi-code .transliterate { color: #9900FF; }
+.ppi-code .word { color: #999999; }

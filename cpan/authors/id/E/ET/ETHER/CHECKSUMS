@@ -1,4 +1,4 @@
-# CHECKSUMS file written on Tue Nov 11 21:06:52 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 21:43:44 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
   'Hook-LexWrap-0.25.tar.gz' => {
     'md5' => '140af3d36b3e80dce414b9a68adf0ad8',
@@ -7,5 +7,13 @@ $cksum = {
     'sha256' => '08ab9af6bd9b4560702d9d994ad9d905af0c2fd24090d1480ff640f137c1430d',
     'sha256-ungz' => 'fcf93814f60cfd05d2a755849a1377ff679f7cb9e891dcfc5595ac046ad605b7',
     'size' => 29304
+  },
+  'URI-1.65.tar.gz' => {
+    'md5' => '12c5d612a20ddd42041a5aa426f66269',
+    'md5-ungz' => 'd2579f433c3f438834d8197e22357887',
+    'mtime' => '2014-11-05',
+    'sha256' => '93dec3e8dc2fe6ababb0cdd53f8b529e89595fe56cd691d2c57b1c04d6df2b91',
+    'sha256-ungz' => 'bcb97e9b6ece2e744737ff00adf7b59fe23403efe3da5ddce26b1e78f7a3dfec',
+    'size' => 82882
   }
 };

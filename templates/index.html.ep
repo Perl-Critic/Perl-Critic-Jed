@@ -13,8 +13,8 @@
 
       %= form_for critique => (method => "post", enctype => "multipart/form-data") => begin
 
-        % my @names = qw(gentle stern harsh cruel brutal);
-        % my @severities = map { [$names[$_-1] => $_] } 1..@names;
+        % my @names = qw(brutal cruel harsh stern gentle);
+        % my @severities = reverse map { [$names[$_-1] => $_] } 1..@names;
 
         <div class="form-group">
           %= label_for code_file => 'Source code';

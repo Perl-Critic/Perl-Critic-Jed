@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Nov 12 22:17:28 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Mojolicious-Plugin-PPI-0.06.tar.gz' => {
+    'md5' => '303a6d71326f701f0242446c75b79d5e',
+    'md5-ungz' => '53b044dd04cada06f054fc4a9bd2b8c7',
+    'mtime' => '2014-05-31',
+    'sha256' => '7f8e314dfe5e4f28e47961d1ce4d33072a36e1ebe7abd6561d3c41ba37f41289',
+    'sha256-ungz' => 'ed7a645b3129c19e7ff595730d386735d399eb3b76d803d1c0e6374988f8e420',
+    'size' => 7099
+  }
+};

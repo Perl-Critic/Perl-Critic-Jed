@@ -1,7 +1,8 @@
 requires 'Mojolicious';
+requires 'Mojolicious::Plugin::PPI';
 requires 'Perl::Critic';
 requires 'PPI::XS';
-requires 'Syntax::Highlight::Perl::Improved';
+requires 'Plack';
 
 test_requires 'Test::More';
 test_requires 'Carp::Always';

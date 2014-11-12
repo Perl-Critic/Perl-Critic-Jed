@@ -1,0 +1,19 @@
+# CHECKSUMS file written on Wed Nov 12 21:43:44 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Apache-LogFormat-Compiler-0.32.tar.gz' => {
+    'md5' => '0abb3275f934c7ac41d7a83c7d0565ad',
+    'md5-ungz' => 'a2a142e0376e7dcf79092747b6e5192a',
+    'mtime' => '2014-06-09',
+    'sha256' => 'bc112cdbc32f2e93c10bf661f39de509036e01c20c3a702a22cdb0be4426dd7f',
+    'sha256-ungz' => '93edd13393d04468e77ca45fe66fb0118051515b67f2129e3b926cf37be3c6c7',
+    'size' => 16354
+  },
+  'POSIX-strftime-Compiler-0.40.tar.gz' => {
+    'md5' => '6b6fb6e767c42443c0bf91ccd82e34d3',
+    'md5-ungz' => '3f56add20dac6b8607b8b20f60f254b2',
+    'mtime' => '2014-08-21',
+    'sha256' => '7b4abbe793acc920b10ed14f9e430c69ef778e28fd59e4046d6c35d1c24b6c99',
+    'sha256-ungz' => 'ce7c582ac4bf1dd45277413b02350382d9dd99e7b20f305324e53a10f0bb01d3',
+    'size' => 17242
+  }
+};

@@ -1,0 +1,35 @@
+# CHECKSUMS file written on Wed Nov 12 21:43:42 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Devel-StackTrace-AsHTML-0.14.tar.gz' => {
+    'md5' => '232c8b4d639adfbcf98e3fe92337756c',
+    'md5-ungz' => '0fe47e3da3b0399fee72925933daf36f',
+    'mtime' => '2013-02-18',
+    'sha256' => '89056a3d5ec559c8fac35890f1ad50452ec18524ed4bfc245f9e3b0cbc49827a',
+    'sha256-ungz' => 'ea39fb2fd0430fc9d7dccf6aa5e96f8c4036709a36a1716fc202b1abe1222a96',
+    'size' => 53370
+  },
+  'Filesys-Notify-Simple-0.12.tar.gz' => {
+    'md5' => 'd1886453241db0a034e5aacd02ee1f72',
+    'md5-ungz' => '69bf0c9abdc4d4f1a3221ca5cae8d307',
+    'mtime' => '2013-06-13',
+    'sha256' => 'ecafcdfdebd0706fdf1bb7ee1bbbc304a65d70c6cc05255d14fd133da6aca60d',
+    'sha256-ungz' => 'ef7bcb9d3858195812eff24802ef79d272aa3db6f691c53657c7c9fd453f97fe',
+    'size' => 12935
+  },
+  'Hash-MultiValue-0.15.tar.gz' => {
+    'md5' => 'eb7df1402b774b07a305dbb67873817a',
+    'md5-ungz' => '51cad11f22c20778f64cb4ca12b3b74f',
+    'mtime' => '2013-06-02',
+    'sha256' => '805d0eba514f18d9af60f7d8baf50b5b6e004bbaa12da43642d40575f93c83c9',
+    'sha256-ungz' => 'db6b26c300fff6097f7ec1fb9ad4f0ff2efb72e6594f5c942df8fc402ad21b57',
+    'size' => 19827
+  },
+  'Plack-1.0033.tar.gz' => {
+    'md5' => '41292d3c33f637773369daeac86a48b8',
+    'md5-ungz' => '926337bb6d5ddb03ae01dafacaef3f3d',
+    'mtime' => '2014-10-23',
+    'sha256' => 'bcd8784b8263bd6d68476e9d52e6f98819bd4f3331455cad12effed63a783220',
+    'sha256-ungz' => '0567345853989e607cd0f006f7ad8d216fbb903bf4c755ada65ed2cd66111405',
+    'size' => 239206
+  }
+};

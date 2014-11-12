@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Nov 12 21:43:40 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'HTTP-Body-1.19.tar.gz' => {
+    'md5' => 'bf0cc34b32a42eab9ce5f1748262d0ec',
+    'md5-ungz' => 'e940f67ee16acbcf01138d296f15d545',
+    'mtime' => '2013-12-06',
+    'sha256' => '01506ac3a19ac96083e0aa3881378fb934bf466e7dca4b9fc1dcbc0fa49e102a',
+    'sha256-ungz' => '525ff196119089327658fefd367de7119b0775912e82d199956466b1d14859c8',
+    'size' => 24189
+  }
+};

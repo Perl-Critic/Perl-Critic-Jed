@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Nov 12 21:43:45 2014 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Test-MockTime-0.13.tar.gz' => {
+    'md5' => '937bc5ccb151e90b7749fc83c1680e70',
+    'md5-ungz' => '27e3c4922424ab2d9bb8f007c7554aca',
+    'mtime' => '2014-08-07',
+    'sha256' => '7c3b4c33d59844b7e9d67408d9f4bf7def76aacb2939f1b9b56aaa319eac387b',
+    'sha256-ungz' => '7dbd9a9bfd6596d63384e56b077cf17f12346cd4e983473a306c151b2286179e',
+    'size' => 4892
+  }
+};

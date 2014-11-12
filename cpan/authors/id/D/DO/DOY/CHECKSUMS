@@ -1,5 +1,13 @@
-# CHECKSUMS file written on Tue Nov 11 21:07:01 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 21:43:42 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Stream-Buffered-0.03.tar.gz' => {
+    'md5' => 'b030fecaa784cd573289ae797c7aeae9',
+    'md5-ungz' => '0e226330e7b8e4845b1c192381d82c56',
+    'mtime' => '2014-06-06',
+    'sha256' => '9b2d4390b5de6b0cf4558e4ad04317a73c5e13dd19af29149c4e47c37fb2423b',
+    'sha256-ungz' => 'b75207b3b8f1c8134100d068957b51f783717789f45fbc79357a510376c30873',
+    'size' => 10348
+  },
   'Try-Tiny-0.22.tar.gz' => {
     'md5' => '6769658bfbca241a470206c9a8819ff2',
     'md5-ungz' => 'e6ef0bed40e87824b6c103c7377cb29c',

@@ -1,4 +1,4 @@
-# CHECKSUMS file written on Tue Nov 11 21:25:10 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 21:43:42 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
   'CPAN-Meta-2.142690.tar.gz' => {
     'md5' => '753bcb213e794e1e39e5a1c6ed8ddf02',
@@ -23,6 +23,14 @@ $cksum = {
     'sha256' => '625d874db1608bd317b52b482d5b94a35812499948b8cba109d402e91748944a',
     'sha256-ungz' => 'c78ef33420d5237338474df35f3463c088bcbc686eb7e8e3aa4ba84c6c2606b0',
     'size' => 25674
+  },
+  'HTTP-Tiny-0.050.tar.gz' => {
+    'md5' => '6a7181c88e666f1bfae9329f24606748',
+    'md5-ungz' => 'c93dfb7a8210bdc4bc5f0c8e92a3f9a9',
+    'mtime' => '2014-09-23',
+    'sha256' => 'ece126ff658f0c646853a39de447672fb39f71ed60ab94c0b45bc7d610f332ee',
+    'sha256-ungz' => 'bd4fdc63268443bb7fcb49072fd6e53d1f41f9ee2a0e092116ee71cb0fc2293e',
+    'size' => 61386
   },
   'PPI-XS-0.902.tar.gz' => {
     'md5' => '9f1fc9b4df050395b5ee314f1f77bc05',

@@ -1,5 +1,29 @@
-# CHECKSUMS file written on Tue Nov 11 21:06:38 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Nov 12 21:43:47 2014 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Encode-Locale-1.03.tar.gz' => {
+    'md5' => 'de8422d068634e7c1068dab4e18b452f',
+    'md5-ungz' => '60161cd42de4634b899a96f610694931',
+    'mtime' => '2012-02-11',
+    'sha256' => 'f76337e0933225914111fcc3319ff4db359b1abfd1aa56dff2df5378db0e2d55',
+    'sha256-ungz' => 'a90951bb9f0977e17ae9790e107c005dd6285ae79a27b34d46ff7371be068811',
+    'size' => 6846
+  },
+  'HTTP-Date-6.02.tar.gz' => {
+    'md5' => '52b7a0d5982d61be1edb217751d7daba',
+    'md5-ungz' => '4e25a92eac7fb92467ce540af22f9450',
+    'mtime' => '2012-03-30',
+    'sha256' => 'e8b9941da0f9f0c9c01068401a5e81341f0e3707d1c754f8e11f42a7e629e333',
+    'sha256-ungz' => '23a1d26f597eff352064289d9221cf84bccc0a11de4deea30369b6ff4bbe544b',
+    'size' => 7319
+  },
+  'HTTP-Message-6.06.tar.gz' => {
+    'md5' => 'e563ac516e28d33f65bc0f295f625f85',
+    'md5-ungz' => '5267cafa62740e34033e33d558af6500',
+    'mtime' => '2012-10-20',
+    'sha256' => '087e97009c5239dca4631cf433d836771b3fc5ba5685eef1965f9d3415cbad63',
+    'sha256-ungz' => '9e4bd4703571b5fa20e55f7400629fcebf2dfc1321fc769c3c93166dfb2c2fc2',
+    'size' => 50806
+  },
   'IO-String-1.08.tar.gz' => {
     'md5' => '250e5424f290299fc3d6b5d1e9da3835',
     'md5-ungz' => 'd578c049d117f1205aec552e788a89f5',
@@ -7,5 +31,13 @@ $cksum = {
     'sha256' => '2a3f4ad8442d9070780e58ef43722d19d1ee21a803bf7c8206877a10482de5a0',
     'sha256-ungz' => '598a56b771051253b5637e34bb6ff40caa530564d8a29b44e3fc61f3d43c252e',
     'size' => 7480
+  },
+  'LWP-MediaTypes-6.02.tar.gz' => {
+    'md5' => '8c5f25fb64b974d22aff424476ba13c9',
+    'md5-ungz' => '501aec80510c1eea8cd8fb203c3c2ec2',
+    'mtime' => '2012-02-16',
+    'sha256' => '18790b0cc5f0a51468495c3847b16738f785a2d460403595001e0b932e5db676',
+    'sha256-ungz' => '9485bcdc729204f7009ea67339f5b704f462cfc6cedec0b24a8736d76d21d6f0',
+    'size' => 18722
   }
 };

@@ -1,22 +1,19 @@
 % layout 'default';
-% title 'Perl::Critic - Results';
+% title 'Analysis';
 
-<body id="results">
+<div class="container-fluid">
+  <div class="row">
 
-  <div id="header">
-      <a href="/" title="Return to Perl::Critic home">
-        <h1 class="logo">Perl::Critic</h1>
-      </a>
-  </div>
+    <div class="col-xs-6">
+      <div class="analysis well">
+        %= "@$violations";
+      </div>
+    </div>
 
-  <div id="contents">
-      <h3>Analysis of '<%= $source_path %>'</h3>
-      <small>Click a warning message to navigate the code.  Click the PBP reference for Policy info.</small>
-      <iframe src="<%= $critique_url %>" name="critique_frame" align="center" width="100%"></iframe>
+    <div class="col-xs-6">
+      <pre class="src">
+        <%= ppi($$source_code, (line_numbers => 1)) %>
+      </pre>
+    </div>
 
-      <h3>Contents of '<%= $source_path %>'</h3>
-      <small>Line numbers have been added.</small>
-      <iframe src="<%= $code_url %>" name="code_frame" align="center" width="100%"></iframe>
-  </div>
-
-</body>
+</div>
