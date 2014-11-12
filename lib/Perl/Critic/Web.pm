@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Mojo::Base qw(Mojolicious);
+use Mojo::ByteStream qw(b);
 use English qw(-no_match_vars);
 use File::Temp qw(tempfile);
 use File::Basename qw(basename);
@@ -110,7 +111,8 @@ sub generate_code_frame {
     my ($temp_fh, $temp_file) = make_tempfile();
     my $template = 'frame-code';
 
-    my $out = $self->render_to_string($template => (code => ${$string_ref}));
+    my $code = b(${$string_ref});
+    my $out = $self->render_to_string($template => (code => $code));
     print $temp_fh $out;
     close $temp_fh;
 
@@ -123,7 +125,7 @@ sub generate_critique_frame {
     my $template = 'frame-critique';
 
     my %TT_vars = ( violations => \@violations, target => $code_frame_url );
-    my $out = $self->render_to_string(template => %TT_vars);
+    my $out = $self->render_to_string($template => %TT_vars);
     print $temp_fh $out;
     close $temp_fh;
 
@@ -184,7 +186,7 @@ sub get_color_table {
 
 sub make_tempfile {
     my $temp_dir = shift || get_temp_dir();
-    return tempfile( DIR => $temp_dir, SUFFIX => '.html.ep' );
+    return tempfile( DIR => $temp_dir, SUFFIX => '.html' );
 }
 
 sub get_temp_dir {

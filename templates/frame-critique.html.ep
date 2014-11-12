@@ -31,33 +31,26 @@ text-decoration: underline;}
 
 <body>
 <pre>
-
-% for my $viol (@violations) {
-
-    my $line = $viol->location->[0];
-    my $col  = $viol->location->[1];
-    my $desc = $viol->description;
-    my $expl = $viol->explanation;
-    my $sev  = $viol->severity;
-
-    my $pol  = $viol->policy;
-    my $pod  = $pol =~ s|::|/|gr;
-
-    my $msg1 = "$desc at line $line, column $col.";
-    my $link1 = "<a href='${target}#${line}' target='code_frame'>${msg1}</a>"
-
-    my $msg2 = "${expl}.  Severity: $sev";
-    my $link2 = "<a href='/pod/${pod}.html' target='_new'>${msg2}</a>
-
-    print ${link1}&nbsp;&nbsp;${link2};
+% for my $viol (@{ $violations }) {
+    % my $line = $viol->location->[0];
+    % my $col  = $viol->location->[1];
+    % my $desc = $viol->description;
+    % my $expl = $viol->explanation;
+    % my $sev  = $viol->severity;
+    % my $pol  = $viol->policy;
+    % my $pod  = $pol =~ s|::|/|gr;
+    % my $msg1 = "$desc at line $line, column $col.";
+    % my $link1 = "<a href='${target}#${line}' target='code_frame'>${msg1}</a>";
+    % my $msg2 = "${expl}.  Severity: $sev";
+    % my $link2 = "<a href='/pod/${pod}.html' target='_new'>${msg2}</a>";
+%= b("${link1}&nbsp;&nbsp;${link2}");
 % }
-
-%# [%- IF violations.size == 0 -%]
-%# Congratulations! No violations were found at this severity level.
-%# You might want to try again using a more restrictive severity level.
-%# [%- END -%]
-
+% if (not @{$violations}) {
+    Congratulations! No violations were found at this severity level.
+    You might want to try again using a more restrictive severity level.
+% }
 </pre>
+
 </body>
 </html>
 
