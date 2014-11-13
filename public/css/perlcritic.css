@@ -10,22 +10,27 @@ h2.tag-line {
     font-size: 20px;
 }
 
-.src, .analysis {
+.src {
+    height: 600px;
+}
+
+.analysis {
     height: 600px;
 }
 
 /*---------------------------------------------------------------------------*/
 
-.ppi-code br {
-    display: none;
-}
-
-.ppi-code {
+pre {
+    background: #FFF;
+    border: none;
     overflow: auto;
     word-wrap: normal;
     white-space: pre;
-    border-radius: 10px;
-    height: 600px;
+    height: 100%;
+}
+
+.ppi-code br {
+    display: none;
 }
 
 .ppi-code .cast { color: #339999; }
