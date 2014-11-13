@@ -1,6 +1,6 @@
 requires 'Mojolicious';
-requires 'Mojolicious::Plugin::PPI';
 requires 'Perl::Critic';
+requires 'PPI::HTML';
 requires 'PPI::XS';
 requires 'Plack';
 

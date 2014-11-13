@@ -17,14 +17,12 @@
               </tr>
           % }
         </table>
-
       </div>
     </div>
 
     <div class="col-xs-6">
       <div class="panel panel-default src">
-        <pre class="panel-body">
-          <%= ppi($$source_code, (line_numbers => 1)) %>
+        <pre class="panel-body"><code class="ppi-code"><%= b($source_code) %></code>
         </pre>
       </div>
     </div>
