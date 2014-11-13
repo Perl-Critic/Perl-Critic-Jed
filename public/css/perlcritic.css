@@ -8,6 +8,7 @@ h2.tag-line {
     font-family: Georgia, "TImes New Roman", Times, serif;
     font-style: italic;
     font-size: 20px;
+    white-space: nowrap;
 }
 
 .src {
@@ -34,7 +35,7 @@ pre code {
 }
 
 .ppi-code br {
-    display: none;
+    /*display: none;*/
 }
 
 .ppi-code .cast { color: #339999; }

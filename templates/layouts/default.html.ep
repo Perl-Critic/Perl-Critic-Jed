@@ -20,7 +20,7 @@
         %= stylesheet '/css/font-awesome.min.css'
         %= stylesheet '/css/perlcritic.css'
 
-        %= include 'includes/ga_script' if app->is_in_production_mode;
+        %= include 'includes/ga_script' if app->mode eq "production";
 
     </head>
 

@@ -10,7 +10,7 @@
         <table class="table table-hover panel-body">
           % Perl::Critic::Violation::set_format("%m at line %l, column %c.");
           % for my $v (@$violations) {
-              <tr>
+              <tr data-src-line="<%= $v->location->[0] %>">
                 <td><%= $v %></td>
                 <!-- TODO: Put diagnostic popover here -->
                 <td><i class="icon-question-sign"></i></td>
