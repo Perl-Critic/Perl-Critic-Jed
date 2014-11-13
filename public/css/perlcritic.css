@@ -23,10 +23,13 @@ h2.tag-line {
 pre {
     background: #FFF;
     border: none;
-    overflow: auto;
+    height: 100%;
+}
+
+
+pre code {
     word-wrap: normal;
     white-space: pre;
-    height: 100%;
 }
 
 .ppi-code br {
