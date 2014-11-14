@@ -12,32 +12,33 @@ h2.tag-line {
 }
 
 .src {
-    height: 600px;
-}
-
-.analysis {
-    height: 600px;
+    height: 593px;
     overflow: auto;
 }
 
+.analysis {
+    height: 593px;
+    overflow: auto;
+}
+
+.analysis .s1 { color: #B9B9B9; }
+.analysis .s2 { color: #F2CA11; }
+.analysis .s3 { color: #EA5B09; }
+.analysis .s4 { color: #B74315; }
+.analysis .s5 { color: #6F0505; }
+
 /*---------------------------------------------------------------------------*/
 
-pre {
-    background: #FFF;
-    border: none;
-    height: 100%;
-}
-
-
-pre code {
+.ppi-code {
+    overflow: auto;
     word-wrap: normal;
     white-space: pre;
+    font-weight: 700;
+    font-family: "Courier New";
+    background-color: #FFFFFF;
 }
 
-.ppi-code br {
-    /*display: none;*/
-}
-
+.ppi-code .active {background-color: #F5F5F5; }
 .ppi-code .cast { color: #339999; }
 .ppi-code .comment { color: #008080; }
 .ppi-code .core { color: #FF0000; }
@@ -46,8 +47,6 @@ pre code {
 .ppi-code .interpolate { color: #999999; }
 .ppi-code .keyword { color: #BD2E2A; }
 .ppi-code .line_number { color: #666666; }
-.ppi-code .line_number_off { display: none; }
-.ppi-code .line_number_on { display: inline; }
 .ppi-code .literal { color: #999999; }
 .ppi-code .magic { color: #0099FF; }
 .ppi-code .match { color: #9900FF; }

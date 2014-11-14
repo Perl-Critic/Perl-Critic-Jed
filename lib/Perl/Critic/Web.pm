@@ -29,12 +29,12 @@ sub critique {
     my @violations = $critic->critique( $doc );
 
     # Covert code to HTML
-    my $formatter = PPI::HTML->new;
-    my $source_code_html = $formatter->html( \$source_code );
+    my $formatter = PPI::HTML->new(line_numbers => 1);
+    my $source_code_html = $formatter->html( $doc->ppi_document );
 
     # Wrap each line in a <div>
     my @lines = split /\n/, $source_code_html;
-    $lines[$_] = qq{<div class="ppi-line" name="line-$_">$lines[$_]</div>} for 0..$#lines;
+    $lines[$_] = qq{<div class="ppi-line" name="line-@{[$_+1]}">$lines[$_]</div>} for 0..$#lines;
     $source_code_html = join '', @lines;
 
     return $self->render(violations  => \@violations, source_code => $source_code_html);

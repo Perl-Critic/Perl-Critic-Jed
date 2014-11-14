@@ -6,25 +6,25 @@
 
     <div class="col-xs-6">
       <div class="panel panel-default analysis">
+        <table class="table table-hover">
+          <toody class="analysis">
 
-        <table class="table table-hover panel-body">
-          % Perl::Critic::Violation::set_format("%m at line %l, column %c.");
-          % for my $v (@$violations) {
-              <tr data-src-line="<%= $v->location->[0] %>">
-                <td><%= $v %></td>
-                <!-- TODO: Put diagnostic popover here -->
-                <td><i class="icon-question-sign"></i></td>
-              </tr>
-          % }
+            % for my $v (@$violations) {
+                % my $s = "s" . $v->severity;
+                <tr data-src-line="<%= $v->location->[0] %>">
+                  <td class="<%= $s %>" ><%= $v->description %></td>
+                  <!-- TODO: Put diagnostic popover here -->
+                  <td><i class="icon-question-sign"></i></td>
+                </tr>
+            % }
+
+          </tobdy>
         </table>
-      </div>
+        </div>
     </div>
 
     <div class="col-xs-6">
-      <div class="panel panel-default src">
-        <pre class="panel-body"><code class="ppi-code"><%= b($source_code) %></code>
-        </pre>
-      </div>
+      <pre class="ppi-code src"><%= b($source_code) %></pre>
     </div>
 
   </div>
