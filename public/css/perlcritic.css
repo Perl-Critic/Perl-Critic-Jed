@@ -11,6 +11,10 @@ h2.tag-line {
     white-space: nowrap;
 }
 
+a:active, a:focus{
+    outline:none;
+}
+
 .src {
     height: 593px;
     overflow: auto;
@@ -19,7 +23,7 @@ h2.tag-line {
 .analysis {
     height: 593px;
     overflow: auto;
-    font-size: 12pt;
+    font-size: 18px;
 }
 
 .analysis .s1 { color: #B9B9B9; }
@@ -29,9 +33,9 @@ h2.tag-line {
 .analysis .s5 { color: #6F0505; font-weight: 700}
 
 .statistics {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 13pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .popover {
@@ -57,7 +61,7 @@ h2.tag-line {
     font-weight: 700;
     font-family: "Courier New";
     background-color: #FFFFFF;
-    font-size: 13pt;
+    font-size: 18px;
 }
 
 .ppi-code .active {background-color: #F5F5F5; }
