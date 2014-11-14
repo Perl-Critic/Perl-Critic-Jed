@@ -1,7 +1,7 @@
 TODO:
 
 Tweak fonts/colors
-Use template helpers
 Handle errors
 Rename stuff
 Add stratopan bug
+footer?
