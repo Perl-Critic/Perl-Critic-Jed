@@ -28,6 +28,12 @@ h2.tag-line {
 .analysis .s4 { color: #B74315; }
 .analysis .s5 { color: #6F0505; font-weight: 700}
 
+.statistics {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 13pt;
+}
+
 .popover {
     max-width: none;
 }
@@ -51,6 +57,7 @@ h2.tag-line {
     font-weight: 700;
     font-family: "Courier New";
     background-color: #FFFFFF;
+    font-size: 13pt;
 }
 
 .ppi-code .active {background-color: #F5F5F5; }

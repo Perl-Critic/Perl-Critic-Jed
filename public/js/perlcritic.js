@@ -3,8 +3,8 @@ $('[data-toggle="popover"]').popover();
 $('.analysis tr').mouseenter(function() {
     line = $(this).attr("data-src-line");
     selector = "[name=line-" + line + "]";
-    myOffset = $(this).offset().top;
-    $(".ppi-code").scrollTo(selector, myOffset - 70, 200);
+    myOffset = $(this).offset().top - 280;
+    $(".ppi-code").scrollTo(selector, myOffset, 200);
     $(selector).addClass("active");
 });
 
