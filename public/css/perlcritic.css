@@ -19,13 +19,28 @@ h2.tag-line {
 .analysis {
     height: 593px;
     overflow: auto;
+    font-size: 12pt;
 }
 
 .analysis .s1 { color: #B9B9B9; }
 .analysis .s2 { color: #F2CA11; }
 .analysis .s3 { color: #EA5B09; }
 .analysis .s4 { color: #B74315; }
-.analysis .s5 { color: #6F0505; }
+.analysis .s5 { color: #6F0505; font-weight: 700}
+
+.popover {
+    max-width: none;
+}
+
+.popover-title {
+    text-align: center;
+}
+
+.popover-content pre {
+    white-space: pre;
+    overflow: auto;
+    word-wrap: normal;
+}
 
 /*---------------------------------------------------------------------------*/
 

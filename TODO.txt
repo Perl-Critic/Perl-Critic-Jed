@@ -1,10 +1,6 @@
 TODO:
 
-Organize into proper controller
-Render stuff in <div> rather than frame
-Do cool scrolling
-Use bootstrap/fontawesome
-Try Mojolicious::Plugin::PPI
+Tweak fonts/colors
 Use template helpers
 Handle errors
 Rename stuff

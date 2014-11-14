@@ -4,17 +4,21 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-xs-6">
+    <div class="col-xs-4">
       <div class="panel panel-default analysis">
         <table class="table table-hover">
           <toody class="analysis">
 
             % for my $v (@$violations) {
                 % my $s = "s" . $v->severity;
+                % my $d = $v->diagnostics =~ s/^[ ]{4}//mgr;
                 <tr data-src-line="<%= $v->location->[0] %>">
-                  <td class="<%= $s %>" ><%= $v->description %></td>
-                  <!-- TODO: Put diagnostic popover here -->
-                  <td><i class="icon-question-sign"></i></td>
+                  <td>
+                    <a href="#" data-toggle="popover" data-trigger="focus"
+                    data-content="<pre><%= $d %></pre>" data-title="<%= $v->policy %>"
+                    data-html="true" tabindex="0" class="<%= $s %>"><%= $v %></a>
+                  </td>
+
                 </tr>
             % }
 
@@ -23,11 +27,9 @@
         </div>
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-xs-8">
       <pre class="ppi-code src"><%= b($source_code) %></pre>
     </div>
 
   </div>
 </div>
-
-
