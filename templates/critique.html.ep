@@ -1,9 +1,43 @@
 % layout 'default';
-% title 'Analysis';
+% title $filename;
 
 <div class="container-fluid">
+
   <div class="row">
 
+    <div class="col-xs-4">
+      <dl class="dl-horizontal">
+        <dt>Total lines:</dt><dd><%= $statistics->lines %></dd>
+        <dt>Code lines:</dt><dd><%= $statistics->lines_of_perl %></dd>
+        <dt>Comment lines:</dt><dd><%= $statistics->lines_of_comment %></dd>
+        <dt>Data lines:</dt><dd><%= $statistics->lines_of_data %></dd>
+        <dt>Blank lines:</dt><dd><%= $statistics->lines_of_blank %></dd>
+        <dt>POD lines:</dt><dd><%= $statistics->lines_of_pod %></dd>
+      </dl>
+    </div>
+
+    <div class="col-xs-4">
+      <dl class="dl-horizontal">
+        <dt>Total violations:</dt><dd><%= $statistics->total_violations %></dd>
+
+        % my $v = $statistics->violations_by_severity;
+        % my @severity_range =  (1..6-$severity);
+        % for (reverse @severity_range) {
+          <dt>Severity <%= $_ %> violations:</dt><dd><%= $v->{6-$_} %></dd>
+        % }
+      </dl>
+    </div>
+
+    <div class="col-xs-4">
+      <dl class="dl-horizontal">
+        <dt>Total subroutines:</dt><dd><%= $statistics->subs %></dd>
+        <dt>Average McCabe score:</dt><dd><%= $statistics->average_sub_mccabe %></dd>
+      </dl>
+    </div>
+
+  </div>
+
+  <div class="row">
     <div class="col-xs-4">
       <div class="panel panel-default analysis">
         <table class="table table-hover">

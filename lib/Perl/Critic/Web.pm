@@ -37,7 +37,11 @@ sub critique {
     $lines[$_] = qq{<div class="ppi-line" name="line-@{[$_+1]}">$lines[$_]</div>} for 0..$#lines;
     $source_code_html = join '', @lines;
 
-    return $self->render(violations  => \@violations, source_code => $source_code_html);
+    return $self->render( filename    => $source_file,
+                          violations  => \@violations,
+                          severity    => $severity,
+                          source_code => $source_code_html,
+                          statistics  => $critic->statistics, );
 }
 
 #-----------------------------------------------------------------------------
