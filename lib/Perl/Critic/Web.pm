@@ -8,6 +8,7 @@ use PPI::HTML;
 
 sub startup {
     my $self = shift;
+    $self->plugin(Config => {});
     $self->routes->get('/' => 'home');
     $self->routes->post('critique' => \&critique);
     return $self;
