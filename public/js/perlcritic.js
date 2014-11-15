@@ -2,8 +2,7 @@
 $('.analysis tr').mouseenter(function() {
     line = $(this).attr("data-src-line");
     selector = "[name=line-" + line + "]";
-    myOffset = $(this).offset().top - 280;
-    $(".ppi-code").scrollTo(selector, myOffset, 200);
+    $(".ppi-code").scrollTo(selector, this, 200);
     $(selector).addClass("active");
 });
 
@@ -14,8 +13,9 @@ $('.analysis tr').mouseleave(function() {
 });
 
 
-jQuery.fn.scrollTo = function(elem, topOffset, speed) {
-    scrollAmount = $(this).scrollTop() - $(this).offset().top + $(elem).offset().top - topOffset;
+jQuery.fn.scrollTo = function(elem, elem2, speed) {
+    var topOffset = $(".analysis").scrollTop() + $("table").offset().top - $(elem2).offset().top - 10;
+    var scrollAmount = $(this).scrollTop() - $(this).offset().top + $(elem).offset().top + topOffset;
     $(this).animate({scrollTop:  scrollAmount}, speed);
     return this;
 };
