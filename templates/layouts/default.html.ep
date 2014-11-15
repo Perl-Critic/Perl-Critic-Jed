@@ -16,8 +16,8 @@
         <meta property="og:type"         content="website">
 
         %= stylesheet '/css/bootstrap.min.css'
-        %= stylesheet '/css/jasny-bootstrap.min.css'
         %= stylesheet '/css/font-awesome.min.css'
+        %= stylesheet '/css/ladda-themeless.min.css'
         %= stylesheet '/css/perlcritic.css'
 
         %= include 'includes/ga_script' if app->mode eq "production";
@@ -39,8 +39,13 @@
 
         %= javascript '/js/jquery.min.js'
         %= javascript '/js/bootstrap.min.js'
-        %= javascript '/js/jasny-bootstrap.min.js'
+        %= javascript '/js/spin.min.js'
+        %= javascript '/js/ladda.min.js'
         %= javascript '/js/perlcritic.js'
+
+        <script>
+            Ladda.bind( 'button' );
+        </script>
 
     </body>
 

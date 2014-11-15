@@ -15,6 +15,35 @@ a:active, a:focus{
     outline:none;
 }
 
+/*---------------------------------------------------------------------------*/
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #F8F8F8;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+
+.form-control[readonly] {
+    background-color: #FFFFFF;
+}
+
+/*---------------------------------------------------------------------------*/
+
 .src {
     height: 593px;
     overflow: auto;
@@ -37,6 +66,8 @@ a:active, a:focus{
     margin-bottom: 20px;
     font-size: 18px;
 }
+
+/*---------------------------------------------------------------------------*/
 
 .popover {
     max-width: none;

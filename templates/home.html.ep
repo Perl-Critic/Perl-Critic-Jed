@@ -1,7 +1,7 @@
 % layout 'default';
 % title 'Perl::Critic';
 
-<div class="container">
+<div class="container-fluid">
 
   <div class="row">
     <div class="col-md-offset-4 col-md-4">
@@ -17,27 +17,29 @@
         % my @severities = reverse map { [$names[$_-1] => $_] } 1..@names;
 
         <div class="form-group">
-          %= label_for code_file => 'Source code';
-          <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-            <div class="form-control input-lg" style="padding-top:11px" data-trigger="fileinput">
-              <i class="icon-file"></i>
-              <span class="fileinput-filename"></span>
-            </div>
+          %= label_for code_file => "Source code"
+          <div class="input-group">
+                <input type="text" class="form-control input-lg" readonly>
+                <span class="input-group-btn">
+                    <span class="btn btn-lg btn-default btn-file input-lg">
+                        Select <i class="icon-file"> </i>
+                        <input type="file" name="code_file">
+                    </span>
+                </span>
 
-            <span class="input-group-addon input-lg btn btn-default btn-file">
-              <span class="fileinput-new">Select file</span>
-              <span class="fileinput-exists">Change</span>
-              <input type="file" name="code_file">
-            </span>
           </div>
         </div>
+
 
         <div class="form-group">
           %= label_for severity => 'Severity level';
           %= select_field severity => \@severities, class => "form-control input-lg";
         </div>
 
-        %= submit_button "Analyze my code!" => class => "btn btn-lg btn-primary btn-block", style=>"margin-top:36px";
+        <button type="submit" class="ladda-button btn btn-lg btn-block btn-primary"
+          data-style="zoom-out" style="margin-top:36px">
+          Analyze my code!
+        </button>
 
       % end
 
