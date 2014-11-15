@@ -1,9 +1,9 @@
 <nav class="navbar navbar-default">
 
   <div class="navbar-header">
-    <a class="navbar-brand" href="http://stratopan.com">
-      Sponsored by Stratopan
-    </a>
+      <span class="navbar-brand">
+        %= stash("filename")
+      </span>
   </div>
 
   <ul class="navbar-text list-inline pull-right">

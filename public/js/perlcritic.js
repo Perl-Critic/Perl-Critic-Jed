@@ -37,6 +37,19 @@ $(document).ready( function() {
 });
 
 //---------------------------------------------------------------------------
+// See http://jsfiddle.net/AAFaY
+
+$('.btn-slide').click(function() {
+    var statistics = $(".statistics");
+
+    statistics.slideToggle('slow', function() {
+        $('.btn-slide').text( $(this).is(":visible") ? "Hide stats" : "Show stats");
+    });
+
+    return false;
+});
+
+//---------------------------------------------------------------------------
 // Popovers require activation
 
 $('[data-toggle="popover"]').popover();

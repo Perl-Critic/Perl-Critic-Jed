@@ -52,7 +52,6 @@ a:active, a:focus{
 .analysis {
     height: 593px;
     overflow: auto;
-    font-size: 18px;
 }
 
 .analysis .s1 { color: #B9B9B9; }
@@ -62,9 +61,13 @@ a:active, a:focus{
 .analysis .s5 { color: #6F0505; font-weight: 700}
 
 .statistics {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 18px;
+    display: none;
+}
+
+.statistics dl {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -85,6 +88,17 @@ a:active, a:focus{
 
 /*---------------------------------------------------------------------------*/
 
+.btn-slide {
+    display: block;
+    max-width: 200px;
+    margin-top: -10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/*---------------------------------------------------------------------------*/
+
 .ppi-code {
     overflow: auto;
     word-wrap: normal;
@@ -92,7 +106,6 @@ a:active, a:focus{
     font-weight: 700;
     font-family: "Courier New";
     background-color: #FFFFFF;
-    font-size: 18px;
 }
 
 .ppi-code .line { width: 100%; }
