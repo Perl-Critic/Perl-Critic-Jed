@@ -20,7 +20,7 @@
         %= stylesheet '/css/ladda-themeless.min.css'
         %= stylesheet '/css/perlcritic.css'
 
-        %= include 'includes/ga_script' if app->mode eq "production";
+        %= include 'includes/google_analytics' if app->mode eq "production";
 
     </head>
 
