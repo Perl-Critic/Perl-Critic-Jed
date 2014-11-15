@@ -54,11 +54,11 @@ a:active, a:focus{
     overflow: auto;
 }
 
-.analysis .s1 { color: #B9B9B9; }
-.analysis .s2 { color: #F2CA11; }
-.analysis .s3 { color: #EA5B09; }
-.analysis .s4 { color: #B74315; }
-.analysis .s5 { color: #6F0505; font-weight: 700}
+.analysis .s1, .statistics .s1 { color: #B9B9B9; }
+.analysis .s2, .statistics .s2 { color: #F2CA11; }
+.analysis .s3, .statistics .s3 { color: #EA5B09; }
+.analysis .s4, .statistics .s4 { color: #B74315; }
+.analysis .s5, .statistics .s5 { color: #6F0505; font-weight: 700}
 
 .statistics {
     display: none;
