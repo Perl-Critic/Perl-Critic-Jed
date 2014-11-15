@@ -65,7 +65,7 @@ help:
 	@echo 'help                    Display this lovely message'
 	@echo 'realclean               Restore everything to a pristine state'
 	@echo 'shell                   Spawn a shell ($$SHELL) with the application environment'
-	@echo 'start                   Launches the (ashbury) app under morbo'
+	@echo 'start                   Launches the app under morbo'
 	@echo 'reply                   Load app in a read-eval-print loop'
 	@echo 'test                    Runs unit tests'
 
