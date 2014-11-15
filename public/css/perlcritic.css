@@ -1,17 +1,40 @@
-h1.logo {
+.headline {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.headline h1 {
     font-family: "Courier New";
     font-weight: 900;
     font-size: 50px;
+    text-align: center;
 }
 
-h2.tag-line {
+.headline h2 {
     font-family: Georgia, "TImes New Roman", Times, serif;
     font-style: italic;
-    font-size: 20px;
-    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
 }
 
-a:active, a:focus{
+ul.social-links {
+    margin-top: 14px;
+    margin-right: 10px;
+}
+
+.ribbon {
+   display: block;
+   position: absolute;
+   top: 15px;
+   left: -100px;
+   width: 300px;
+   -webkit-transform: rotate(-45deg);
+   -moz-transform:    rotate(-45deg);
+   -ms-transform:     rotate(-45deg);
+   transform:         rotate(-45deg);
+}
+
+a:active, a:focus {
     outline:none;
 }
 

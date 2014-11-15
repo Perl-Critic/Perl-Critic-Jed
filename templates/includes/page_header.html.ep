@@ -1,28 +1,29 @@
-<nav class="navbar navbar-default">
+<a href="https://stratopan.com" target="_blank" class="btn btn-primary btn-lg ribbon">
+ <span class="small">Sponsored by</span></br>
+ <span class="">Stratopan</span>
+</a>
 
-  <div class="navbar-header">
-      <span class="navbar-brand">
-        %= stash("filename")
-      </span>
-  </div>
-
-  <ul class="navbar-text list-inline pull-right">
+<div class="container-fluid">
+<div class="row">
+  <ul class="list-inline pull-right social-links">
     <li>
-      <a class="navbar-link" href="http://twitter.com/perlcritic">
+      <a class="navbar-link" target="_blank" href="http://twitter.com/perlcritic">
         <i class="icon-twitter icon-2x"></i>
       </a>
     </li>
 
     <li>
-      <a class="navbar-link" href="http://github/com/Perl-Critic">
+      <a class="navbar-link" target="_blank" href="http://github.com/Perl-Critic">
         <i class="icon-github icon-2x"></i>
       </a>
     </li>
 
     <li>
-      <a class="navbar-link" href="mailto:feedback@perlcritic.com">
+      <a class="navbar-link" href="mailto:perlcritic@stratopan.com">
         <i class="icon-envelope icon-2x"></i>
       </a>
     </li>
   </ul>
-</nav>
+
+</div>
+</div>

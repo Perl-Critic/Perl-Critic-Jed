@@ -43,10 +43,6 @@
         %= javascript '/js/ladda.min.js'
         %= javascript '/js/perlcritic.js'
 
-        <script>
-            Ladda.bind( 'button' );
-        </script>
-
     </body>
 
 </html>

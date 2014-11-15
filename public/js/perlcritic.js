@@ -55,4 +55,10 @@ $('.btn-slide').click(function() {
 $('[data-toggle="popover"]').popover();
 
 
+//---------------------------------------------------------------------------
+// Bind and disable animated submit buttons
+
+$(function(){Ladda.bind('.ladda-button')});
+$(function(){Ladda.stopAll()});
+
 
