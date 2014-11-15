@@ -35,7 +35,7 @@ sub critique {
 
     # Wrap each line in a <div>
     my @lines = split /\n/, $source_code_html;
-    $lines[$_] = qq{<div class="ppi-line" name="line-@{[$_+1]}">$lines[$_]</div>} for 0..$#lines;
+    $lines[$_] = qq{<div class="line" name="line-@{[$_+1]}">$lines[$_]</div>} for 0..$#lines;
     $source_code_html = join '', @lines;
 
     return $self->render( filename    => $source_file,
