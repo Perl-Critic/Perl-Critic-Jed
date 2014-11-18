@@ -8,4 +8,4 @@ use lib "$Bin/../lib";
 
 # Start commands for application
 require Mojolicious::Commands;
-Mojolicious::Commands->start_app('Perl::Critic::Web');
+Mojolicious::Commands->start_app('Perl::Critic::Jed');

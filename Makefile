@@ -2,17 +2,18 @@
 #-----------------------------------------------------------------------------
 # Safety checks...
 
-ifndef PERLCRITIC_MODE
-PERLCRITIC_MODE = development
+ifndef PCJD_MODE
+PCJD_MODE = development
 endif
 
-ifeq ($(PERLCRITIC_MODE), production)
+ifeq ($(PCJD_MODE), production)
 $(error Refusing to run in production environment)
 endif
 
 #-----------------------------------------------------------------------------
 
-APP      = perlcritic
+APP      = pcjd
+PORT     = 5555
 CPAN     = cpan
 LOCAL    = $(PWD)/local
 PROVE    = prove
@@ -22,12 +23,12 @@ REPLY    = reply
 IDE      = '/Applications/Sublime Text.app'
 
 PLACKUP            = plackup
-PLACK_FLAG_PORT    = -port 5555 
+PLACK_FLAG_PORT    = -port $(PORT) 
 PLACK_FLAG_SERVER  = -server HTTP::Server::PSGI
 PLACK_FLAGS        = $(PLACK_FLAG_PORT) $(PLACK_FLAG_SERVER)
 
 MORBO              = $(LOCAL)/bin/morbo
-MORBO_FLAG_LISTEN  = --listen http://*:5555
+MORBO_FLAG_LISTEN  = --listen http://*:$(PORT)
 MORBO_FLAG_VERBOSE = --verbose
 MORBO_FLAG_WATCH   =
 MORBO_FLAGS        = $(MORBO_FLAG_LISTEN) $(MORBO_FLAG_WATCH) $(MORBO_FLAG_VERBOSE)
@@ -38,7 +39,7 @@ CPANM_FLAG_LOCAL_LIB = --local-lib-contained $(LOCAL)
 CPANM_FLAG_CPANFILE  = --cpanfile etc/cpanfile
 CPANM_FLAGS          = $(CPANM_FLAG_MIRROR) $(CPANM_FLAG_LOCAL_LIB) $(CPANM_FLAG_CPANFILE)
 
-MOJO_MODE = $(PERLCRITIC_MODE)
+MOJO_MODE = $(PCJD_MODE)
 
 #-----------------------------------------------------------------------------
 
@@ -126,9 +127,10 @@ realclean: clean
 #-----------------------------------------------------------------------------
 
 reply:
-	$(REPLY) -MCarp::Always -MStratopan::Core
+	$(REPLY) -MCarp::Always -MPerl::Critic::Jed
 
 #-----------------------------------------------------------------------------
 
 ide:
 	open $(IDE)
+

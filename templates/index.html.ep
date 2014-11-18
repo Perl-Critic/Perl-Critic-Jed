@@ -19,13 +19,13 @@
         % my @severities = reverse map { [$names[$_-1] => $_] } 1..@names;
 
         <div class="form-group">
-          %= label_for code_file => "Source code"
+          %= label_for upload => "Source code"
           <div class="input-group">
                 <input type="text" class="form-control input-lg" readonly>
                 <span class="input-group-btn">
                     <span class="btn btn-lg btn-default btn-file input-lg">
                         Select <i class="icon-file"> </i>
-                        <input type="file" name="code_file">
+                        <input type="file" name="upload">
                     </span>
                 </span>
 
