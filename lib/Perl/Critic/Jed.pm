@@ -19,17 +19,16 @@ sub startup {
 
 sub critique {
 
-    my $c = shift; # controller
+    my $c = shift; # I am a controller
     my $severity = $c->param('severity');
     my $upload = $c->param('upload');
     my $source_filename = $upload->filename;
     my $source_code_raw = $upload->slurp;
 
     # Critique code
-    my $config = $c->app->config->{perlcritic} || {};
     my $document = Perl::Critic::Document->new(-source => \$source_code_raw, '-forced-filename' => $source_filename);
-    my $critic = Perl::Critic->new(-severity => $severity, %{ $config });
-    my @violations = $critic->critique($document);
+    my $critic = Perl::Critic->new(-severity => $severity, %{ $c->app->config->{perlcritic} || {} });
+    my $violations = [ reverse Perl::Critic::Violation::sort_by_severity($critic->critique($document)) ];
 
     # Covert raw source code to HTML
     my $formatter = PPI::HTML->new(line_numbers => 1);
@@ -43,7 +42,7 @@ sub critique {
 
     return $c->render(
         filename    => $source_filename,
-        violations  => \@violations,
+        violations  => $violations,
         severity    => $severity,
         source_code => $source_code_html,
         statistics  => $critic->statistics,
