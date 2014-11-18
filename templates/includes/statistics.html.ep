@@ -20,10 +20,9 @@
           <dd><%= $statistics->total_violations %></dd>
 
           % my $v = $statistics->violations_by_severity;
-          % my @severity_range =  (1..6-$severity);
-          % for (reverse @severity_range) {
+          % for (reverse $severity..5) {
             <dt class="<%= "s$_" %>">Severity <%= $_ %>:</dt>
-            <dd class="<%= "s$_" %>"><%= $v->{6-$_} || 0 %></dd>
+            <dd class="<%= "s$_" %>"><%= $v->{$_} || 0 %></dd>
           % }
         </dl>
 
