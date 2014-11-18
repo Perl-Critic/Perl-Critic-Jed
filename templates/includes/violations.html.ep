@@ -1,0 +1,27 @@
+<div class="panel panel-default analysis">
+
+  <table class="table table-hover">
+
+    <toody class="analysis">
+
+      % for my $v (@$violations) {
+
+          % my $s = "s" . $v->severity;
+          % my $d = $v->diagnostics =~ s/^[ ]{4}//mgr;
+
+          <tr data-src-line="<%= $v->location->[0] %>">
+
+            <td>
+              <a href="#" data-toggle="popover" data-trigger="focus"
+              data-content="<pre><%= $d %></pre>" data-title="<%= $v->policy %>"
+              data-html="true" tabindex="0" class="<%= $s %>"><%= $v %></a>
+            </td>
+
+          </tr>
+      % }
+
+    </tobdy>
+
+  </table>
+
+</div>

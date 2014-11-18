@@ -1,0 +1,3 @@
+<pre class="ppi-code src">
+    %= b($source_code)
+</pre>
