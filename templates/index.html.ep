@@ -15,9 +15,6 @@
 
       %= form_for critique => (method => "post", enctype => "multipart/form-data") => begin
 
-        % my @names = qw(brutal cruel harsh stern gentle);
-        % my @severities = reverse map { [$names[$_-1] => $_] } 1..@names;
-
         <div class="form-group">
           %= label_for upload => "Source code"
           <div class="input-group">
@@ -32,6 +29,8 @@
           </div>
         </div>
 
+        % my @names = qw(brutal cruel harsh stern gentle);
+        % my @severities = reverse map { ["($_) $names[$_-1]" => $_] } 1..@names;
 
         <div class="form-group">
           %= label_for severity => 'Severity level';
