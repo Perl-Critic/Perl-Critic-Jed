@@ -1,7 +1,9 @@
 TODO:
 
-Tweak fonts/colors
 Handle errors
-Rename stuff
+Show badges
+Show filename
+Link to home
+Package for CPAN
 File/line counter
-footer?
+Footer?
