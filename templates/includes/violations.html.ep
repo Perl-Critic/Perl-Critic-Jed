@@ -20,10 +20,15 @@
 
           <tr data-src-line="<%= $v->location->[0] %>">
 
-            <td>
-              <a href="#" data-toggle="popover" data-trigger="focus"
+            <td class="<%= $s %>">
+              %= $v
+            </td>
+
+            <td style="vertical-align:middle">
+              <i class="icon-question-sign" data-toggle="popover" data-trigger="hover"
               data-content="<pre><%= $d %></pre>" data-title="<%= $v->policy %>"
-              data-html="true" tabindex="0" class="<%= $s %>"><%= $v %></a>
+              data-html="true"</i>
+              </a>
             </td>
 
           </tr>
