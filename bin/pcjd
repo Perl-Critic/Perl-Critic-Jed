@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use FindBin qw($Bin);
-use lib "$Bin/../lib";
+use lib ("$Bin/../local/lib/perl5", "$Bin/../lib");
 
 # Start commands for application
 require Mojolicious::Commands;
