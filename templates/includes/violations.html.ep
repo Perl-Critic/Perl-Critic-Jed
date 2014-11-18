@@ -1,10 +1,19 @@
 <div class="panel panel-default analysis">
 
-  <table class="table table-hover">
+  % if (not @{$violations}) {
 
-    <tbody class="analysis">
+    <div class="panel-body">
+      <p class="lead" style="text-align:center">Congratulations! No violations were found at severity level <%= $severity %>.</p>
+      <img class="pc-badge" src="<%= qq{/img/badge/$severity.gif} %>"/>
+    </div>
 
-      % for my $v (@$violations) {
+  % } else {
+
+    <table class="table table-hover">
+
+      <tbody>
+
+        % for my $v (@$violations) {
 
           % my $s = "s" . $v->severity;
           % my $d = $v->diagnostics =~ s/^[ ]{4}//mgr;
@@ -18,10 +27,12 @@
             </td>
 
           </tr>
-      % }
+        % }
 
-    </tbody>
+      </tbody>
 
-  </table>
+    </table>
+
+  % }
 
 </div>

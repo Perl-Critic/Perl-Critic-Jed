@@ -93,6 +93,10 @@ a:active, a:focus {
     width: 32%;
 }
 
+.pc-badge {
+    display: block;
+    margin: auto;
+}
 /*---------------------------------------------------------------------------*/
 
 .popover {
