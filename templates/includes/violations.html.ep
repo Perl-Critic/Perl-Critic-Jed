@@ -2,7 +2,7 @@
 
   <table class="table table-hover">
 
-    <toody class="analysis">
+    <tbody class="analysis">
 
       % for my $v (@$violations) {
 
@@ -20,7 +20,7 @@
           </tr>
       % }
 
-    </tobdy>
+    </tbody>
 
   </table>
 
