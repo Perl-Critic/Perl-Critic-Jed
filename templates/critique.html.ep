@@ -7,7 +7,9 @@
     %= include 'includes/statistics';
   </div>
 
+
   <div class="row">
+
     <div class="col-xs-4">
       %= include 'includes/violations';
     </div>
