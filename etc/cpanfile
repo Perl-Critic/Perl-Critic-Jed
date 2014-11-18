@@ -2,7 +2,12 @@ requires 'Mojolicious';
 requires 'Perl::Critic';
 requires 'PPI::HTML';
 requires 'PPI::XS';
-requires 'Plack';
 
 test_requires 'Test::More';
 test_requires 'Carp::Always';
+
+author_requires 'App::Ack';
+author_requires 'Plack';
+author_requires 'Reply';
+author_requires 'Term::ReadLine';
+author_requires 'Term::ReadLine::EditLine';
