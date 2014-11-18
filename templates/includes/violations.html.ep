@@ -26,7 +26,7 @@
 
             <td style="vertical-align:middle">
               <i class="icon-question-sign" data-toggle="popover" data-trigger="hover"
-              data-content="<pre><%= $d %></pre>" data-title="<%= $v->policy %>"
+              data-content="<pre><%= $d %></pre>" data-title="<%= sprintf '%s (Severity %d)', $v->policy, $v->severity %>"
               data-html="true"</i>
               </a>
             </td>
