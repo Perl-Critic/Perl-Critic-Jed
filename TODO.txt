@@ -3,5 +3,5 @@ TODO:
 Tweak fonts/colors
 Handle errors
 Rename stuff
-Add stratopan bug
+File/line counter
 footer?
