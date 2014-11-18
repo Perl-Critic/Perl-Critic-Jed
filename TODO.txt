@@ -1,9 +1,9 @@
 TODO:
 
 Handle errors
-Show badges
 Show filename
 Link to home
 Package for CPAN
+Clean up HTML/CSS
 File/line counter
 Footer?
