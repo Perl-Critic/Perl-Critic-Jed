@@ -42,6 +42,7 @@
         </div>
 
         %= javascript '/js/jquery.min.js'
+        %= javascript '/js/jquery-color.min.js'
         %= javascript '/js/bootstrap.min.js'
         %= javascript '/js/spin.min.js'
         %= javascript '/js/ladda.min.js'

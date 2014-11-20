@@ -1,22 +1,35 @@
 
 $('.analysis tr').mouseenter(function() {
-    line = $(this).attr("data-src-line");
-    selector = "[name=line-" + line + "]";
-    $(".ppi-code").scrollTo(selector, this, 200);
-    $(selector).addClass("active");
+    var line = $(this).attr("data-src-line");
+    var selector = "[name=line-" + line + "]";
+
+    // Extra scroll amount so that the relevant line
+    // of code appears right next to the violation.
+    var offset = $(".analysis").scrollTop()
+        + $(".analysis table").offset().top
+        - $(this).offset().top;
+
+    // After scrolling, briefly highlght the relevant
+    // line of code so that it is easier to see
+    var highlight = function(){
+        $(selector).animate({backgroundColor: "yellow"}, 200)
+        .delay(100).animate({backgroundColor: "#F5F5F5"}, 400)
+    };
+
+
+    $(".ppi-code").scrollTo(selector, 200, offset, highlight);
 });
 
 $('.analysis tr').mouseleave(function() {
-    line = $(this).attr("data-src-line");
-    selector = "[name=line-" + line + "]";
-    $(selector).removeClass("active");
+    var line = $(this).attr("data-src-line");
+    var selector = "[name=line-" + line + "]";
+    $(selector).attr("style", "none");
 });
 
 
-jQuery.fn.scrollTo = function(elem, elem2, speed) {
-    var topOffset = $(".analysis").scrollTop() + $("table").offset().top - $(elem2).offset().top - 10;
-    var scrollAmount = $(this).scrollTop() - $(this).offset().top + $(elem).offset().top + topOffset;
-    $(this).animate({scrollTop:  scrollAmount}, speed);
+jQuery.fn.scrollTo = function(elem, speed, offset, after) {
+    var scrollAmount = $(this).scrollTop() - $(this).offset().top + $(elem).offset().top + offset;
+    $(this).stop(true, false).animate({scrollTop:  scrollAmount}, speed, "swing", after);
     return this;
 };
 

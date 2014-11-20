@@ -136,7 +136,6 @@ a:active, a:focus {
 }
 
 .ppi-code .line { width: 100%; }
-.ppi-code .active {background-color: #F5F5F5; }
 .ppi-code .cast { color: #339999; }
 .ppi-code .comment { color: #008080; }
 .ppi-code .core { color: #FF0000; }

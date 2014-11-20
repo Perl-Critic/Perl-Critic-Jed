@@ -1,3 +1,1 @@
-<pre class="ppi-code src">
-    %= b($source_code)
-</pre>
+<pre class="ppi-code src"><%== $source_code =%></pre>
