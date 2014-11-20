@@ -33,6 +33,7 @@
         <div class="wrapper">
 
             %= include 'includes/page_header'
+            %= include 'includes/page_alert'
             %= content
 
             <div class="push"></div>
