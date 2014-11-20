@@ -1,6 +1,5 @@
 TODO:
 
-Handle errors
 Show filename
 Link to home
 Package for CPAN
