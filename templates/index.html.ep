@@ -22,7 +22,7 @@
                 <span class="input-group-btn">
                     <span class="btn btn-lg btn-default btn-file input-lg">
                         Select <i class="icon-file"> </i>
-                        <input type="file" name="upload">
+                        <input type="file" name="upload" id="upload">
                     </span>
                 </span>
 
@@ -34,7 +34,7 @@
 
         <div class="form-group">
           %= label_for severity => 'Severity level';
-          %= select_field severity => \@severities, class => "form-control input-lg";
+          %= select_field severity => \@severities, class => "form-control input-lg", id => "severity";
         </div>
 
         <button type="submit" class="ladda-button btn btn-lg btn-block btn-primary"

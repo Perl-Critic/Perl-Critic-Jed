@@ -7,6 +7,7 @@
 
         % my $meta_description = "Instantly find bugs in your Perl code";
 
+        <meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
         <meta name="keywords"            content="perl::critic, perl-critic, static analyzer, lint, perl">
         <meta name="description"         content="<%= $meta_description %>">
         <meta property="og:description"  content="<%= $meta_description %>">
