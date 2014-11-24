@@ -65,6 +65,14 @@ a:active, a:focus {
     background-color: #FFFFFF;
 }
 
+#paste-tab textarea {
+    height: 150px;
+}
+
+.tab-pane {
+    padding-top: 10px;
+}
+
 /*---------------------------------------------------------------------------*/
 
 .src {

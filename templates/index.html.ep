@@ -13,37 +13,45 @@
   <div class="row" style="margin-bottom:30px">
     <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
 
-      %= form_for critique => (method => "post", enctype => "multipart/form-data") => begin
+      
 
         <div class="form-group">
-          %= label_for upload => "Source code"
-          <div class="input-group">
-                <input type="text" class="form-control input-lg" readonly>
-                <span class="input-group-btn">
-                    <span class="btn btn-lg btn-default btn-file input-lg">
-                        Select <i class="icon-file"> </i>
-                        <input type="file" name="upload" id="upload">
-                    </span>
-                </span>
 
+          <div role="tabpanel">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active"><a href="#upload-tab" data-toggle="tab">Upload</a></li>
+              <li><a href="#paste-tab" data-toggle="tab">Paste</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="upload-tab">
+                %= form_for critique =>{ type => 'file' } => (method => 'post', enctype => 'multipart/form-data') => begin
+                  <div class="form-group">
+                    %= label_for upload => "Source code"   
+                    <div class="input-group">
+                      <input type="text" class="form-control input-lg" readonly>
+                      <span class="input-group-btn">
+                          <span class="btn btn-lg btn-default btn-file input-lg">
+                              Select <i class="icon-file"> </i>
+                              <input type="file" name="upload" id="upload">
+                          </span>
+                      </span>
+                    </div>
+                  </div>
+                  %= include 'includes/common_form'
+                % end
+              </div>
+              <div class="tab-pane" id="paste-tab">
+                %= form_for critique => { type => 'paste' } => (method => 'post') => begin
+                  <div class="form-group">
+                    %= label_for pasted => "Source code"
+                    <textarea class="form-control input-md" name="pasted"></textarea>
+                  </div>
+                  %= include 'includes/common_form'
+                %= end
+              </div>
+            </div>
           </div>
         </div>
-
-        % my @names = qw(brutal cruel harsh stern gentle);
-        % my @severities = reverse map { ["($_) $names[$_-1]" => $_] } 1..@names;
-
-        <div class="form-group">
-          %= label_for severity => 'Severity level';
-          %= select_field severity => \@severities, class => "form-control input-lg", id => "severity";
-        </div>
-
-        <button type="submit" class="ladda-button btn btn-lg btn-block btn-primary"
-          data-style="zoom-out" style="margin-top:36px">
-          Analyze my code!
-        </button>
-
-      % end
-
     </div>
   </div>
 </div>
