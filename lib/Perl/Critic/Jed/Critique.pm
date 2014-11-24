@@ -22,7 +22,7 @@ sub critique {
     return $self->_oops('That file is empty. Got another one?')
         if $self->param('type') eq 'file' && !$self->param('upload')->size;
 
-    return $self->_oops('Something went wrong. Was that Perl source code?' . $self->param('type'))
+    return $self->_oops('Something went wrong. Was that Perl source code?')
         unless eval { $self->_critique; 1 };
 }
 
