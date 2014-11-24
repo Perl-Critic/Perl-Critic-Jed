@@ -47,7 +47,7 @@
                     <textarea class="form-control input-md" name="pasted"></textarea>
                   </div>
                   %= include 'includes/common_form'
-                %= end
+                % end
               </div>
             </div>
           </div>
