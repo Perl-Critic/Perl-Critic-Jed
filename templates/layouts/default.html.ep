@@ -12,6 +12,7 @@
         <meta name="description"         content="<%= $meta_description %>">
         <meta property="og:description"  content="<%= $meta_description %>">
         <meta property="og:url"          content="http://perlcritic.com/">
+        <meta property="og:image"        content="http://perlcritic.com/img/screenshot.jpg">
         <meta property="og:title"        content="<%= title %>">
         <meta property="og:site_name"    content="PerlCritic">
         <meta property="og:type"         content="website">
