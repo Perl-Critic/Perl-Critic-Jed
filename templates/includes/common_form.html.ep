@@ -1,0 +1,12 @@
+        % my @names = qw(brutal cruel harsh stern gentle);
+        % my @severities = reverse map { ["($_) $names[$_-1]" => $_] } 1..@names;
+
+        <div class="form-group">
+          %= label_for severity => 'Severity level';
+          %= select_field severity => \@severities, class => "form-control input-lg", id => "severity";
+        </div>
+
+        <button type="submit" class="ladda-button btn btn-lg btn-block btn-primary"
+          data-style="zoom-out" style="margin-top:36px">
+          Analyze my code!
+        </button>

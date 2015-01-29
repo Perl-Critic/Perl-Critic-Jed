@@ -13,11 +13,14 @@ sub critique {
     return $self->_oops('Please select a severity.')
         unless $self->param('severity');
 
-    return $self->_oops("Please select a file.")
-        unless $self->param('upload')->filename;
+    return $self->_oops('Please paste some code (or upload a file.')
+        if $self->param('type') eq 'paste' && !$self->param('pasted');
+
+    return $self->_oops(q{Please select a file (or paste some code).})
+        if $self->param('type') eq 'file' && !$self->param('upload')->filename;
 
     return $self->_oops('That file is empty. Got another one?')
-        unless $self->param('upload')->size;
+        if $self->param('type') eq 'file' && !$self->param('upload')->size;
 
     return $self->_oops('Something went wrong. Was that Perl source code?')
         unless eval { $self->_critique; 1 };
@@ -29,12 +32,9 @@ sub _critique {
     my $self = shift;
 
     my $severity = $self->param('severity');
-    my $upload = $self->param('upload');
-    my $source_filename = $upload->filename;
-    my $source_code_raw = $upload->slurp;
 
     # Critique code
-    my $document = Perl::Critic::Document->new(-source => \$source_code_raw, '-forced-filename' => $source_filename);
+    my $document = $self->_get_document;
     my $critic = Perl::Critic->new(-severity => $severity, %{ $self->app->config->{perlcritic} || {} });
     my $violations = [ reverse sort {$a->severity <=> $b->severity || $b->location->[0] <=> $a->location->[0]} $critic->critique($document) ];
 
@@ -50,12 +50,28 @@ sub _critique {
 
     $self->render(
         template    => 'critique',
-        filename    => $source_filename,
+        filename    => $document->filename ? $document->filename : 'Pasted code',
         violations  => $violations,
         severity    => $severity,
         source_code => $source_code_html,
         statistics  => $critic->statistics,
     );
+}
+
+#-----------------------------------------------------------------------------
+
+sub _get_document {
+    my $self = shift;
+
+    my $pasted_code = $self->param('pasted');
+    return Perl::Critic::Document->new(-source => \$pasted_code) if $self->param('type') eq 'paste';
+
+    my $upload = $self->param('upload');
+    my $source_filename = $upload->filename;
+    my $source_code_raw = $upload->slurp;
+
+    return Perl::Critic::Document->new(-source => \$source_code_raw, '-forced-filename' => $source_filename);
+
 }
 
 #-----------------------------------------------------------------------------

@@ -12,7 +12,7 @@ sub startup {
     push @{$self->routes->namespaces}, __PACKAGE__;
 
     $self->routes->get('/' => 'index');
-    $self->routes->post('critique')->to('critique#critique');
+    $self->routes->post('/critique/:type')->name('critique')->to('critique#critique');
 
     # Redirect everything else back home (no 404s)
     $self->routes->any('/*' => sub { $_[0]->redirect_to('/') });
