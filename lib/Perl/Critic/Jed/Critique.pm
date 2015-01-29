@@ -38,7 +38,7 @@ sub _critique {
     my $critic = Perl::Critic->new(-severity => $severity, %{ $self->app->config->{perlcritic} || {} });
     my $violations = [ reverse sort {$a->severity <=> $b->severity || $b->location->[0] <=> $a->location->[0]} $critic->critique($document) ];
 
-    # Covert raw source code to HTML
+    # Convert raw source code to HTML
     my $formatter = PPI::HTML->new(line_numbers => 1);
     my $source_code_html = $formatter->html($document->ppi_document);
 
