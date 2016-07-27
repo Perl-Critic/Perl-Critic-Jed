@@ -1,9 +1,17 @@
-# CHECKSUMS file written on Wed Nov 12 21:43:44 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Jul 27 04:22:15 2016 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Term-ReadLine-EditLine-1.1.1.tar.gz' => {
+    'md5' => '72a16737da321ef2eda5ed408a01ff6c',
+    'md5-ungz' => 'e0ad067963ff6e40579ec7ce1d62ec1f',
+    'mtime' => '2013-06-13',
+    'sha256' => 'c498e293b31ae8fd9a79ff4a06a513542a244a4cfae6cd421f5f6f1de0be22e8',
+    'sha256-ungz' => 'd033f0a8063ad6519d0020309a9cba7f452d164a713eaf6eed8937497b8d7b59',
+    'size' => 11095
+  },
   'Test-Requires-0.08.tar.gz' => {
     'md5' => '339ec20fbbeaa904a968bdee629688a6',
     'md5-ungz' => 'bf0f6bd18b4dd21ac62e4129b371a227',
-    'mtime' => '2014-07-16',
+    'mtime' => '2014-12-01',
     'sha256' => 'e7b1b4b30b90d530aea68205c0e65cf7a784d6a218df5a2b41830cdb404d8221',
     'sha256-ungz' => 'cea55e243382a8040d44d2bf20bdbefb4f938317cda791aca361b638bb73cb17',
     'size' => 10888
@@ -11,7 +19,7 @@ $cksum = {
   'Test-TCP-2.06.tar.gz' => {
     'md5' => 'ab8f2025180c91eca7f7cbf90c3c7784',
     'md5-ungz' => 'fddd529186a3237ea8e89094e69bb120',
-    'mtime' => '2014-07-01',
+    'mtime' => '2014-12-01',
     'sha256' => '714956bb012536f617988e9cfb588253e908144e9169e5862356091f44e59229',
     'sha256-ungz' => 'f8132973f26c0a8ecec71df783184af366c97f961cdbc3d7354e0cafcb8176e0',
     'size' => 21848

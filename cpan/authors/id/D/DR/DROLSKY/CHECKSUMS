@@ -1,9 +1,9 @@
-# CHECKSUMS file written on Tue Nov 11 21:06:46 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Jul 27 04:22:25 2016 GMT by CPAN::Checksums (v2.08)
 $cksum = {
   'Devel-StackTrace-2.00.tar.gz' => {
     'md5' => '826ed2bc7cdd8d852d7d2d8b69aa313c',
     'md5-ungz' => '16c3e4d01b9c98eb255804d7a0af5838',
-    'mtime' => '2014-11-01',
+    'mtime' => '2014-12-01',
     'sha256' => '1debe7273099a60e1386e0da5edbed7334db3cf3ed8e3b4106b087100b8ec5e4',
     'sha256-ungz' => 'fa6b4ba2a9a7d6070fc7087e1314a3097e4d584a5b2ed1129d6b4742a7847115',
     'size' => 30012
@@ -11,9 +11,17 @@ $cksum = {
   'Exception-Class-1.39.tar.gz' => {
     'md5' => '971b6e47d18419bf1f8f0419ace2348c',
     'md5-ungz' => '6f51069c82d4ae518ea772f09872cdf8',
-    'mtime' => '2014-11-01',
+    'mtime' => '2014-12-01',
     'sha256' => '819c756a69a6d1e31f396eca6a508b07b0a522a035b904cd1d432353cc362083',
     'sha256-ungz' => '400bff534d7645323e964e238e01e8b9f7c0c7559f17cae4b4316dae0d6046ce',
     'size' => 38936
+  },
+  'Module-Implementation-0.09.tar.gz' => {
+    'md5' => '52e3fe0ca6b1eff0488d59b7aacc0667',
+    'md5-ungz' => 'bd6d543d8e1b5c8030a61d49929a90af',
+    'mtime' => '2014-08-24',
+    'sha256' => 'c15f1a12f0c2130c9efff3c2e1afe5887b08ccd033bd132186d1e7d5087fd66d',
+    'sha256-ungz' => 'ea16f469fc61569683e79a45aa38256998359264744f6766ebc05f2f00fd80b3',
+    'size' => 18553
   }
 };

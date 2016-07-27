@@ -1,9 +1,49 @@
-# CHECKSUMS file written on Wed Nov 12 21:43:42 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Jul 27 04:25:18 2016 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Dist-CheckConflicts-0.11.tar.gz' => {
+    'md5' => 'c8725a92b9169708b0f63036812070f2',
+    'md5-ungz' => '3dc84c72f72fee74ac1fba1d77315ced',
+    'mtime' => '2014-04-03',
+    'sha256' => 'ea844b9686c94d666d9d444321d764490b2cde2f985c4165b4c2c77665caedc4',
+    'sha256-ungz' => '9f71e5d544871616bdb7310cebd6b951cd68db68aaf2a7b6f2612bf8cda1e9d2',
+    'size' => 19964
+  },
+  'Eval-Closure-0.14.tar.gz' => {
+    'md5' => 'ceeb1fc579ac9af981fa6b600538c285',
+    'md5-ungz' => '7272f307f94bb740283675432bed5bbf',
+    'mtime' => '2016-05-29',
+    'sha256' => 'ea0944f2f5ec98d895bef6d503e6e4a376fea6383a6bc64c7670d46ff2218cad',
+    'sha256-ungz' => '4240b50c100b57c3b754e46ccc01a1f1ba90b8eb2067c91a0d55887c6d9d17c4',
+    'size' => 20128
+  },
+  'Package-Stash-0.37.tar.gz' => {
+    'md5' => '7e47a8261312e1cf3d12bd2007916b66',
+    'md5-ungz' => '24b5195668f610b59a0817f446f57b52',
+    'mtime' => '2014-09-21',
+    'sha256' => '06ab05388f9130cd377c0e1d3e3bafeed6ef6a1e22104571a9e1d7bfac787b2c',
+    'sha256-ungz' => '8f8ca5783194b1b6a97606008d8e5c0fa346338ccd96d14d77e6867eee0c7223',
+    'size' => 40309
+  },
+  'Package-Stash-XS-0.28.tar.gz' => {
+    'md5' => '9664356ec3be02626cbd3081ec246b70',
+    'md5-ungz' => '88d82f6819206f12286561e5747d33e7',
+    'mtime' => '2013-07-16',
+    'sha256' => '23d8c5c25768ef1dc0ce53b975796762df0d6e244445d06e48d794886c32d486',
+    'sha256-ungz' => 'd4f1cf4665bf46b3aae6576a240b8a8ee68919e40fd20a9be80cefe66dc90289',
+    'size' => 74161
+  },
+  'Reply-0.40.tar.gz' => {
+    'md5' => '8dfca165649fcd00d22b4323ecfd3da2',
+    'md5-ungz' => '6b80e6f51d300d0d35664a43d0136b27',
+    'mtime' => '2016-06-25',
+    'sha256' => 'e9bb75a3d59a0a55f5c280843b1c79d828e14a548cb307405d31494ae1503824',
+    'sha256-ungz' => 'fc687db57c69fb3e8072c76b1bf72275ff903680a0b850111cb3da0d5cf8f895',
+    'size' => 28101
+  },
   'Stream-Buffered-0.03.tar.gz' => {
     'md5' => 'b030fecaa784cd573289ae797c7aeae9',
     'md5-ungz' => '0e226330e7b8e4845b1c192381d82c56',
-    'mtime' => '2014-06-06',
+    'mtime' => '2014-12-01',
     'sha256' => '9b2d4390b5de6b0cf4558e4ad04317a73c5e13dd19af29149c4e47c37fb2423b',
     'sha256-ungz' => 'b75207b3b8f1c8134100d068957b51f783717789f45fbc79357a510376c30873',
     'size' => 10348
@@ -11,7 +51,7 @@ $cksum = {
   'Try-Tiny-0.22.tar.gz' => {
     'md5' => '6769658bfbca241a470206c9a8819ff2',
     'md5-ungz' => 'e6ef0bed40e87824b6c103c7377cb29c',
-    'mtime' => '2014-04-29',
+    'mtime' => '2014-12-01',
     'sha256' => '60fba46f4693d33d54539104f9001df008dabb400b6837e9605c39a6ee6a1b19',
     'sha256-ungz' => '541fbc1d20e7fc0284de67107f04bbb10daa0d8f73a8c7d8fbc68d37cdad74cb',
     'size' => 18311

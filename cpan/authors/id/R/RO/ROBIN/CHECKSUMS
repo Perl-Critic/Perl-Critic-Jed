@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Jul 27 04:22:23 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'PadWalker-2.2.tar.gz' => {
+    'md5' => '6bcc741f77b1831a893b2a22c785e31a',
+    'md5-ungz' => '851e413072fb99acdcfba109bb9c8687',
+    'mtime' => '2015-10-23',
+    'sha256' => 'fc1df2084522e29e892da393f3719d2c1be0da022fdd89cff4b814167aecfea3',
+    'sha256-ungz' => '2e9c2745c3ca56b6c5a7305d9ade3126651bb18556782bc6b6beb672e45a8d3a',
+    'size' => 16158
+  }
+};

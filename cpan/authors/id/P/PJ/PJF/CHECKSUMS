@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Jul 27 04:25:19 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'IPC-System-Simple-1.25.tar.gz' => {
+    'md5' => 'fb49e674e1d52e8e5646d08507d7fda5',
+    'md5-ungz' => '21c6fcf595f3bdb5cc3971509c7ad6b2',
+    'mtime' => '2013-10-20',
+    'sha256' => 'f1b6aa1dfab886e8e4ea825f46a1cbb26038ef3e727fef5d84444aa8035a4d3b',
+    'sha256-ungz' => '007a4a14069abe616a070afd4d8d2d9799115a2521d79a142e01e1a49d1fda98',
+    'size' => 29744
+  }
+};

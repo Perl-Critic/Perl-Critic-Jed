@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Jul 27 04:22:20 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Sort-Versions-1.62.tar.gz' => {
+    'md5' => 'c975afa9dd114951d902aa4a81ead685',
+    'md5-ungz' => '86b6b174d877b451f6a5e0e685056202',
+    'mtime' => '2015-12-13',
+    'sha256' => 'bf5f3307406ebe2581237f025982e8c84f6f6625dd774e457c03f8994efd2eaa',
+    'sha256-ungz' => 'b6c6cd737ff532b9cefdd02f73820f00c77f229e79ed1df00647df1136317899',
+    'size' => 12295
+  }
+};

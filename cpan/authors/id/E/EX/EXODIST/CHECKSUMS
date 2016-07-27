@@ -1,9 +1,17 @@
-# CHECKSUMS file written on Wed Nov 12 21:43:45 2014 GMT by CPAN::Checksums (v2.08)
+# CHECKSUMS file written on Wed Jul 27 04:22:27 2016 GMT by CPAN::Checksums (v2.08)
 $cksum = {
+  'Test-Exception-0.43.tar.gz' => {
+    'md5' => '572d355026fb0b87fc2b8c64b83cada0',
+    'md5-ungz' => '78de0b36d5fc1c16b98cb4e5c90ea7a6',
+    'mtime' => '2015-12-29',
+    'sha256' => '156b13f07764f766d8b45a43728f2439af81a3512625438deab783b7883eb533',
+    'sha256-ungz' => '8efa751a3a9993c3f347e30470c29ba8522eb43d81eb25804a5c4208ae86c86f',
+    'size' => 15204
+  },
   'Test-SharedFork-0.29.tar.gz' => {
     'md5' => 'acbc5baf82d78edf3771dfecaacd2345',
     'md5-ungz' => '77c61be44e5cd1caa47a634da185327c',
-    'mtime' => '2014-09-20',
+    'mtime' => '2014-12-01',
     'sha256' => '63af7788cc35b9b7e6fa37c61220ca66abd6364d8bb90c20038e3d8241988a6e',
     'sha256-ungz' => 'cf1e734d2e0f6913eaba5dbb684348146ea2c2ec9a517ec28d5f2a72ea4dce66',
     'size' => 15449
@@ -11,7 +19,7 @@ $cksum = {
   'Test-Simple-1.001009.tar.gz' => {
     'md5' => '45b8942055352fc20543d24b6f5b9a59',
     'md5-ungz' => 'ec5c0c59d927c0750521a54b93d9a2a5',
-    'mtime' => '2014-11-03',
+    'mtime' => '2014-12-01',
     'sha256' => '657554191cb1f9189a58395df873819cc6670283410ec373bd412a548cbf9dce',
     'sha256-ungz' => '11e2385d8ce90711e9aa7cf44338be8947542001b7c9e08acb56d8ea3ef773a9',
     'size' => 114671

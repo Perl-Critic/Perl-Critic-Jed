@@ -1,0 +1,19 @@
+# CHECKSUMS file written on Wed Jul 27 04:22:29 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'File-Next-1.16.tar.gz' => {
+    'md5' => '103bc329cd2b64ec270ac53a7dacb378',
+    'md5-ungz' => '1ed8ca3eff7573a3df2859076f70f67b',
+    'mtime' => '2016-07-08',
+    'sha256' => '6965f25c2c132d0ba7a6f72b57b8bc6d25cf8c1b7032caa3a9bda8612e41d759',
+    'sha256-ungz' => '0b363752f51425eed8a696565969e058516a16935cf1f817ac120aad9774f6a4',
+    'size' => 17914
+  },
+  'ack-2.14.tar.gz' => {
+    'md5' => '43cfa05123ba0440fa3958690ee03bac',
+    'md5-ungz' => '4b36b84a52d89ea8d8492e9c7c585bd5',
+    'mtime' => '2014-09-04',
+    'sha256' => '8549a833efec158dc85bc6334b3a384ae5a389896942eab9a58c6e630c181b3f',
+    'sha256-ungz' => '33c687d12a2d8d9da9c1c374a50abccecaa721861b8be648f0254b197858420c',
+    'size' => 222479
+  }
+};

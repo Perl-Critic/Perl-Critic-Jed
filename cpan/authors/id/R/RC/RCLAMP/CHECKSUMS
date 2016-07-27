@@ -1,0 +1,19 @@
+# CHECKSUMS file written on Wed Jul 27 04:22:24 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Devel-Caller-2.06.tar.gz' => {
+    'md5' => 'af52f47979b3c9358af9e5d8c283f263',
+    'md5-ungz' => '4516084c5a9a2f8d45ec57c546aba263',
+    'mtime' => '2013-01-16',
+    'sha256' => '6a73ae6a292834255b90da9409205425305fcfe994b148dcb6d2d6ef628db7df',
+    'sha256-ungz' => 'abd64a2d0f1e90b5f4d288db7cb38148f007383bc07a12acd718f80ab19ea4a6',
+    'size' => 6540
+  },
+  'Devel-LexAlias-0.05.tar.gz' => {
+    'md5' => '1a4f70dff1a47b3eb96bdeac50db2ec5',
+    'md5-ungz' => 'e1e93e1df494d2dd916c603caf65a6c2',
+    'mtime' => '2013-01-16',
+    'sha256' => '5e0ad9d43e266033856e424e104a0009f8e63449e40cd5aba59ad94cb1bcee72',
+    'sha256-ungz' => '1a3f282a808b113ea61b61d57a42be492c4a240b57dad4c308ea18fc84eb8d7c',
+    'size' => 3123
+  }
+};

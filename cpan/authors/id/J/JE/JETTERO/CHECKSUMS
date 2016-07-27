@@ -1,0 +1,11 @@
+# CHECKSUMS file written on Wed Jul 27 04:25:19 2016 GMT by CPAN::Checksums (v2.08)
+$cksum = {
+  'Unix-Process-1.3101.tar.gz' => {
+    'md5' => 'e4cd354984d1e683b8a14b30222007c9',
+    'md5-ungz' => 'bcb30535c02397e1bffc2aa1f32994a3',
+    'mtime' => '2009-04-25',
+    'sha256' => '83da4cab1e4ea4ded8daddf45988bd581416431c907b0e18a3238e950a9c9107',
+    'sha256-ungz' => '150d25e43b70304fce7d662c70004333a76c505ae349fd8ef56e27b54640e4a5',
+    'size' => 3311
+  }
+};
